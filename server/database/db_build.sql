@@ -20,6 +20,26 @@ CREATE TABLE pharmacy
     location VARCHAR(150) NOT NULL
 )
 
+CREATE TABLE pharmacy_to_medicine
+(
+    medicineID INTEGER,
+    FOREIGN KEY (medicineID) REFERENCES medicine (medicineID),
+    pharmacyID INTEGER,
+    FOREIGN KEY (pharmacyID) REFERENCES pharmacy (pharmacyID),
+    soldOut boolean NOT NULL,
+    price NUMBER NOT NULL
+
+)
+
+
+CREATE TABLE pharmacist
+(
+    email VARCHAR(50) UNIQUE,
+    password VARCHAR(50) NOT NULL,
+    pharmacyID INTEGER,
+    FOREIGN KEY (pharmacyID) REFERENCES pharmacy (pharmacyID)
+)
+
 
 
 COMMIT;
