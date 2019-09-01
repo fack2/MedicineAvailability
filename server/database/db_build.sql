@@ -1,6 +1,6 @@
 BEGIN;
 
-    DROP TABLE IF EXISTS medicine , pharmacy , pharmacist_login , pharmacy_to_medicine
+    DROP TABLE IF EXISTS medicine , pharmacy , pharmacy_to_medicine
     CASCADE;
 
 
@@ -18,6 +18,8 @@ CREATE TABLE pharmacy
 (
     pharmacyID serial primary key,
     pharmacyName VARCHAR(100) NOT NULL,
+    email VARCHAR(50) UNIQUE,
+    password VARCHAR(50) NOT NULL,
     phone INTEGER NOT NULL,
     location VARCHAR(150) NOT NULL
 );
@@ -31,15 +33,6 @@ CREATE TABLE pharmacy_to_medicine
     soldOut boolean NOT NULL,
     price INTEGER NOT NULL
 
-);
-
-
-CREATE TABLE pharmacist_login
-(
-    email VARCHAR(50) UNIQUE,
-    password VARCHAR(50) NOT NULL,
-    pharmacyID INTEGER,
-    FOREIGN KEY (pharmacyID) REFERENCES pharmacy (pharmacyID)
 );
 
 
