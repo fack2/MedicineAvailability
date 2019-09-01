@@ -9,16 +9,18 @@ CREATE TABLE medicine
     medicineID serial primary key,
     name VARCHAR(100) NOT NULL,
     description VARCHAR(150) NOT NULL,
-)
+    availability boolean NOT NULL,
+    prescription boolean NOT NULL
+);
 
 
 CREATE TABLE pharmacy
 (
     pharmacyID serial primary key,
     pharmacyName VARCHAR(100) NOT NULL,
-    phone NUMBER NOT NULL,
+    phone INTEGER NOT NULL,
     location VARCHAR(150) NOT NULL
-)
+);
 
 CREATE TABLE pharmacy_to_medicine
 (
@@ -27,18 +29,18 @@ CREATE TABLE pharmacy_to_medicine
     pharmacyID INTEGER,
     FOREIGN KEY (pharmacyID) REFERENCES pharmacy (pharmacyID),
     soldOut boolean NOT NULL,
-    price NUMBER NOT NULL
+    price INTEGER NOT NULL
 
-)
+);
 
 
-CREATE TABLE pharmacist
+CREATE TABLE pharmacist_login
 (
     email VARCHAR(50) UNIQUE,
     password VARCHAR(50) NOT NULL,
     pharmacyID INTEGER,
     FOREIGN KEY (pharmacyID) REFERENCES pharmacy (pharmacyID)
-)
+);
 
 
 
