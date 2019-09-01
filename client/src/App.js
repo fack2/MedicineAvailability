@@ -1,12 +1,17 @@
-import React from "react"
+import React, { Component } from "react"
+import { BrowserRouter as Router, Route } from "react-router-dom"
+import Home from "./components/Home/index"
 import "./App.css"
 
-function App() {
-  return (
-    <div>
-      <p>hello</p>
-    </div>
-  )
+class App extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        <Router>
+          <Route exact path="/" component={Home} />
+        </Router>
+      </React.Fragment>
+    )
+  }
 }
-
 export default App
