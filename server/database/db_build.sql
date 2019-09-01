@@ -9,7 +9,6 @@ CREATE TABLE medicine
     medicineID serial primary key,
     name VARCHAR(100) NOT NULL,
     description VARCHAR(150) NOT NULL,
-    availability boolean NOT NULL,
     prescription boolean NOT NULL
 );
 
