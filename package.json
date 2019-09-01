@@ -1,0 +1,33 @@
+{
+  "name": "medicine-availability",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./server/server.js",
+    "dev": "nodemon ./sever/server.js",
+    "eslint": "eslint .",
+    "eslint:fix": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fack2/MedicineAvailability.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fack2/MedicineAvailability/issues"
+  },
+  "homepage": "https://github.com/fack2/MedicineAvailability#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^1.19.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "eslint": "^6.3.0",
+    "eslint-plugin-react": "^7.14.3"
+  }
+}
