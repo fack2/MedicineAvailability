@@ -20,7 +20,11 @@ class HomePage extends Component {
     const { history } = this.props
 
     // This should handle in backend
-    axios.get(`/api/medicine/${medicineName}`).then(({ data }) => {
+    console.log("iii", medicineName)
+
+    axios.get(`/api/medicine/${medicineName}`).then(data => {
+      console.log("hh", data)
+
       this.setState({
         pharmaciesResult: data
       })

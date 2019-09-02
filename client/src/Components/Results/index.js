@@ -4,12 +4,14 @@ import UserSearchResults from "../UserSearchResults"
 import NavBar from "../NavBar"
 class HomePage extends Component {
   render() {
-    // data will recieve by: this.props.history.location.data
+    const { data } = this.props.history.location
+    console.log("data", data)
+
     return (
       <>
         <NavBar />
-        <CustomerPharmacyInfo />
         <UserSearchResults />
+        <CustomerPharmacyInfo pharmacyName={"jjj"} price={"hhhhh"} />
       </>
     )
   }
