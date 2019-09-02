@@ -1,10 +1,10 @@
-import React, { Component } from "react"
-import { BrowserRouter as Router, Route } from "react-router-dom"
-import Results from "./Components/Results"
+// eslint-disable-next-line no-unused-vars
+import React, { Component } from 'react'
+// eslint-disable-next-line no-unused-vars
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import Results from './Components/Results'
 
-import "./App.css"
-
-import HomePage from "./Components/HomePage"
+import HomePage from './Components/HomePage'
 
 const App = () => (
   <Router>
