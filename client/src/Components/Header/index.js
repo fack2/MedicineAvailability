@@ -1,5 +1,6 @@
 import React from "react"
 import "./style.css"
+
 const Header = () => (
   <div className="header1 ">
     <div className="logo" />
