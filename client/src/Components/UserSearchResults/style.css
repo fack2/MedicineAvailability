@@ -1,0 +1,56 @@
+.medicineImage {
+  width: 20%;
+  height: 60%;
+  left: 154px;
+  top: 133px;
+
+  font-family: SeoulHangang;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 13px;
+
+  color: #969696;
+  flex-grow: 20%;
+}
+
+.medicineInformation {
+  position: absolute;
+  width: 308px;
+  height: 118px;
+  left: 33px;
+  top: 79px;
+
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+}
+.medicineName {
+  width: 153px;
+  height: 26px;
+  left: 155px;
+  top: 107px;
+
+  font-family: SeoulHangang;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+
+  color: #000000;
+  flex-grow: 20%;
+}
+
+.description {
+  width: 153px;
+  height: 26px;
+  left: 155px;
+  top: 10%;
+
+  font-family: SeoulHangang;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #000000;
+}

@@ -1,13 +1,13 @@
 import React, { Component } from "react"
 import { BrowserRouter as Router, Route } from "react-router-dom"
 import HomePage from "./Components/HomePage"
-import CustomerPharmacyInfo from "./Components/CustomerPharmacyInfo"
+import Results from "./Components/Results"
 
 const App = () => (
   <Router>
     <React.Fragment>
       <Route exact path="/" component={HomePage} />
-      <Route path="/CustomerPharmacyInfo" component={CustomerPharmacyInfo} />
+      <Route path="/Results" component={Results} />
     </React.Fragment>
   </Router>
 )

@@ -1,0 +1,20 @@
+.NavBar {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  width: 375px;
+  height: 58px;
+  left: 0px;
+  top: -1px;
+  background: #ebd6c3;
+}
+.logoDiv {
+  left: 2.4%;
+  right: 82.67%;
+  top: 15.52%;
+  bottom: 10.34%;
+  background: url(logo.png);
+  background-size: auto;
+}
