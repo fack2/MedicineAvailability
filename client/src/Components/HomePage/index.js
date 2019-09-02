@@ -1,12 +1,12 @@
-import React, { Component } from "react"
-import Header from "../Header"
+import React, { Component } from 'react'
+import Header from '../Header'
 
 class HomePage extends Component {
-  render() {
+  render () {
     return (
-      <>
-        <Header />
-      </>
+			<>
+				<Header />
+			</>
     )
   }
 }
