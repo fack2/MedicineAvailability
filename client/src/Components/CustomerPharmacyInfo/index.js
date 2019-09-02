@@ -1,10 +1,10 @@
 import React, { Component } from "react"
 import "./style.css"
 
-const CustomerPharmacyInfo = ({ pharmacyName, price }) => (
+const CustomerPharmacyInfo = ({ pharmacyname, price }) => (
   <div className="pharmacyInfo">
-    <h3 className="pharmacyName">{pharmacyName}</h3>
-    <h3 className="price">{price}ILS</h3>
+    <h3 className="pharmacyName">{pharmacyname}</h3>
+    <h3 className="price">{price}</h3>
   </div>
 )
 
