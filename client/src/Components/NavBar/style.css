@@ -10,11 +10,41 @@
   top: -1px;
   background: #ebd6c3;
 }
-.logoDiv {
+.logo {
   left: 2.4%;
   right: 82.67%;
   top: 15.52%;
   bottom: 10.34%;
-  background: url(logo.png);
-  background-size: auto;
+  background: url(logo2.svg);
+  background-repeat: no-repeat;
+}
+.switch {
+  position: absolute;
+  left: 60.8%;
+  right: 3.73%;
+  top: 41.38%;
+  bottom: 34.48%;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+
+  color: #000000;
+}
+.home {
+  position: absolute;
+  left: 20.53%;
+  right: 67.73%;
+  top: 39.66%;
+  bottom: 36.21%;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+
+  color: #a33230;
 }
