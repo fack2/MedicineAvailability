@@ -24,7 +24,7 @@ class HomePage extends Component {
       })
     })
     const { history } = this.props
-    history.push({ pathname: "/results", data: "mar7aba" })
+    history.push({ pathname: "/results", data: pharmaciesResult })
   }
   render() {
     return (
