@@ -17,14 +17,15 @@ class HomePage extends Component {
 
   searchHandler = () => {
     const { pharmaciesResult, medicineName } = this.state
+    const { history } = this.props
+
     // This should handle in backend
     axios.get(`/api/medicine/${medicineName}`).then(({ data }) => {
       this.setState({
         pharmaciesResult: data
       })
+      history.push({ pathname: "/results", data: pharmaciesResult })
     })
-    const { history } = this.props
-    history.push({ pathname: "/results", data: pharmaciesResult })
   }
   render() {
     return (
