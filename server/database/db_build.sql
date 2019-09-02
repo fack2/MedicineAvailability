@@ -1,7 +1,7 @@
 BEGIN;
 
-    DROP TABLE IF EXISTS medicine , pharmacy , pharmacy_to_medicine
-    CASCADE;
+DROP TABLE IF EXISTS medicine , pharmacy , pharmacy_to_medicine
+CASCADE;
 
 
 CREATE TABLE medicine
