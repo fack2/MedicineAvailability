@@ -1,19 +1,19 @@
-import React, { Component } from "react"
-import { Link } from "react-router-dom"
-import "./search.css"
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import './search.css'
 
 const Search = props => {
-  const { pharmaciesResult, medicineName, handleSearch, changInput } = props
+  const { pharmaciesResult, medname, handleSearch, changInput } = props
 
   return (
     <div>
       <span>
-        The app is an easy way to search for the medicine you need in your next
-        door pharmacy.
+				The app is an easy way to search for the medicine you need in your next
+				door pharmacy.
       </span>
       <input
         className="searchBar"
-        value={medicineName}
+        value={medname}
         onChange={changInput}
         type="text"
         name="firstname"

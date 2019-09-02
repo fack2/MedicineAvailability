@@ -6,17 +6,17 @@ import axios from "axios"
 class HomePage extends Component {
   state = {
     pharmaciesResult: "",
-    medicineName: ""
+    medname: ""
   }
 
   changeInput = event => {
     const { target } = event
     const { value } = target
-    this.setState({ medicineName: value })
+    this.setState({ medname: value })
   }
 
   searchHandler = () => {
-    const { pharmaciesResult, medicineName } = this.state
+    const { pharmaciesResult, medname: medname } = this.state
     const { history } = this.props
 
     // This should handle in backend
