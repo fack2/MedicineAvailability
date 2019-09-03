@@ -9,22 +9,22 @@ class Results extends Component {
     const info = data.data
 
     return (
-      <>
-        <NavBar />
-        {info.map(item => {
-          return (
-            <CustomerPharmacyInfo
-              pharmacyname={item.pharmacyname}
-              price={item.price}
-            />
-          )
-        })}
-        <UserSearchResults
-          img={info[0].img}
-          description={info[0].description}
-          medicinename={info[0].medicinename}
-        />
-      </>
+			<>
+				<NavBar />
+				{info.map(item => {
+				  return (
+				    <CustomerPharmacyInfo
+				      pharmacyname={item.pharmacyname}
+				      price={item.price}
+				    />
+				  )
+				})}
+				<UserSearchResults
+				  img={info[0].img}
+				  description={info[0].description}
+				  medicinename={info[0].medicinename}
+				/>
+			</>
     )
   }
 }
