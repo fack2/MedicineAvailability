@@ -1,0 +1,36 @@
+.input1 {
+  position: absolute;
+  width: 305px;
+  height: 43px;
+  left: 35px;
+  top: 360px;
+
+  background: #ffffff;
+  border: 1px solid #b6b1b1;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+.input2 {
+  position: absolute;
+  width: 305px;
+  height: 43px;
+  left: 35px;
+  top: 435px;
+
+  background: #ffffff;
+  border: 1px solid #b6b1b1;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+.login {
+  position: absolute;
+  width: 166px;
+  height: 43px;
+  left: 99px;
+  top: 539px;
+
+  background: #e8cdb8;
+  border: 1px solid #b6b1b1;
+  box-sizing: border-box;
+  border-radius: 20px;
+}

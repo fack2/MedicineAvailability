@@ -15,7 +15,7 @@ class HomePage extends Component {
   }
 
   searchHandler = () => {
-    const { pharmaciesResult, medname } = this.state
+    const { medname } = this.state
     const { history } = this.props
 
     // This should handle in backend
