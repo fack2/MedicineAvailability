@@ -1,9 +1,7 @@
 import React, { Component } from "react"
 import axios from "axios"
 import "./login.css"
-import Results from "../Results"
 import Header from "../Header"
-import Pharmacy from "../PharmacyHome"
 
 class Login extends Component {
   state = {
@@ -34,13 +32,15 @@ class Login extends Component {
   }
 
   render() {
+    const { username, password } = this.state
+
     return (
       <>
         <Header />
         <form onSubmit={this.goLogedin}>
           <input
             className="input1"
-            value={this.state.username}
+            value={username}
             placeholder="username"
             type="text"
             name="username"
@@ -48,7 +48,7 @@ class Login extends Component {
           />
           <input
             className="input2"
-            value={this.state.password}
+            value={password}
             placeholder="password"
             type="text"
             name="password"
