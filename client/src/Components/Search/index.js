@@ -8,8 +8,8 @@ const Search = props => {
   return (
     <div>
       <span>
-				The app is an easy way to search for the medicine you need in your next
-				door pharmacy.
+        The app is an easy way to search for the medicine you need in your next
+        door pharmacy.
       </span>
       <input
         className="searchBar"
