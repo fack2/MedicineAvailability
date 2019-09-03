@@ -1,11 +1,14 @@
 import React, { Component } from "react"
 import axios from "axios"
 import "./login.css"
+import Results from "../Results"
+import Header from "../Header"
 
 class Login extends Component {
   state = {
     username: "",
-    password: ""
+    password: "",
+    errorMsg: ""
   }
 
   changName = event => {
@@ -17,15 +20,22 @@ class Login extends Component {
   goLogedin = event => {
     event.preventDefault()
     const { username, password } = this.state
-    axios.post("/api/login", { username, password }).then(data => {
-      //the data what we get from user.js
-      console.log(data)
+    const { history } = this.props
+    axios.post("/api/login", { username, password }).then(({ data }) => {
+      if (data.msg == "true") {
+        history.push("/")
+        //should continue to pharmacist home
+      } else {
+        const { errorMsg } = this.state
+        this.setState({ errorMsg: "true" })
+      }
     })
   }
 
   render() {
     return (
       <>
+        <Header />
         <form onSubmit={this.goLogedin}>
           <input
             className="input1"
@@ -44,6 +54,7 @@ class Login extends Component {
             onChange={this.changName}
           />
           <input type="submit" className="login" value="Login" />
+          {this.state.errorMsg && <p>User or password WRONG</p>}
         </form>
       </>
     )

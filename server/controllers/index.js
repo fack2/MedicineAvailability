@@ -4,7 +4,6 @@ const search = require('./search')
 const user = require('./user')
 
 router.get('/api/medicine/:medname', search.get)
-console.log('in router')
 
 router.post('/api/login', user.get)
 
