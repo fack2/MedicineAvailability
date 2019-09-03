@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import CustomerPharmacyInfo from '../CustomerPharmacyInfo'
 import UserSearchResults from '../UserSearchResults'
 import NavBar from '../NavBar'
-class HomePage extends Component {
+
+class Results extends Component {
   render () {
     const { data } = this.props.history.location
     const info = data.data
@@ -27,4 +28,4 @@ class HomePage extends Component {
     )
   }
 }
-export default HomePage
+export default Results
