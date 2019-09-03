@@ -9,14 +9,14 @@ const Search = props => {
     <div>
       <span>
         The app is an easy way to search for the medicine you need in your next
-				door pharmacy.
+        door pharmacy.
       </span>
       <input
         className="searchBar"
         value={medname}
         onChange={changInput}
         type="text"
-        name="firstname"
+        name="medname"
       />
       <button onClick={handleSearch}>search</button>
     </div>
