@@ -14,10 +14,9 @@ class Login extends Component {
     this.setState({ [name]: value })
   }
 
-  goLogedin = () => {
+  goLogedin = event => {
+    event.preventDefault()
     const { username, password } = this.state
-    console.log("login")
-
     axios.post("/api/login", { username, password }).then(data => {
       console.log(data)
     })
@@ -25,25 +24,27 @@ class Login extends Component {
 
   render() {
     return (
-      <form>
-        <input
-          className="searchBars"
-          value={this.state.username}
-          placeholder="username"
-          type="text"
-          name="username"
-          onChange={this.changName}
-        />
-        <input
-          className="searchBars"
-          value={this.state.password}
-          placeholder="password"
-          type="text"
-          name="password"
-          onChange={this.changName}
-        />
-        <button onClick={this.goLogedin}>Login</button>
-      </form>
+      <>
+        <form onSubmit={this.goLogedin}>
+          <input
+            className="searchBars"
+            value={this.state.username}
+            placeholder="username"
+            type="text"
+            name="username"
+            onChange={this.changName}
+          />
+          <input
+            className="searchBars"
+            value={this.state.password}
+            placeholder="password"
+            type="text"
+            name="password"
+            onChange={this.changName}
+          />
+          <input type="submit" value="Login" />
+        </form>
+      </>
     )
   }
 }

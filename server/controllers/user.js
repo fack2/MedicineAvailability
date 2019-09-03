@@ -7,7 +7,6 @@ exports.get = (req, res) => {
   checkUser(username)
     .then(data => {
       console.log('data', data)
-
       res.json({ data })
     })
     .catch(err => console.log(err))
