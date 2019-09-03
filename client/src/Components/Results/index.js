@@ -6,7 +6,9 @@ class HomePage extends Component {
   render() {
     const { data } = this.props.history.location
     const info = data.data
-    console.log(info)
+    console.log("hhh")
+
+    console.log("des", info)
 
     return (
       <>
@@ -19,7 +21,11 @@ class HomePage extends Component {
             />
           )
         })}
-        <UserSearchResults />
+        <UserSearchResults
+          img={info[0].img}
+          description={info[0].description}
+          medicinename={info[0].medicinename}
+        />
       </>
     )
   }

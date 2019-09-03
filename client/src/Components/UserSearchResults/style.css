@@ -1,17 +1,14 @@
 .medicineImage {
-  width: 20%;
-  height: 60%;
-  left: 154px;
+  width: 27%;
+  height: 121%;
+  left: 61px;
   top: 133px;
-
   font-family: SeoulHangang;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
   line-height: 13px;
-
   color: #969696;
-  flex-grow: 20%;
 }
 
 .medicineInformation {
@@ -42,11 +39,11 @@
 }
 
 .description {
-  width: 153px;
+  width: 250px;
   height: 26px;
   left: 155px;
   top: 10%;
-
+  text-align: justify;
   font-family: SeoulHangang;
   font-style: normal;
   font-weight: normal;
