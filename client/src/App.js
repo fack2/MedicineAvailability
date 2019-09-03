@@ -11,7 +11,7 @@ const App = () => (
     <React.Fragment>
       <Route exact path="/" component={HomePage} />
       <Route exact path="/results" component={Results} />
-      <Route exact phath='/pharmacy' component={PharmacyHome} />
+      <Route exact path='/pharmacy' component={PharmacyHome} />
     </React.Fragment>
   </Router>
 )
