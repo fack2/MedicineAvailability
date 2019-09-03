@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import Header from "../Header"
 import Search from "../Search"
 import axios from "axios"
+import PharmacyHome from "../PharmacyHome"
 
 class HomePage extends Component {
   state = {
@@ -9,14 +10,12 @@ class HomePage extends Component {
     medname: ""
   }
 
-  changeInput = event => {
-    const { target } = event
-    const { value } = target
-    this.setState({ medname: value })
+  changeInput = ({ target: { value, name } }) => {
+    this.setState({ [name]: value })
   }
 
   searchHandler = () => {
-    const { pharmaciesResult, medname: medname } = this.state
+    const { medname } = this.state
     const { history } = this.props
 
     // This should handle in backend
@@ -24,7 +23,7 @@ class HomePage extends Component {
       this.setState({
         pharmaciesResult: data
       })
-      history.push({ pathname: "/results", data: pharmaciesResult })
+      history.push({ pathname: "/results", data })
     })
   }
   render() {

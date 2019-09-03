@@ -3,6 +3,7 @@ import axios from "axios"
 import "./login.css"
 import Results from "../Results"
 import Header from "../Header"
+import Pharmacy from "../PharmacyHome"
 
 class Login extends Component {
   state = {
@@ -23,7 +24,7 @@ class Login extends Component {
     const { history } = this.props
     axios.post("/api/login", { username, password }).then(({ data }) => {
       if (data.msg == "true") {
-        history.push("/")
+        history.push("/pharmacy")
         //should continue to pharmacist home
       } else {
         const { errorMsg } = this.state

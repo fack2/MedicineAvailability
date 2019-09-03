@@ -1,0 +1,34 @@
+.pharmacyInfo {
+  position: absolute;
+  width: 308px;
+  height: 76px;
+  left: 33px;
+  top: 236px;
+
+  background: #ffffff;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+  display: flex;
+}
+.pharmacyName {
+  width: 124px;
+  height: 43px;
+  left: 42px;
+  top: 267px;
+
+  font-family: SeoulHangang;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+
+  color: #a33230;
+}
+
+.price {
+  width: 62px;
+  height: 29px;
+  left: 271px;
+  top: 263px;
+  margin-left: 3%;
+  background: #ffffff;
+}
