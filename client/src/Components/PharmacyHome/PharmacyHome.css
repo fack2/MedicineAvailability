@@ -1,32 +1,17 @@
-.headerHome {
+.switch {
   position: absolute;
-  left: 0%;
-  right: 0%;
+  width: 133px;
+  height: 14px;
+  left: 222px;
+  top: 260px;
 
-  top: 0%;
-  bottom: 0%;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
 
-  background: linear-gradient(
-    180deg,
-    #e8cdb8 0%,
-    rgba(234, 202, 179, 0.35) 100%
-  );
-  border-radius: 0px 0px 0px 151px;
-
-  width: 380px;
-  height: 297px;
-  left: -5px;
-  top: 0px;
-}
-
-.logoImg {
-  position: absolute;
-  width: 121px;
-  height: 105px;
-  left: 125px;
-  top: 95px;
-
-  background: url(logo.png);
+  color: #000000;
 }
 
 .pharmacySearch {

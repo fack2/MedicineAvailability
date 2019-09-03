@@ -2,12 +2,12 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import './PharmacyHome.css'
+import Header from '../Header';
 
 
 class PharmacyHome extends Component {
     state = {
         medName: '',
-        pharmacyID: '',
         medResult: ''
     }
 
@@ -17,10 +17,10 @@ class PharmacyHome extends Component {
     }
 
     submitHandler = () => {
-        const { medResult, medName: medName, pharmacyID: pharmacyID } = this.state
+        const { medResult, medName: medName } = this.state
         const { history } = this.props
 
-        axios.get(`/api/pharmacy/${pharmacyID}/medicine/${medName}`).then(({ data }) => {
+        axios.get(`/api/pharmacy/medicine/${medName}`).then(({ data }) => {
             this.setState({
                 medResult: data
             })
@@ -31,8 +31,7 @@ class PharmacyHome extends Component {
     render() {
         return (
             <div>
-                <div className="headerHome " />
-                <div className="logoImg" />
+                <Header />
                 <p className="searchToUpdate">Search to Update</p>
                 <input placeholder='search/edit medicine' className="pharmacySearch" type='text' onChange={this.inputHandler} value={this.state.medName}></input>
                 <button className='searchBtn' type="submit" onClick={this.submitHandler}>Search</button>
