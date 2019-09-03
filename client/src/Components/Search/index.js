@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import './search.css'
+import './style.css'
 
 const Search = props => {
   const { pharmaciesResult, medname, handleSearch, changInput } = props
@@ -8,7 +8,7 @@ const Search = props => {
   return (
     <div>
       <span>
-				The app is an easy way to search for the medicine you need in your next
+        The app is an easy way to search for the medicine you need in your next
 				door pharmacy.
       </span>
       <input

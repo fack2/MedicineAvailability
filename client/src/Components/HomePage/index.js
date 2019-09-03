@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Header from '../Header'
 import Search from '../Search'
 import axios from 'axios'
+import PharmacyHome from '../PharmacyHome';
 
 class HomePage extends Component {
 	state = {
@@ -11,8 +12,8 @@ class HomePage extends Component {
 
 	changeInput = event => {
 		const { target } = event
-		const { value } = target
-		this.setState({ medname: value })
+		const { value, name } = target
+		this.setState({ [name]: value })
 	}
 
 	searchHandler = () => {
@@ -29,6 +30,7 @@ class HomePage extends Component {
 			console.log(pharmaciesResult)
 		})
 	}
+
 	render() {
 		return (
 			<>
