@@ -1,0 +1,87 @@
+.switch {
+  position: absolute;
+  width: 133px;
+  height: 14px;
+  left: 222px;
+  top: 260px;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+
+  color: #000000;
+}
+
+.pharmacySearch {
+  position: absolute;
+  padding-left: 2%;
+  width: 232px;
+  height: 39px;
+  left: 36px;
+  top: 362px;
+}
+
+.searchBtn {
+  position: absolute;
+  width: 57.46px;
+  height: 30.52px;
+  left: 296px;
+  top: 369px;
+
+  background: linear-gradient(180deg, #e7c7ae 0%, rgba(231, 199, 174, 0) 100%);
+}
+
+.searchToUpdate {
+  position: absolute;
+  width: 93px;
+  height: 14px;
+  left: 38px;
+  top: 332px;
+  font-family: Strong;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;
+}
+
+::placeholder {
+  position: absolute;
+  width: 181px;
+  height: 29px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12.5px;
+  line-height: 12px;
+
+  color: #8f8f8f;
+}
+
+.or {
+  position: absolute;
+  width: 276px;
+  height: 29px;
+  left: 53px;
+  top: 469px;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 14px;
+
+  color: #000000;
+}
+
+.addBtn {
+  position: absolute;
+  width: 153px;
+  height: 36px;
+  left: 112px;
+  top: 563px;
+
+  background: linear-gradient(180deg, #e7c7ae 0%, rgba(231, 199, 174, 0) 100%);
+}

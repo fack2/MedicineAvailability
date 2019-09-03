@@ -3,12 +3,14 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Results from './Components/Results'
 import HomePage from './Components/HomePage'
+import PharmacyHome from './Components/PharmacyHome'
 
 const App = () => (
   <Router>
     <React.Fragment>
       <Route exact path="/" component={HomePage} />
-      <Route path="/results" component={Results} />
+      <Route exact path="/results" component={Results} />
+      <Route exact path='/pharmacy' component={PharmacyHome} />
     </React.Fragment>
   </Router>
 )
