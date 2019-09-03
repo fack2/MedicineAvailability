@@ -9,6 +9,11 @@ class AddMedicine extends Component {
 		medCompany: ''
 	}
 
+	updateInput = event => {
+		const { value, name } = event.target
+		this.setState({ [name]: value })
+	}
+
 	render() {
 		return (
 			<div>
@@ -20,24 +25,31 @@ class AddMedicine extends Component {
 					<input
 						className="medName"
 						name="name"
+						onChange={this.updateInput}
 						value={this.state.medName}
 						type="text"
+						name="medName"
 					></input>
 					<label className="price">Price</label>
 					<input
 						className="medPrice"
 						name="price"
+						onChange={this.updateInput}
 						value={this.state.medPrice}
 						type="text"
+						name="medPrice"
 					></input>
 					<label className="company">Company</label>
 					<input
 						className="medCompany"
 						name="company"
+						onChange={this.updateInput}
 						value={this.state.medCompany}
 						type="text"
+						name="medCompany"
 					></input>
-					<input type="checkbox" /> <label className="checkboxLabel">Needs Prescription</label>
+					<input type="checkbox" />
+					<label className="checkboxLabel">Needs Prescription</label>
 					<button type="submit">Add</button>
 				</form>
 			</div>
