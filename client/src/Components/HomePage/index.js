@@ -9,9 +9,7 @@ class HomePage extends Component {
     medicineName: ""
   }
 
-  changeInput = event => {
-    const { target } = event
-    const { value } = target
+  changeInput = ({ target: { value } }) => {
     this.setState({ medicineName: value })
   }
 
