@@ -4,35 +4,29 @@
   right: 0%;
   top: 0%;
   bottom: 0%;
-  width: 375px;
+  width: 426px;
   height: 58px;
   left: 0px;
   top: -1px;
   background: #ebd6c3;
 }
-.logo {
+.logoDiv {
+  background: url(logo2.svg);
+  background-repeat: no-repeat;
   left: 2.4%;
   right: 82.67%;
   top: 15.52%;
   bottom: 10.34%;
-  background: url(logo2.svg);
-  background-repeat: no-repeat;
-}
-.switch {
   position: absolute;
-  left: 60.8%;
-  right: 3.73%;
-  top: 41.38%;
-  bottom: 34.48%;
-
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 14px;
-
-  color: #000000;
 }
+/* 
+.logo1 {
+  left: 2.4%;
+  right: 82.67%;
+  top: 15.52%;
+  bottom: 10.34%;
+} */
+
 .home {
   position: absolute;
   left: 20.53%;
@@ -47,4 +41,18 @@
   line-height: 16px;
 
   color: #a33230;
+}
+
+.switch1 {
+  position: absolute;
+  width: 133px;
+  height: 14px;
+  left: 235px;
+  top: 25px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;
 }
