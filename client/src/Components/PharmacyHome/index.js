@@ -17,7 +17,7 @@ class PharmacyHome extends Component {
     }
 
     submitHandler = () => {
-        const { medResult, medName: medName } = this.state
+        const { medResult, medName: medName, pharmacyID: pharmacyID } = this.state
         const { history } = this.props
 
         axios.get(`/api/pharmacy/${pharmacyID}/medicine/${medName}`).then(({ data }) => {
