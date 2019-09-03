@@ -1,6 +1,5 @@
 // eslint-disable-next-line no-unused-vars
 import React, { Component } from 'react'
-// eslint-disable-next-line no-unused-vars
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Results from './Components/Results'
 import HomePage from './Components/HomePage'
