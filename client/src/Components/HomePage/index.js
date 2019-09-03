@@ -18,10 +18,6 @@ class HomePage extends Component {
   searchHandler = () => {
     const { medicineName } = this.state
     const { history } = this.props
-
-    // This should handle in backend
-    console.log("iii", medicineName)
-
     axios.get(`/api/medicine/${medicineName}`).then(({ data }) => {
       this.setState({
         pharmaciesResult: data
