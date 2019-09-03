@@ -18,6 +18,7 @@ class Login extends Component {
     event.preventDefault()
     const { username, password } = this.state
     axios.post("/api/login", { username, password }).then(data => {
+      //the data what we get from user.js
       console.log(data)
     })
   }
@@ -27,7 +28,7 @@ class Login extends Component {
       <>
         <form onSubmit={this.goLogedin}>
           <input
-            className="searchBars"
+            className="input1"
             value={this.state.username}
             placeholder="username"
             type="text"
@@ -35,14 +36,14 @@ class Login extends Component {
             onChange={this.changName}
           />
           <input
-            className="searchBars"
+            className="input2"
             value={this.state.password}
             placeholder="password"
             type="text"
             name="password"
             onChange={this.changName}
           />
-          <input type="submit" value="Login" />
+          <input type="submit" className="login" value="Login" />
         </form>
       </>
     )
