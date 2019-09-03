@@ -5,14 +5,12 @@ import axios from 'axios'
 import PharmacyHome from '../PharmacyHome';
 
 class HomePage extends Component {
-  state = {
-    pharmaciesResult: "",
-    medicineName: ""
-  }
+	state = {
+		pharmaciesResult: "",
+		medicineName: ""
+	}
 
-	changeInput = event => {
-		const { target } = event
-		const { value, name } = target
+	changeInput = ({ target: { value, name } }) => {
 		this.setState({ [name]: value })
 	}
 
