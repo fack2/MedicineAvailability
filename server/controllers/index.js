@@ -6,6 +6,6 @@ const user = require('./user')
 router.get('/api/medicine/:medname', search.get)
 console.log('in router')
 
-router.get('/api/login', user.get)
+router.post('/api/login', user.get)
 
 module.exports = router
