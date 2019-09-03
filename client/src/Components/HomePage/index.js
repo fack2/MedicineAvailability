@@ -26,6 +26,7 @@ class HomePage extends Component {
       history.push({ pathname: "/results", data })
     })
   }
+
   render() {
     return (
       <>
