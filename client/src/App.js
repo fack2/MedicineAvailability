@@ -4,6 +4,7 @@ import HomePage from './Components/HomePage'
 import Results from './Components/Results'
 import Login from './Components/Login'
 import PharmacyHome from './Components/PharmacyHome'
+import PharmacyInfo from './Components/PharmacyInfo'
 
 const App = () => (
   <Router>
@@ -12,6 +13,7 @@ const App = () => (
       <Route path="/results" component={Results} />
       <Route path="/login" component={Login} />
       <Route path="/pharmacy" component={PharmacyHome} />
+      <Route path="/customer/pharmacy/:pharmacyname" component={PharmacyInfo} />
     </React.Fragment>
   </Router>
 )

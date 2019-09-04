@@ -5,13 +5,16 @@ import NavBar from "../NavBar"
 
 class Results extends Component {
   moveToDetailsPage = item => {
-    console.log("jhjhjhhj", item)
+    const { history } = this.props
+    history.push({
+      pathname: `/customer/pharmacy/${item.pharmacyname}`,
+      data: item
+    })
   }
 
   render() {
     const { data } = this.props.history.location
     const info = data.data
-    console.log("asas")
 
     return (
       <>
