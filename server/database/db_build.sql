@@ -9,7 +9,7 @@ CREATE TABLE medicine
     medicineID serial primary key,
     name VARCHAR(100) NOT NULL,
     img TEXT,
-    description VARCHAR NOT NULL,
+    description VARCHAR,
     prescription boolean NOT NULL,
     company TEXT NOT NULL
 );

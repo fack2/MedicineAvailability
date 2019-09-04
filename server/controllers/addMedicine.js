@@ -4,8 +4,8 @@ exports.addMedicine = (req, res) => {
   addMedicineInfo(req.body)
   const { pharmacyID } = req
   if (req.body) {
-    return res.json({ msg: 'true' })
+    return res.json({ message: 'true' })
   } else {
-    return res.json({ msg: 'false' })
+    return res.json({ message: 'false' })
   }
 }

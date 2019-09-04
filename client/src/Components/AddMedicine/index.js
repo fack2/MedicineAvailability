@@ -9,7 +9,7 @@ class AddMedicine extends Component {
 		medPrice: '',
 		medCompany: '',
 		prescription: false,
-		msg: "false"
+		msg: ''
 	}
 
 	updateInput = event => {
@@ -28,7 +28,7 @@ class AddMedicine extends Component {
 		const { medName, medCompany, prescription } = this.state
 		axios.post('/api/pharmacy/medicine', { medName, medCompany, prescription })
 			.then((res) => {
-				if (res.msg == "true") {
+				if (res.data.message == "true") {
 					this.setState({ msg: "true" })
 					history.push({ data: res })
 				} else {
