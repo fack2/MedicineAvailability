@@ -6,12 +6,17 @@ class AddMedicine extends Component {
 	state = {
 		medName: '',
 		medPrice: '',
-		medCompany: ''
+		medCompany: '',
+		prescription: false
 	}
 
 	updateInput = event => {
 		const { value, name } = event.target
 		this.setState({ [name]: value })
+	}
+
+	toggleCheckbox = () => {
+		this.setState({ prescription: !this.state.prescription })
 	}
 
 	render() {
@@ -24,7 +29,6 @@ class AddMedicine extends Component {
 					<label className="medicineName">Medicine Name</label>
 					<input
 						className="medName"
-						name="name"
 						onChange={this.updateInput}
 						value={this.state.medName}
 						type="text"
@@ -33,7 +37,6 @@ class AddMedicine extends Component {
 					<label className="price">Price</label>
 					<input
 						className="medPrice"
-						name="price"
 						onChange={this.updateInput}
 						value={this.state.medPrice}
 						type="text"
@@ -42,13 +45,17 @@ class AddMedicine extends Component {
 					<label className="company">Company</label>
 					<input
 						className="medCompany"
-						name="company"
 						onChange={this.updateInput}
 						value={this.state.medCompany}
 						type="text"
 						name="medCompany"
 					></input>
-					<input type="checkbox" />
+					<input
+						type="checkbox"
+						name="prescription"
+						onChange={this.toggleCheckbox}
+						value={this.state.prescription}
+					/>
 					<label className="checkboxLabel">Needs Prescription</label>
 					<button type="submit">Add</button>
 				</form>
