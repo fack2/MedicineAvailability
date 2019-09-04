@@ -3,6 +3,8 @@ const { verify } = require('jsonwebtoken')
 const SECRET = process.env.SECRET
 
 exports.auth = (req, res, next) => {
+  console.log('req.headers.cookie', req.headers.cookie)
+
   if (req.headers.cookie) {
     const { token } = cookie.parse(req.headers.cookie)
     verify(token, SECRET, (err, result) => {
@@ -10,7 +12,7 @@ exports.auth = (req, res, next) => {
         return res.json({ error: 'server error' })
       }
       if (result) {
-        req.pharmacyID = token.pharmacyID
+        req.pharmacyID = result.pharmacyID
         return next()
       } else {
         return res.json({ error: 'not Authorized' })

@@ -5,7 +5,7 @@ import Header from "../Header"
 
 class Login extends Component {
   state = {
-    username: "",
+    email: "",
     password: "",
     errorMsg: ""
   }
@@ -18,9 +18,9 @@ class Login extends Component {
 
   goLogedin = event => {
     event.preventDefault()
-    const { username, password } = this.state
+    const { email, password } = this.state
     const { history } = this.props
-    axios.post("/api/login", { username, password }).then(({ data }) => {
+    axios.post("/api/login", { email, password }).then(({ data }) => {
       if (data.msg == "true") {
         history.push("/pharmacy")
         //should continue to pharmacist home
@@ -32,7 +32,7 @@ class Login extends Component {
   }
 
   render() {
-    const { username, password } = this.state
+    const { email, password } = this.state
 
     return (
       <>
@@ -40,10 +40,10 @@ class Login extends Component {
         <form onSubmit={this.goLogedin}>
           <input
             className="input1"
-            value={username}
-            placeholder="username"
+            value={email}
+            placeholder="email"
             type="text"
-            name="username"
+            name="email"
             onChange={this.changName}
           />
           <input

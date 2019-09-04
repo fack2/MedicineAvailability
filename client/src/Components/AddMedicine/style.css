@@ -1,154 +1,154 @@
 h3 {
-	position: absolute;
-	width: 251px;
-	height: 26px;
-	left: 62px;
-	top: 98px;
+  position: absolute;
+  width: 251px;
+  height: 26px;
+  left: 62px;
+  top: 98px;
 
-	font-family: SeoulHangang;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 26px;
-	line-height: 26px;
-	text-align: center;
+  font-family: SeoulHangang;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 26px;
+  text-align: center;
 
-	color: #a33230;
+  color: #a33230;
 }
 
 p {
-	position: absolute;
-	width: 343px;
-	height: 40px;
-	left: 16px;
-	top: 147px;
+  position: absolute;
+  width: 343px;
+  height: 40px;
+  left: 16px;
+  top: 147px;
 
-	font-family: Scope One;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 18px;
-	line-height: 25px;
-	text-align: center;
+  font-family: Scope One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
 
-	color: #8395a7;
+  color: #8395a7;
 }
 
 .medicineName {
-	position: absolute;
-	width: 120px;
-	height: 13px;
-	left: 20px;
-	top: calc(50% - 13px / 2 - 107px);
+  position: absolute;
+  width: 120px;
+  height: 13px;
+  left: 20px;
+  top: calc(50% - 13px / 2 - 107px);
 
-	font-family: Lato;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 19px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
 
-	color: #000000;
+  color: #000000;
 }
 
 .price {
-	position: absolute;
-	width: 106px;
-	height: 13px;
-	left: 9px;
-	top: calc(50% - 13px / 2 - 15px);
+  position: absolute;
+  width: 106px;
+  height: 13px;
+  left: 9px;
+  top: calc(50% - 13px / 2 - 15px);
 
-	font-family: Lato;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 19px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
 
-	color: #000000;
+  color: #000000;
 }
 
 .company {
-	position: absolute;
-	width: 106px;
-	height: 13px;
-	left: 20px;
-	top: calc(50% - 13px / 2 + 71px);
+  position: absolute;
+  width: 106px;
+  height: 13px;
+  left: 20px;
+  top: calc(50% - 13px / 2 + 71px);
 
-	font-family: Lato;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 19px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
 
-	color: #000000;
+  color: #000000;
 }
 
 .medName {
-	position: absolute;
-	width: 333px;
-	height: 40px;
-	left: 21px;
-	top: 247px;
+  position: absolute;
+  width: 333px;
+  height: 40px;
+  left: 21px;
+  top: 247px;
 
-	background: #ffffff;
-	border: 1px solid #8395a7;
-	box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #8395a7;
+  box-sizing: border-box;
 }
 
 .medPrice {
-	position: absolute;
-	width: 335px;
-	height: 40px;
-	left: 19px;
-	top: 338px;
+  position: absolute;
+  width: 335px;
+  height: 40px;
+  left: 19px;
+  top: 338px;
 
-	background: #ffffff;
-	border: 1px solid #8395a7;
-	box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #8395a7;
+  box-sizing: border-box;
 }
 
 .medCompany {
-	position: absolute;
-	width: 335px;
-	height: 40px;
-	left: 19px;
-	top: 426px;
+  position: absolute;
+  width: 335px;
+  height: 40px;
+  left: 19px;
+  top: 426px;
 
-	background: #ffffff;
-	border: 1px solid #8395a7;
-	box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #8395a7;
+  box-sizing: border-box;
 }
 
 input[type="checkbox"] {
-	position: absolute;
-	width: 20px;
-	height: 15px;
-	left: 21px;
-	top: 525px;
+  position: absolute;
+  width: 20px;
+  height: 15px;
+  left: 21px;
+  top: 525px;
 
-	background: #c4c4c4;
+  background: #c4c4c4;
 }
 
-button {
-	position: absolute;
-	width: 178px;
-	height: 35px;
-	left: 98px;
-	top: 596px;
+.addInput {
+  position: absolute;
+  width: 178px;
+  height: 35px;
+  left: 98px;
+  top: 596px;
 
-	background: #ebd6c3;
-	border-radius: 10px;
+  background: #ebd6c3;
+  border-radius: 10px;
 }
 
 .checkboxLabel {
-	position: absolute;
-	width: 174px;
-	height: 15px;
-	left: 52px;
-	top: 522px;
+  position: absolute;
+  width: 174px;
+  height: 15px;
+  left: 52px;
+  top: 522px;
 
-	font-family: Lato;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 19px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
 
-	color: #000000;
+  color: #000000;
 }
