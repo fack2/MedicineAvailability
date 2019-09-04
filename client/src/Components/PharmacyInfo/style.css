@@ -1,0 +1,24 @@
+.pharmName {
+  position: absolute;
+  width: 193px;
+  height: 26px;
+  left: 24px;
+  top: 125px;
+
+  font-family: SeoulHangang;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+
+  color: #a33230;
+}
+.pharmInfo {
+  position: absolute;
+  width: 233px;
+  height: 32px;
+  left: 119px;
+  top: 202px;
+
+  background: rgba(196, 196, 196, 0.2);
+}
