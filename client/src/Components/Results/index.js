@@ -11,11 +11,12 @@ class Results extends Component {
     return (
 			<>
 				<NavBar />
-				{info.map(item => {
+				{info.map((item, i) => {
 				  return (
 				    <CustomerPharmacyInfo
 				      pharmacyname={item.pharmacyname}
 				      price={item.price}
+				      key={i}
 				    />
 				  )
 				})}

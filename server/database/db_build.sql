@@ -1,10 +1,9 @@
 BEGIN;
 
-DROP TABLE IF EXISTS medicine , pharmacy , pharmacy_to_medicine
-CASCADE;
+DROP TABLE IF EXISTS medicine, pharmacy, pharmacy_to_medicine CASCADE;
 
 
-CREATE TABLE medicine
+CREATE TABLE medicine 
 (
     medicineID serial primary key,
     name VARCHAR(100) NOT NULL,
@@ -27,13 +26,13 @@ CREATE TABLE pharmacy
     pharmacyID serial primary key,
     pharmacyName VARCHAR(100) NOT NULL,
     email VARCHAR(50) UNIQUE,
-    password VARCHAR(50) NOT NULL,
+    password VARCHAR(150) NOT NULL,
     phone INTEGER NOT NULL,
     location VARCHAR(150) NOT NULL
 );
 
 INSERT INTO pharmacy (pharmacyName, email, password, phone, location) VALUES ('Al-Eman Pharmacy', 'aleman@gmail.com', '123', '0598403872', 'Ras El-Jora'),
-('Al-Jazera', 'aljazera@gmail.com', '1234', '0594327865', 'Al-Manara square');
+('Al-Jazera', 'aljazera@gmail.com', '$2a$10$D/IX/AtYw5YHT4YWI2B2aOg5ZGMBodHNDx2x6vIbHWomyH4fsJ9SG', '0594327865', 'Al-Manara square');
 
 CREATE TABLE pharmacy_to_medicine
 (

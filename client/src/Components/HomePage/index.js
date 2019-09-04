@@ -2,11 +2,12 @@ import React, { Component } from 'react'
 import Header from '../Header'
 import Search from '../Search'
 import axios from 'axios'
+import PharmacyHome from '../PharmacyHome'
 
 class HomePage extends Component {
 	state = {
 		pharmaciesResult: '',
-		medicineName: ''
+		medname: ''
 	}
 
 	changeInput = ({ target: { value, name } }) => {
@@ -14,17 +15,15 @@ class HomePage extends Component {
 	}
 
 	searchHandler = () => {
-		const { pharmaciesResult, medname: medname } = this.state
+		const { medname } = this.state
 		const { history } = this.props
 
 		// This should handle in backend
 		axios.get(`/api/medicine/${medname}`).then(({ data }) => {
-			console.log(data)
 			this.setState({
 				pharmaciesResult: data
 			})
-			history.push({ pathname: '/results', data: pharmaciesResult })
-			console.log(pharmaciesResult)
+			history.push({ pathname: '/results', data })
 		})
 	}
 
