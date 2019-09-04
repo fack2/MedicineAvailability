@@ -1,18 +1,10 @@
-import React, { Component } from "react"
-import CustomerPharmacyInfo from "../CustomerPharmacyInfo"
-import UserSearchResults from "../UserSearchResults"
-import NavBar from "../NavBar"
+import React, { Component } from 'react'
+import CustomerPharmacyInfo from '../CustomerPharmacyInfo'
+import UserSearchResults from '../UserSearchResults'
+import NavBar from '../NavBar'
 
 class Results extends Component {
-  moveToDetailsPage = item => {
-    const { history } = this.props
-    history.push({
-      pathname: `/customer/pharmacy/${item.pharmacyname}`,
-      data: item
-    })
-  }
-
-  render() {
+  render () {
     const { data } = this.props.history.location
     const info = data.data
 
@@ -25,7 +17,7 @@ class Results extends Component {
               item={item}
               pharmacyname={item.pharmacyname}
               price={item.price}
-              getDetails={this.moveToDetailsPage}
+              history={this.props.history}
               key={i}
             />
           )

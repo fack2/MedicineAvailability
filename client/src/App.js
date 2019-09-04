@@ -12,7 +12,6 @@ const App = () => (
     <React.Fragment>
       <Route exact path="/" component={HomePage} />
       <Route exact path="/results" component={Results} />
-      <Route exact path="/pharmacy" component={PharmacyHome} />
       <Route exact path="/pharmacy/addmed" component={AddMedicine} />
       <Route path="/login" component={Login} />
       <Route path="/pharmacy" component={PharmacyHome} />

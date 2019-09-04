@@ -5,18 +5,14 @@ import './style.css'
 const PharmacyInfo = info => {
   const { location } = info
   const { data } = location
-  console.log(data)
   return (
     <div>
       <NavBar />
       <p className="pharmName">Pharmacy name : {data.pharmacyname}</p>
-      <div className="pharmInfo">
-        <p>Pharmacy location : {data.location}</p>
-        <p>Pharmacy phone : {data.phone}</p>
-        <p>{data.prescription}</p>
-      </div>
+      <p className="location">Pharmacy location : {data.location}</p>
+      <p className="phone">Pharmacy phone : {data.phone}</p>
+      <p className="prescription">prescription : {data.prescription}</p>
     </div>
   )
 }
-//   <div>{info.location.data}</div>
 export default PharmacyInfo
