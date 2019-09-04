@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './style.css'
 
 const Search = props => {
-  const { pharmaciesResult, medname, handleSearch, changInput } = props
+  const { medname, handleSearch, changInput } = props
 
   return (
     <div>

@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
-import CustomerPharmacyInfo from '../CustomerPharmacyInfo'
-import UserSearchResults from '../UserSearchResults'
-import NavBar from '../NavBar'
+import React, { Component } from "react"
+import CustomerPharmacyInfo from "../CustomerPharmacyInfo"
+import UserSearchResults from "../UserSearchResults"
+import NavBar from "../NavBar"
 
 class Results extends Component {
-  render () {
+  render() {
     const { data } = this.props.history.location
     const info = data.data
 
