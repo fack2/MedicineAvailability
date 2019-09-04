@@ -1,0 +1,41 @@
+.pharmName {
+  position: absolute;
+  height: 26px;
+  left: 24px;
+  top: 125px;
+
+  font-family: SeoulHangang;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+
+  color: #a33230;
+}
+.location {
+  position: absolute;
+  width: 233px;
+  height: 32px;
+  left: 119px;
+  top: 202px;
+
+  background: rgba(196, 196, 196, 0.2);
+}
+.phone {
+  position: absolute;
+  width: 233px;
+  height: 32px;
+  left: 119px;
+  top: 258px;
+
+  background: rgba(196, 196, 196, 0.2);
+}
+.prescription {
+  position: absolute;
+  width: 233px;
+  height: 32px;
+  left: 119px;
+  top: 312px;
+
+  background: rgba(196, 196, 196, 0.2);
+}
