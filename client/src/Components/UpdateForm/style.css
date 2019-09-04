@@ -1,0 +1,165 @@
+.name {
+  position: absolute;
+  width: 116px;
+  height: 9px;
+  left: 40px;
+  top: calc(50% - 9px / 2 - 110px);
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #000000;
+}
+.nameStyle {
+  position: absolute;
+  width: 290px;
+  height: 29px;
+  left: 42px;
+  top: 246px;
+
+  background: #ffffff;
+  border: 1px solid #8395a7;
+  box-sizing: border-box;
+}
+
+.price {
+  position: absolute;
+  width: 102px;
+  height: 10px;
+  left: 27px;
+  top: calc(50% - 10px / 2 - 38.5px);
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #000000;
+}
+.priceStyle {
+  position: absolute;
+  width: 290px;
+  height: 29px;
+  left: 42px;
+  top: 317px;
+
+  background: #ffffff;
+  border: 1px solid #8395a7;
+  box-sizing: border-box;
+}
+.company {
+  position: absolute;
+  width: 103px;
+  height: 9px;
+  left: 40px;
+  top: calc(50% - 9px / 2 + 35px);
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #000000;
+}
+
+.companyStyle {
+  position: absolute;
+  width: 292px;
+  height: 29px;
+  left: 40px;
+  top: 389px;
+
+  background: #ffffff;
+  border: 1px solid #8395a7;
+  box-sizing: border-box;
+}
+.description {
+  position: absolute;
+  width: 103px;
+  height: 10px;
+  left: 40px;
+  top: calc(50% - 10px / 2 + 105.5px);
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #000000;
+}
+.descriptionStyle {
+  position: absolute;
+  width: 290px;
+  height: 71px;
+  left: 40px;
+  top: 462px;
+
+  background: #ffffff;
+  border: 1px solid #8395a7;
+  box-sizing: border-box;
+}
+.preseption {
+  position: absolute;
+  width: 20px;
+  height: 15px;
+  left: 42px;
+  top: 554px;
+
+  background: #c4c4c4;
+  position: absolute;
+}
+.preseptionText {
+  position: absolute;
+  width: 174px;
+  height: 15px;
+  left: 73px;
+  top: 555px;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #000000;
+}
+.quantity {
+  position: absolute;
+  width: 20px;
+  height: 15px;
+  left: 42px;
+  top: 580px;
+
+  background: #c4c4c4;
+}
+.quantityText {
+  position: absolute;
+  width: 174px;
+  height: 15px;
+  left: 73px;
+  top: 581px;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #000000;
+}
+.Update {
+  position: absolute;
+  width: 86px;
+  height: 31px;
+  left: 156px;
+  top: 617px;
+
+  background: #ebd6c3;
+  border-radius: 10px;
+}
