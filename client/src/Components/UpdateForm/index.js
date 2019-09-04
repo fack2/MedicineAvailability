@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import "./style.css"
+import axios from "axios"
 
 class UpdateForm extends Component {
   state = {
@@ -8,6 +9,20 @@ class UpdateForm extends Component {
     company: "",
     description: "",
     quantity: false
+    // data: this.props.history.location.data
+  }
+
+  componentDidMount() {
+    console.log(this.props)
+
+    // const { medName } = this.props.params
+    // axios.get(`/api/pharmacy/medicine/${medName}`).then(({ data }) => {
+    //   this.setState({
+    //     data
+    //   })
+
+    //   console.log(data)
+    // })
   }
 
   handleChange = event => {
@@ -19,9 +34,6 @@ class UpdateForm extends Component {
     this.setState({ quantity: !this.state.quantity })
   }
   render() {
-    const { data } = this.props.history.location
-    console.log("data", data)
-
     return (
       <div className="updateForm">
         <form className="restaurantForm">
