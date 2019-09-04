@@ -1,11 +1,11 @@
 const addMedicineInfo = require('../database/queries/addMedicineInfo')
 
 exports.addMedicine = (req, res) => {
-  console.log('lllll', req.body.medicine)
-  console.log('lllkjhjgjull', req.body)
-
-  // addMedicineInfo(req.body.medicine)
-  // console.log(req.pharmacyID)
-  // const { pharmacyID } = req
-  // res.json({ true: 'jhjjjjj' })
+  addMedicineInfo(req.body)
+  const { pharmacyID } = req
+  if (req.body) {
+    return res.json({ msg: 'true' })
+  } else {
+    return res.json({ msg: 'false' })
+  }
 }

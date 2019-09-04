@@ -8,7 +8,8 @@ class AddMedicine extends Component {
 		medName: '',
 		medPrice: '',
 		medCompany: '',
-		prescription: false
+		prescription: false,
+		msg: "false"
 	}
 
 	updateInput = event => {
@@ -24,14 +25,16 @@ class AddMedicine extends Component {
 	AddMedicineInfo = (event) => {
 		event.preventDefault()
 		const { history } = this.props
-		const { medName, medPrice, medCompany, prescription } = this.state
-		axios.post('api/pharmacy/medicine', { medName, medPrice, medCompany, prescription })
-			.then(({ result }) => {
-				console.log("history", result)
-				history.push("/")
+		const { medName, medCompany, prescription } = this.state
+		axios.post('/api/pharmacy/medicine', { medName, medCompany, prescription })
+			.then((res) => {
+				if (res.msg == "true") {
+					this.setState({ msg: "true" })
+					history.push({ data: res })
+				} else {
+					this.setState({ msg: "false" })
+				}
 			})
-
-
 	}
 
 
@@ -75,6 +78,7 @@ class AddMedicine extends Component {
 					/>
 					<label className="checkboxLabel">Needs Prescription</label>
 					<input type="submit" value="Add" className="addInput" />
+					{this.state.msg && <p className="addMsg">Your data has been added</p>}
 				</form>
 			</div>
 		)
