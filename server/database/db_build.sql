@@ -51,11 +51,15 @@ CREATE TABLE pharmacy_to_medicine
 
 );
 
+<<<<<<< HEAD
 INSERT INTO pharmacy_to_medicine
     (medicineID, pharmacyID, soldOut, price)
 VALUES
     (1, 1, false, '25 ILS'),
     (2, 2, true, '19 ILS');
+=======
+INSERT INTO pharmacy_to_medicine(medicineID, pharmacyID, soldOut, price) VALUES (1, 1, false, '25 ILS'), (2, 2, true, '19 ILS'),(1,2,true,'20 ILS');
+>>>>>>> 9d0bcc277c44d3532e79e80d0da421e085849c2a
 
 
 
