@@ -35,6 +35,14 @@ class UpdateForm extends Component {
   }
 
   render() {
+    const {
+      name,
+      quantity,
+      price,
+      company,
+      description,
+      prescription
+    } = this.state
     return (
       <div className="updateForm">
         <form className="upForm">
@@ -45,7 +53,7 @@ class UpdateForm extends Component {
             className="nameStyle"
             type="text"
             name="name"
-            value={this.state.name}
+            value={name}
             placeholder=""
             onChange={this.handleChange}
           />
@@ -56,7 +64,7 @@ class UpdateForm extends Component {
             className="priceStyle"
             type="text"
             name="price"
-            value={this.state.price}
+            value={price}
             placeholder=""
             onChange={this.handleChange}
           />
@@ -67,7 +75,7 @@ class UpdateForm extends Component {
             className="companyStyle"
             type="text"
             name="company"
-            value={this.state.company}
+            value={company}
             placeholder=""
             onChange={this.handleChange}
           />
@@ -78,7 +86,7 @@ class UpdateForm extends Component {
             className="descriptionStyle"
             type="text"
             name="description"
-            value={this.state.description}
+            value={description}
             placeholder=""
             onChange={this.handleChange}
           />
@@ -87,7 +95,7 @@ class UpdateForm extends Component {
             name="prescription"
             className="preseption"
             onChange={this.toggle}
-            checked={this.state.prescription}
+            checked={prescription}
           />
           <label className="preseptionText"> Needs prescription</label>
 
@@ -96,7 +104,7 @@ class UpdateForm extends Component {
             name="quantity"
             onChange={this.toggle}
             className="quantity"
-            checked={this.state.quantity}
+            checked={quantity}
           />
           <label className="quantityText">Quantity out of stock</label>
           <button className="Update" type="submit">
