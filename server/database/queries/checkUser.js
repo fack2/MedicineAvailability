@@ -1,8 +1,9 @@
 const dbConnection = require('./../db_connection')
 
-const checkUser = username => {
+const checkUser = email => {
+
   return dbConnection
-    .query('select password from pharmacy where pharmacyName = $1', [username])
+    .query('select password, pharmacyID from pharmacy where email = $1', [email])
     .then(res => res.rows[0])
     .catch(err => console.log(err))
 }

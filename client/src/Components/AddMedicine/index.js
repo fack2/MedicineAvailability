@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
 import NavBar from './../NavBar'
 import './style.css'
+import axios from 'axios'
 
 class AddMedicine extends Component {
 	state = {
 		medName: '',
 		medPrice: '',
 		medCompany: '',
-		prescription: false
+		prescription: false,
+		msg: '',
+		submitClicked: false
 	}
 
 	updateInput = event => {
@@ -19,13 +22,36 @@ class AddMedicine extends Component {
 		this.setState({ prescription: !this.state.prescription })
 	}
 
+
+	AddMedicineInfo = (event) => {
+		event.preventDefault()
+		const { history } = this.props
+		const { medName, medCompany, medPrice, prescription } = this.state
+		this.setState({ submitClicked: true })
+		if (medName === '' || medCompany === '' || medPrice === '') {
+
+			return
+		}
+
+		axios.post('/api/pharmacy/medicine', { medName, medCompany, prescription })
+			.then((res) => {
+				if (res.data.message == "true") {
+					this.setState({ msg: "true" })
+					history.push({ data: res })
+				}
+			})
+	}
+
+
+
 	render() {
+		const { submitClicked } = this.state
 		return (
 			<div>
 				<NavBar />
 				<h3>Medicine Information</h3>
 				<p>Fill The Form To Add A New Medicine</p>
-				<form>
+				<form onSubmit={this.AddMedicineInfo}>
 					<label className="medicineName">Medicine Name</label>
 					<input
 						className="medName"
@@ -57,7 +83,11 @@ class AddMedicine extends Component {
 						value={this.state.prescription}
 					/>
 					<label className="checkboxLabel">Needs Prescription</label>
-					<button type="submit">Add</button>
+					<input type="submit" value="Add" className="addInput" />
+					{this.state.msg && <p className="addMsg">Your data has been added</p>}
+					{!this.state.medCompany && this.state.submitClicked && <p className="addCompany">Please enter a company</p>}
+					{!this.state.medName && this.state.submitClicked && <p className="addName">Please enter a name </p>}
+					{!this.state.medPrice && this.state.submitClicked && <p className="addPrice">Please enter a price</p>}
 				</form>
 			</div>
 		)
