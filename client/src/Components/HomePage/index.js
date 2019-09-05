@@ -1,44 +1,44 @@
-import React, { Component } from "react"
-import Header from "../Header"
-import Search from "../Search"
-import axios from "axios"
-import PharmacyHome from "../PharmacyHome"
+import React, { Component } from 'react'
+import Header from '../Header'
+import Search from '../Search'
+import axios from 'axios'
+import PharmacyHome from '../PharmacyHome'
 
 class HomePage extends Component {
-  state = {
-    pharmaciesResult: "",
-    medname: ""
-  }
+	state = {
+		pharmaciesResult: '',
+		medname: ''
+	}
 
-  changeInput = ({ target: { value, name } }) => {
-    this.setState({ [name]: value })
-  }
+	changeInput = ({ target: { value, name } }) => {
+		this.setState({ [name]: value })
+	}
 
-  searchHandler = () => {
-    const { medname } = this.state
-    const { history } = this.props
+	searchHandler = () => {
+		const { medname } = this.state
+		const { history } = this.props
 
-    // This should handle in backend
-    axios.get(`/api/medicine/${medname}`).then(({ data }) => {
-      this.setState({
-        pharmaciesResult: data
-      })
-      history.push({ pathname: "/results", data })
-    })
-  }
+		// This should handle in backend
+		axios.get(`/api/medicine/${medname}`).then(({ data }) => {
+			this.setState({
+				pharmaciesResult: data
+			})
+			history.push({ pathname: '/results', data })
+		})
+	}
 
-  render() {
-    return (
-      <>
-        <Header />
-        <Search
-          handleSearch={this.searchHandler}
-          changInput={this.changeInput}
-          medname={this.state.medname}
-          pharmaciesResult={this.state.pharmaciesResult}
-        />
-      </>
-    )
-  }
+	render() {
+		return (
+			<>
+				<Header />
+				<Search
+					handleSearch={this.searchHandler}
+					changInput={this.changeInput}
+					medname={this.state.medname}
+					pharmaciesResult={this.state.pharmaciesResult}
+				/>
+			</>
+		)
+	}
 }
 export default HomePage
