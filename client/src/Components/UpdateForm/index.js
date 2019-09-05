@@ -37,7 +37,7 @@ class UpdateForm extends Component {
   render() {
     return (
       <div className="updateForm">
-        <form className="restaurantForm">
+        <form className="upForm">
           <label class="name" for="name">
             Medicine Name
           </label>
