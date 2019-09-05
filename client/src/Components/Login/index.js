@@ -16,6 +16,24 @@ class Login extends Component {
     this.setState({ [name]: value })
   }
 
+  componentDidMount = () => {
+    const { history } = this.props
+
+    axios.get("/check-auth").then(data => {
+      const { success } = data.data
+
+      if (success == "true") {
+        console.log("im here")
+        this.setState({
+          login: true
+        })
+        history.push("/pharmacy")
+      } else {
+        history.push("/login")
+      }
+    })
+  }
+
   goLogedin = event => {
     event.preventDefault()
     const { email, password } = this.state
