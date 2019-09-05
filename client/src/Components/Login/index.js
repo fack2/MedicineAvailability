@@ -10,6 +10,24 @@ class Login extends Component {
     errorMsg: ""
   }
 
+  componentDidMount = () => {
+    const { history } = this.props
+
+    axios.get("/check-auth").then(data => {
+      const { success } = data.data
+
+      if (success == "true") {
+        console.log("im here")
+        this.setState({
+          login: true
+        })
+        history.push("/pharmacy")
+      } else {
+        history.push("/login")
+      }
+    })
+  }
+
   changName = event => {
     const { target } = event
     const { value, name } = target
