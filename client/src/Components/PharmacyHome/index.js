@@ -9,6 +9,24 @@ class PharmacyHome extends Component {
     medResult: ""
   }
 
+  componentDidMount = () => {
+    const { history } = this.props
+
+    axios.get("/check-auth").then(data => {
+      const { success } = data.data
+
+      if (success == "true") {
+        console.log("im here")
+        this.setState({
+          login: true
+        })
+        history.push("/pharmacy")
+      } else {
+        history.push("/login")
+      }
+    })
+  }
+
   inputHandler = event => {
     const { value } = event.target
     this.setState({ medName: value })
