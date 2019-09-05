@@ -9,7 +9,8 @@ class AddMedicine extends Component {
 		medPrice: '',
 		medCompany: '',
 		prescription: false,
-		msg: ''
+		msg: '',
+		submitClicked: false
 	}
 
 	updateInput = event => {
@@ -25,14 +26,18 @@ class AddMedicine extends Component {
 	AddMedicineInfo = (event) => {
 		event.preventDefault()
 		const { history } = this.props
-		const { medName, medCompany, prescription } = this.state
+		const { medName, medCompany, medPrice, prescription } = this.state
+		this.setState({ submitClicked: true })
+		if (medName === '' || medCompany === '' || medPrice === '') {
+
+			return
+		}
+
 		axios.post('/api/pharmacy/medicine', { medName, medCompany, prescription })
 			.then((res) => {
 				if (res.data.message == "true") {
 					this.setState({ msg: "true" })
 					history.push({ data: res })
-				} else {
-					this.setState({ msg: "false" })
 				}
 			})
 	}
@@ -40,6 +45,7 @@ class AddMedicine extends Component {
 
 
 	render() {
+		const { submitClicked } = this.state
 		return (
 			<div>
 				<NavBar />
@@ -79,6 +85,9 @@ class AddMedicine extends Component {
 					<label className="checkboxLabel">Needs Prescription</label>
 					<input type="submit" value="Add" className="addInput" />
 					{this.state.msg && <p className="addMsg">Your data has been added</p>}
+					{!this.state.medCompany && this.state.submitClicked && <p className="addCompany">Please enter a company</p>}
+					{!this.state.medName && this.state.submitClicked && <p className="addName">Please enter a name </p>}
+					{!this.state.medPrice && this.state.submitClicked && <p className="addPrice">Please enter a price</p>}
 				</form>
 			</div>
 		)

@@ -9,6 +9,6 @@ const { checkAuth } = require('./checkAuth')
 router.get('/api/medicine/:medname', search.get)
 router.get('/check-auth', auth, checkAuth)
 router.post('/api/login', login.get)
-router.post('/api/pharmacy/medicine', auth, addMedicine)
+router.post('/api/pharmacy/medicine', addMedicine)
 
 module.exports = router
