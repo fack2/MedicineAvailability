@@ -9,7 +9,7 @@ CREATE TABLE medicine
     medicineID serial primary key ,
     name VARCHAR(100) UNIQUE,
     img TEXT,
-    description VARCHAR,
+    description VARCHAR NOT NULL,
     prescription boolean NOT NULL,
     company TEXT NOT NULL
 );
@@ -47,16 +47,16 @@ CREATE TABLE pharmacy_to_medicine
     pharmacyID INTEGER,
     FOREIGN KEY (pharmacyID) REFERENCES pharmacy (pharmacyID),
     soldOut boolean,
-    price VARCHAR NOT NULL
+    price INTEGER NOT NULL
 
 );
 
 INSERT INTO pharmacy_to_medicine
     (medicineID, pharmacyID, soldOut, price)
 VALUES
-    (1, 1, false, '25 ILS'),
-    (2, 2, true, '19 ILS'),
-    (1, 2, true, '20 ILS');
+    (1, 1, false, 25),
+    (2, 2, true, 19),
+    (1, 2, true, 20);
 
 
 
