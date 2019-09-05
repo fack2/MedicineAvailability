@@ -6,8 +6,8 @@ BEGIN;
 
 CREATE TABLE medicine
 (
-    medicineID serial primary key,
-    name VARCHAR(100) NOT NULL,
+    medicineID serial primary key ,
+    name VARCHAR(100) UNIQUE,
     img TEXT,
     description VARCHAR,
     prescription boolean NOT NULL,
@@ -46,7 +46,7 @@ CREATE TABLE pharmacy_to_medicine
     FOREIGN KEY (medicineID) REFERENCES medicine (medicineID),
     pharmacyID INTEGER,
     FOREIGN KEY (pharmacyID) REFERENCES pharmacy (pharmacyID),
-    soldOut boolean NOT NULL,
+    soldOut boolean,
     price VARCHAR NOT NULL
 
 );
