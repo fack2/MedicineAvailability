@@ -9,15 +9,11 @@ class UpdatePage extends Component {
     details: ""
   }
   componentDidMount() {
-    console.log(this.props.match.params)
-
     const { medname } = this.props.match.params
     axios.get(`/api/pharmacy/medicine/${medname}`).then(({ data }) => {
       this.setState({
         details: data
       })
-
-      console.log(data)
     })
   }
 

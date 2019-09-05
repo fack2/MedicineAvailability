@@ -13,7 +13,6 @@ class UpdateForm extends Component {
   }
 
   componentDidMount() {
-    console.log("form", this.props.details.price)
     const { details } = this.props
     this.setState({
       price: details.price,
