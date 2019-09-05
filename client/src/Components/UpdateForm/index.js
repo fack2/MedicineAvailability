@@ -8,31 +8,33 @@ class UpdateForm extends Component {
     price: "",
     company: "",
     description: "",
-    quantity: false
-    // data: this.props.history.location.data
+    quantity: false,
+    prescription: false
   }
 
   componentDidMount() {
-    console.log(this.props)
-
-    // const { medName } = this.props.params
-    // axios.get(`/api/pharmacy/medicine/${medName}`).then(({ data }) => {
-    //   this.setState({
-    //     data
-    //   })
-
-    //   console.log(data)
-    // })
+    console.log("form", this.props.details.price)
+    const { details } = this.props
+    this.setState({
+      price: details.price,
+      company: details.company,
+      description: details.description,
+      name: details.name,
+      prescription: details.prescription,
+      quantity: details.soldout
+    })
   }
 
   handleChange = event => {
     const { value, name } = event.target
     this.setState({ [name]: value })
-    console.log("name", value)
   }
-  toggle = () => {
-    this.setState({ quantity: !this.state.quantity })
+
+  toggle = event => {
+    const { name } = event.target
+    this.setState({ [name]: !this.state[name] })
   }
+
   render() {
     return (
       <div className="updateForm">
@@ -70,7 +72,7 @@ class UpdateForm extends Component {
             placeholder=""
             onChange={this.handleChange}
           />
-          <label className="description" for="description">
+          <label className="descriptionForm" for="description">
             Description
           </label>
           <input
@@ -84,8 +86,9 @@ class UpdateForm extends Component {
           <input
             type="checkbox"
             name="prescription"
-            value="true"
             className="preseption"
+            onChange={this.toggle}
+            checked={this.state.prescription}
           />
           <label className="preseptionText"> Needs prescription</label>
 
@@ -94,7 +97,7 @@ class UpdateForm extends Component {
             name="quantity"
             onChange={this.toggle}
             className="quantity"
-            value={this.state.quantity}
+            checked={this.state.quantity}
           />
           <label className="quantityText">Quantity out of stock</label>
           <button className="Update" type="submit">

@@ -1,15 +1,43 @@
-import React, { Component } from 'react'
-import UpdateForm from '../UpdateForm'
-import NavBar from '../NavBar'
-import UserSearchResults from '../UserSearchResults'
+import React, { Component } from "react"
+import UpdateForm from "../UpdateForm"
+import NavBar from "../NavBar"
+import UserSearchResults from "../UserSearchResults"
+import axios from "axios"
 
 class UpdatePage extends Component {
-  render () {
+  state = {
+    details: ""
+  }
+  componentDidMount() {
+    console.log(this.props.match.params)
+
+    const { medname } = this.props.match.params
+    axios.get(`/api/pharmacy/medicine/${medname}`).then(({ data }) => {
+      this.setState({
+        details: data
+      })
+
+      console.log(data)
+    })
+  }
+
+  render() {
+    const { details } = this.state
     return (
       <>
-        <NavBar />
-        <UserSearchResults />
-        <UpdateForm />
+        {!details ? (
+          <h1>loading</h1>
+        ) : (
+          <>
+            <NavBar />
+            <UserSearchResults
+              img={details.img}
+              description={details.description}
+              medicinename={details.name}
+            />
+            <UpdateForm details={details} />
+          </>
+        )}
       </>
     )
   }
