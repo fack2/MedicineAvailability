@@ -1,6 +1,8 @@
 # Medicine Availability
 The app is an easy way to search for the medicine you need in your next door pharmacy.
 
+Website:
+- [MedicineAvailability](https://medicine-availability.herokuapp.com/)
 
 ## User Story 
 - As a user (customer), i want to be able to search for a medicine

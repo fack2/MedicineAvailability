@@ -1,12 +1,30 @@
 import React, { Component } from "react"
-import axios from "axios"
 import "./PharmacyHome.css"
 import Header from "../Header"
+import axios from "axios"
 
 class PharmacyHome extends Component {
   state = {
     medName: "",
-    medResult: ""
+    medResult: "",
+    login: false
+  }
+
+  componentDidMount = () => {
+    const { history } = this.props
+
+    axios.get("/check-auth").then(({ data }) => {
+      const { success } = data
+
+      if (success) {
+        this.setState({
+          login: true
+        })
+        history.push("/pharmacy")
+      } else {
+        history.push("/login")
+      }
+    })
   }
 
   inputHandler = event => {
@@ -19,6 +37,11 @@ class PharmacyHome extends Component {
     const { history } = this.props
 
     history.push(`/pharmacy/medinfo/${medName}`)
+  }
+
+  addButtonHandler = () => {
+    const { history } = this.props
+    history.push("/pharmacy/addmed")
   }
 
   render() {
@@ -45,7 +68,11 @@ class PharmacyHome extends Component {
           --------------------------- OR --------------------------
         </p>
 
-        <button className="addBtn" type="submit">
+        <button
+          onClick={this.addButtonHandler}
+          className="addBtn"
+          type="submit"
+        >
           Add Medicine
         </button>
       </div>

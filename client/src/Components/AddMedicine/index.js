@@ -10,7 +10,25 @@ class AddMedicine extends Component {
     medCompany: "",
     prescription: false,
     msg: "",
-    submitClicked: false
+    submitClicked: false,
+    login: false
+  }
+
+  componentDidMount = () => {
+    const { history } = this.props
+
+    axios.get("/check-auth").then(({ data }) => {
+      const { success } = data
+
+      if (success) {
+        this.setState({
+          login: true
+        })
+        history.push("/pharmacy")
+      } else {
+        history.push("/login")
+      }
+    })
   }
 
   updateInput = event => {
@@ -41,7 +59,6 @@ class AddMedicine extends Component {
       .then(res => {
         if (res.data.message == "true") {
           this.setState({ msg: "true" })
-          history.push({ data: res })
         }
       })
   }
