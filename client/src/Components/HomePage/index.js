@@ -7,7 +7,9 @@ import PharmacyHome from '../PharmacyHome'
 class HomePage extends Component {
 	state = {
 		pharmaciesResult: '',
-		medname: ''
+		medname: '',
+		location: '',
+		pharmacy: ''
 	}
 
 	changeInput = ({ target: { value, name } }) => {
@@ -15,16 +17,26 @@ class HomePage extends Component {
 	}
 
 	searchHandler = () => {
-		const { medname } = this.state
+		const { medname, location, pharmacy } = this.state
 		const { history } = this.props
 
 		// This should handle in backend
-		axios.get(`/api/medicine/${medname}`).then(({ data }) => {
-			this.setState({
-				pharmaciesResult: data
+		axios
+			.get(`/api/medicine/${medname}/${location}/${pharmacy}`)
+			.then(({ data }) => {
+				this.setState({
+					pharmaciesResult: data
+				})
+				history.push({ pathname: '/results', data })
 			})
-			history.push({ pathname: '/results', data })
-		})
+	}
+
+	searchByLocation = ({ target: { value } }) => {
+		this.setState({ location: value })
+	}
+
+	searchByPharmacy = ({ target: { value } }) => {
+		this.setState({ pharmacy: value })
 	}
 
 	render() {
@@ -36,6 +48,10 @@ class HomePage extends Component {
 					changInput={this.changeInput}
 					medname={this.state.medname}
 					pharmaciesResult={this.state.pharmaciesResult}
+					searchByLocation={this.searchByLocation}
+					location={this.state.location}
+					searchByPharmacy={this.searchByPharmacy}
+					pharmacy={this.state.pharmacy}
 				/>
 			</>
 		)
