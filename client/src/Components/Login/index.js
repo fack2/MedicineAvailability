@@ -7,17 +7,17 @@ class Login extends Component {
   state = {
     email: "",
     password: "",
-    errorMsg: ""
+    errorMsg: "",
+    login: false
   }
 
   componentDidMount = () => {
     const { history } = this.props
 
-    axios.get("/check-auth").then(data => {
-      const { success } = data.data
+    axios.get("/check-auth").then(({ data }) => {
+      const { success } = data
 
-      if (success == "true") {
-        console.log("im here")
+      if (success) {
         this.setState({
           login: true
         })
