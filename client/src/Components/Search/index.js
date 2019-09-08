@@ -32,7 +32,7 @@ const Search = props => {
         name="By location"
         onChange={searchByLocation}
       >
-        <option>By Location</option>
+        <option value="">By Location</option>
         <option value="Ras El-Jora">Ras El-Jora</option>
         <option value="Al-Manara square">Al-Manara square</option>
         <option value="Ein Sara">Ein Sara</option>
@@ -43,7 +43,7 @@ const Search = props => {
         onChange={searchByPharmacy}
         className="By-Pharmacy"
       >
-        <option value="By Pharmacy">By Pharnmacy</option>
+        <option value="">By Pharnmacy</option>
         <option value="Al-Eman Pharmacy">Al-Eman Pharmacy</option>
         <option value="Al-Manara square">Al-Manara square</option>
         <option value="Ein Sara">Ein Sara</option>
