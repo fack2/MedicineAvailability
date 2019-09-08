@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "client-install": "cd client && npm install",
     "client": "cd client && npm run start",
     "start": "node ./server/server.js",
-    "server": "nodemon ./sever/server.js ",
+    "server": "nodemon ./server/server.js",
+    "build": "cd client && npm run build",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "eslint": "eslint .",
-    "eslint:fix": "eslint . --fix"
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
