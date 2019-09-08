@@ -4,14 +4,13 @@
   "description": "",
   "scripts": {
     "client-install": "cd client && npm install",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "client": "cd client && npm run start",
     "start": "node ./server/server.js",
     "server": "nodemon ./server/server.js",
     "build": "cd client && npm run build",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "cd client && npm install && npm run build",
-    "db:query": "psql -U staff -d ydrc1 -a -f ./queries.sql"
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
