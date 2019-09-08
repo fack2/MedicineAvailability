@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "client-install": "cd client && npm install",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "client": "cd client && npm run start",
-    "start": "react-scripts start",
-    "server": "nodemon ./sever/server.js ",
+    "start": "node ./server/server.js",
+    "server": "nodemon ./server/server.js",
+    "build": "cd client && npm run build",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "eslint": "eslint .",
-    "eslint:fix": "eslint . --fix",
-    "postinstall": "npm run build"
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "db:query": "psql -U staff -d ydrc1 -a -f ./queries.sql"
   },
   "repository": {
     "type": "git",
