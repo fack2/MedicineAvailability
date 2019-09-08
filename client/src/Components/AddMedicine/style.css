@@ -116,13 +116,12 @@ p {
   box-sizing: border-box;
 }
 
-input[type="checkbox"] {
+.presc {
   position: absolute;
   width: 20px;
   height: 15px;
   left: 21px;
   top: 525px;
-
   background: #c4c4c4;
 }
 
