@@ -7,7 +7,25 @@ class Login extends Component {
   state = {
     email: "",
     password: "",
-    errorMsg: ""
+    errorMsg: "",
+    login: false
+  }
+
+  componentDidMount = () => {
+    const { history } = this.props
+
+    axios.get("/check-auth").then(({ data }) => {
+      const { success } = data
+
+      if (success) {
+        this.setState({
+          login: true
+        })
+        history.push("/pharmacy")
+      } else {
+        history.push("/login")
+      }
+    })
   }
 
   changName = event => {

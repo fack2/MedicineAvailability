@@ -51,13 +51,8 @@ CREATE TABLE pharmacy_to_medicine
 
 );
 
-INSERT INTO pharmacy_to_medicine
-    (medicineID, pharmacyID, soldOut, price)
-VALUES
-    (1, 1, false, 25),
-    (2, 2, true, 19),
-    (1, 2, true, 20);
 
+INSERT INTO pharmacy_to_medicine(medicineID, pharmacyID, soldOut, price) VALUES (1, 1, false, '25 ILS'), (2, 2, true, '19 ILS'),(1,2,true,'20 ILS');
 
 
 COMMIT;
