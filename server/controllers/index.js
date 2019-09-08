@@ -15,6 +15,6 @@ router.get(
 )
 router.get('/check-auth', auth, checkAuth)
 router.post('/api/login', login.get)
-router.post('/api/pharmacy/medicine', addMedicine)
+router.post('/api/pharmacy/medicine', auth, addMedicine)
 
 module.exports = router

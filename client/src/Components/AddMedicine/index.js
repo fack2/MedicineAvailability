@@ -33,7 +33,7 @@ class AddMedicine extends Component {
 			return
 		}
 
-		axios.post('/api/pharmacy/medicine', { medName, medCompany, prescription })
+		axios.post('/api/pharmacy/medicine', { medName, medCompany, prescription, medPrice })
 			.then((res) => {
 				if (res.data.message == "true") {
 					this.setState({ msg: "true" })

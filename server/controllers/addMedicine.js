@@ -6,10 +6,8 @@ exports.addMedicine = (req, res) => {
   if (req.body) {
     axios.get(`https://api.fda.gov/drug/label.json?search=${medName}`).then(res => {
       const description = res.data.results[0].description[0]
-
-      addMedicineInfo(req.body, description)
-
-      // const { pharmacyID } = req
+      const { pharmacyID } = req
+      addMedicineInfo(req.body, description, pharmacyID)
     })
     return res.json({ message: 'true' })
   } else {

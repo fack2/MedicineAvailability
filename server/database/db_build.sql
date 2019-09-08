@@ -6,10 +6,10 @@ BEGIN;
 
 CREATE TABLE medicine
 (
-    medicineID serial primary key,
-    name VARCHAR(100) NOT NULL,
+    medicineID serial primary key ,
+    name VARCHAR(100) UNIQUE,
     img TEXT,
-    description VARCHAR,
+    description VARCHAR NOT NULL,
     prescription boolean NOT NULL,
     company TEXT NOT NULL
 );
@@ -46,21 +46,13 @@ CREATE TABLE pharmacy_to_medicine
     FOREIGN KEY (medicineID) REFERENCES medicine (medicineID),
     pharmacyID INTEGER,
     FOREIGN KEY (pharmacyID) REFERENCES pharmacy (pharmacyID),
-    soldOut boolean NOT NULL,
-    price VARCHAR NOT NULL
+    soldOut boolean,
+    price INTEGER NOT NULL
 
 );
 
-<<<<<<< HEAD
-INSERT INTO pharmacy_to_medicine
-    (medicineID, pharmacyID, soldOut, price)
-VALUES
-    (1, 1, false, '25 ILS'),
-    (2, 2, true, '19 ILS');
-=======
-INSERT INTO pharmacy_to_medicine(medicineID, pharmacyID, soldOut, price) VALUES (1, 1, false, '25 ILS'), (2, 2, true, '19 ILS'),(1,2,true,'20 ILS');
->>>>>>> 9d0bcc277c44d3532e79e80d0da421e085849c2a
 
+INSERT INTO pharmacy_to_medicine(medicineID, pharmacyID, soldOut, price) VALUES (1, 1, false, '25 ILS'), (2, 2, true, '19 ILS'),(1,2,true,'20 ILS');
 
 
 COMMIT;
