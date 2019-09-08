@@ -4,11 +4,12 @@
   "description": "",
   "scripts": {
     "client": "cd client && npm run start",
-    "start": "node ./server/server.js",
+    "start": "react-scripts start",
     "server": "nodemon ./sever/server.js ",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "eslint": "eslint .",
-    "eslint:fix": "eslint . --fix"
+    "eslint:fix": "eslint . --fix",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
