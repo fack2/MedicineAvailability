@@ -1,18 +1,41 @@
-import React from 'react'
-import './style.css'
+import React, { Component } from "react"
+import axios from "axios"
+import "./style.css"
 
-const NavBar = () => (
-  <div className="NavBar">
-    <a className="home" href="">
-      Home
-    </a>
-    <a className="switch1" href="">
-      Continue as a pharmacist
-    </a>
-    <div className="logoDiv">
-      <a className="logo1" href="" />
-    </div>
-  </div>
-)
+class NavBar extends Component {
+  state = {
+    login: "Login"
+  }
+
+  componentDidMount = () => {
+    axios.get("/check-auth").then(({ data }) => {
+      const { success } = data
+      if (success) {
+        this.setState({
+          login: "Logout"
+        })
+      }
+    })
+  }
+
+  render() {
+    return (
+      <div className="NavBar">
+        <a className="home" href="">
+          Home
+        </a>
+        <div>
+          <a className="switch1" href="javascript:void(0)">
+            {this.state.login}
+          </a>
+        </div>
+
+        <div className="logoDiv">
+          <a className="logo1" href="" />
+        </div>
+      </div>
+    )
+  }
+}
 
 export default NavBar
