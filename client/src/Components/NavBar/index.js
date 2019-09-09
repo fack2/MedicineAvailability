@@ -16,28 +16,16 @@ class NavBar extends Component {
     console.log("loging", login)
     if (login) {
       this.setState({
-        loginWord: "Logout"
+        loginWord: "Logout",
+        logPath: "/"
       })
     } else {
       this.setState({
-        loginWord: "Continue as a pharmacist"
+        loginWord: "Continue as a pharmacist",
+        logPath: "/login"
       })
     }
   }
-
-  // anchorClick = e => {
-  //   e.preventDefault()
-
-  //   const { login } = this.state
-  //   const { history } = this.props
-
-  //   if (login == "Login") {
-  //     console.log("hell")
-  //     history.push("/login")
-  //   } else {
-  //     console.log("hello")
-  //   }
-  // }
 
   render() {
     return (
@@ -45,13 +33,9 @@ class NavBar extends Component {
         <a className="home" href="">
           Home
         </a>
-        {/* <div onClick={this.anchorClick}>
-          <a className="switch1" href="javascript:void(0)">
-            {this.state.login}
-          </a>
-        </div> */}
+
         <div onClick={this.anchorClick}>
-          <Link to="login" className="switch1">
+          <Link to={this.state.logPath} className="switch1">
             {this.state.loginWord}
           </Link>
         </div>
