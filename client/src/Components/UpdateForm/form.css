@@ -161,3 +161,15 @@
   background: #ebd6c3;
   border-radius: 10px;
 }
+.updateMsg {
+  position: absolute;
+  height: 20px;
+  left: 29px;
+  top: 642px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 19px;
+  color: green;
+}

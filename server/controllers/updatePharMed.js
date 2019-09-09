@@ -4,14 +4,14 @@ const {
 } = require('../database/queries/updateMedTable')
 
 exports.updateMedForm = (req, res) => {
-  console.log('pa', req.body)
   const { pharmacyID } = req
-  // console.log('ph', pharmacyID)
+  const { medicineid } = req.params
 
-  if (req.body) {
-    updateFormQuery(req.body)
-    updateFormQuery2(req.body, pharmacyID)
-  } else {
-    return res.json({ message: 'false' })
-  }
+  updateFormQuery(req.body, medicineid)
+    .then(() =>
+      updateFormQuery2(req.body, pharmacyID, medicineid)
+        .then(() => res.status(200).json({ updated: true }))
+        .catch(err => res.status(500).json({ err, updated: false }))
+    )
+    .catch(err => res.status(500).json({ err, updated: false }))
 }

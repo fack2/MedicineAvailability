@@ -17,6 +17,6 @@ router.get(
 router.get('/check-auth', auth, checkAuth)
 router.post('/api/login', login.get)
 router.post('/api/pharmacy/medicine', auth, addMedicine)
-router.patch('/api/pharmacy/medicine', auth, updateMedForm)
+router.patch('/api/pharmacy/medicine/:medicineid', auth, updateMedForm)
 
 module.exports = router

@@ -10,7 +10,9 @@ class UpdateForm extends Component {
     description: "",
     quantity: false,
     prescription: false,
-    medicineid: 0
+    medicineid: 0,
+    msg: "",
+    updated: false
   }
 
   componentDidMount() {
@@ -24,14 +26,11 @@ class UpdateForm extends Component {
       quantity: details.soldout,
       medicineid: details.medicineid
     })
-    // const medicineid = details.medicineid
-    console.log("id", details.medicineid)
   }
 
   handleChange = event => {
     const { value, name } = event.target
     this.setState({ [name]: value })
-    // console.log("d", value)
   }
 
   toggle = event => {
@@ -52,17 +51,22 @@ class UpdateForm extends Component {
     } = this.state
 
     axios
-      .patch("/api/pharmacy/medicine", {
+      .patch(`/api/pharmacy/medicine/${medicineid}`, {
         name,
         quantity,
         price,
         company,
         description,
-        prescription,
-        medicineid
+        prescription
       })
-      .then(result => {
-        console.log("here")
+      .then(({ data }) => {
+        console.log("up", data.updated)
+
+        if (data.updated) {
+          this.setState({ updated: true, msg: "Your data has been updated" })
+        } else {
+          this.setState({ updated: true, msg: "request failed" })
+        }
       })
   }
 
@@ -142,6 +146,7 @@ class UpdateForm extends Component {
           <label className="quantityText">Quantity out of stock</label>
           <input className="Update" type="submit" value=" Update" />
           Update
+          {this.state.updated && <p className="updateMsg">{this.state.msg}</p>}
         </form>
       </div>
     )
