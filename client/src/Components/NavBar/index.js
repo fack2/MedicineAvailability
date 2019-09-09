@@ -8,7 +8,7 @@ class NavBar extends Component {
   logout = () => {
     const { history } = this.props
 
-    axios.get("/api/clearcookies").then(() => history.push("/"))
+    axios.get("/api/logout").then(() => history.push("/"))
   }
 
   render() {

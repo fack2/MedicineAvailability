@@ -7,7 +7,7 @@ const { auth } = require('../middlewares/auth')
 const { checkAuth } = require('./checkAuth')
 const getPharmacyMed = require('./getPharmacyMed')
 const { updateMedForm } = require('./updatePharMed')
-const clearCookies = require('./clearCookies')
+const logout = require('./logout')
 
 router.get('/api/medicine/:medname', search.get)
 router.get(
@@ -19,6 +19,6 @@ router.get('/check-auth', auth, checkAuth)
 router.post('/api/login', login.get)
 router.post('/api/pharmacy/medicine', auth, addMedicine)
 router.patch('/api/pharmacy/medicine/:medicineid', auth, updateMedForm)
-router.get('/api/clearcookies', clearCookies.get)
+router.get('/api/logout', logout.get)
 
 module.exports = router
