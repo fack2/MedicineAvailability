@@ -17,14 +17,11 @@ class UpdatePage extends Component {
 
       if (success) {
         {
-          {
-            this.update()
-          }
-          {
-            this.setState({
-              login: true
-            })
-          }
+          this.update()
+
+          this.setState({
+            login: true
+          })
         }
       } else {
         history.push("/login")
