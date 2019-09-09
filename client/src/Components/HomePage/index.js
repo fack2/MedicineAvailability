@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Header from '../Header'
 import Search from '../Search'
 import axios from 'axios'
-
 import PharmacyHome from '../PharmacyHome'
 
 class HomePage extends Component {

@@ -14,20 +14,20 @@ span {
 }
 .searchBar {
   position: absolute;
-  width: 270px;
-  height: 39px;
-  left: 56px;
-  top: 406px;
+  width: 72%;
+  height: 6%;
+  left: 15%;
+  top: 61%;
   border: 1px solid #b6b1b1;
   box-sizing: border-box;
   border-radius: 20px;
 }
 button {
   position: absolute;
-  width: 34px;
-  height: 36.52px;
-  left: 291px;
-  top: 407px;
+  width: 9%;
+  height: 6%;
+  left: 78%;
+  top: 61%;
   border: 1px solid #b6b1b1;
   box-sizing: border-box;
   border-radius: 20px;
@@ -40,11 +40,11 @@ button {
 
 .By-Location {
   position: absolute;
-  width: 271px;
-  height: 40px;
-  left: 55px;
-  top: 469px;
-  padding: 11px;
+  width: 73%;
+  height: 6%;
+  left: 14%;
+  top: 71%;
+  padding: 3%;
   border: 1px solid #b6b1b1;
   box-sizing: border-box;
   border-radius: 20px;
@@ -52,11 +52,11 @@ button {
 
 .By-Pharmacy {
   position: absolute;
-  width: 271px;
-  height: 40px;
-  left: 55px;
-  top: 531px;
-  padding: 11px;
+  width: 73%;
+  height: 6%;
+  left: 14%;
+  top: 80%;
+  padding: 3%;
   border: 1px solid #b6b1b1;
   box-sizing: border-box;
   border-radius: 20px;
