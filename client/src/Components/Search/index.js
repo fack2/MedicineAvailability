@@ -26,7 +26,6 @@ const Search = props => {
         type="text"
         name="medname"
       />
-      {/* <button onClick={handleSearch}>search</button> */}
       <button onClick={handleSearch}> <FontAwesomeIcon icon="search" /> </button>
 
       <select
