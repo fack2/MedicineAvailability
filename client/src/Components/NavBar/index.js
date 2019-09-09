@@ -29,9 +29,9 @@ class NavBar extends Component {
           </div>
         )}
 
-        <div className="logoDiv">
+        <Link to="/" className="logoDiv">
           <a className="logo1" href="" />
-        </div>
+        </Link>
       </div>
     )
   }
