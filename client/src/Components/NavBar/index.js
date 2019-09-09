@@ -7,19 +7,20 @@ import "./style.css"
 class NavBar extends Component {
   state = {
     loginWord: "",
-    logPath:""
+    logPath: ""
   }
 
-  componentDidMount = ({ login }) => {
+  componentDidMount = () => {
     const { loginWord } = this.state
-    console.log("loging",login)
+    const { login } = this.props
+    console.log("loging", login)
     if (login) {
       this.setState({
-        loginWord = "Logout"
-      })}
-     else {
+        loginWord: "Logout"
+      })
+    } else {
       this.setState({
-        loginWord = "Continue as a pharmacist"
+        loginWord: "Continue as a pharmacist"
       })
     }
   }
@@ -50,8 +51,8 @@ class NavBar extends Component {
           </a>
         </div> */}
         <div onClick={this.anchorClick}>
-          <Link to={logPath} className="switch1">
-            {this.state.login}
+          <Link to="login" className="switch1">
+            {this.state.loginWord}
           </Link>
         </div>
 

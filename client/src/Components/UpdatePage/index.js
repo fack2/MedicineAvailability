@@ -44,6 +44,7 @@ class UpdatePage extends Component {
           <h1>loading</h1>
         ) : (
           <>
+            <NavBar login={this.state.login} />
             <UserSearchResults
               img={details.img}
               description={details.description}

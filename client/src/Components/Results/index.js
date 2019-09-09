@@ -10,7 +10,7 @@ class Results extends Component {
 
     return (
       <>
-        <NavBar />
+        <NavBar login={false} />
         {info.map((item, i) => {
           return (
             <CustomerPharmacyInfo
