@@ -19,22 +19,21 @@ class HomePage extends Component {
 	searchHandler = () => {
 		const { medname, location, pharmacy } = this.state
 		const { history } = this.props
-		let url = ''
-		if (!location && !pharmacy) {
-			url = `/api/medicine/${medname}`
-		} else if (!location) {
-			url = `/api/medicine/${medname}/${pharmacy}`
-		} else if (!pharmacy) {
-			url = `/api/medicine/${medname}/${location}`
-		} else {
-			url = `/api/medicine/${medname}/${location}/${pharmacy}`
-		}
+
 		// This should handle in backend
-		axios.get(url).then(({ data }) => {
-			this.setState({
-				pharmaciesResult: data
-			})
-			history.push({ pathname: '/results', data })
+		axios.get(`/api/medicine/${medname}`).then(({ data }) => {
+			let result = ""
+			if (location && pharmacy) {
+				result = data.data.filter(ele => ele.location == location && ele.pharmacyname == pharmacy)
+			} else if (location) {
+				result = data.data.filter(ele => ele.location = location)
+			} else if (pharmacy) {
+				result = data.data.filter(ele => ele.pharmacy = pharmacy)
+			} else {
+				result = data.data
+			}
+			this.setState({ pharmaciesResult: result })
+			history.push({ pathname: '/results', result })
 		})
 	}
 
