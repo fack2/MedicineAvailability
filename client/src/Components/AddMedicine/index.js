@@ -24,7 +24,6 @@ class AddMedicine extends Component {
         this.setState({
           login: true
         })
-        history.push("/pharmacy")
       } else {
         history.push("/login")
       }

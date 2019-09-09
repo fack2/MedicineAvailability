@@ -1,46 +1,63 @@
 span {
-	position: absolute;
-	width: 268px;
-	height: 79px;
-	left: 56px;
-	top: 327px;
-	font-family: Karla Tamil Inclined;
-	font-style: italic;
-	font-weight: normal;
-	font-size: 13px;
-	line-height: 15px;
+  position: absolute;
+  width: 268px;
+  height: 79px;
+  left: 56px;
+  top: 327px;
+  font-family: Karla Tamil Inclined;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 15px;
 
-	color: #000000;
+  color: #000000;
 }
 .searchBar {
-	position: absolute;
-	width: 232px;
-	height: 39px;
-	left: 56px;
-	top: 406px;
+  position: absolute;
+  width: 270px;
+  height: 39px;
+  left: 56px;
+  top: 406px;
+  border: 1px solid #b6b1b1;
+  box-sizing: border-box;
+  border-radius: 20px;
 }
 button {
-	position: absolute;
-	width: 50px;
-	height: 27.52px;
-	left: 310px;
-	top: 411px;
+  position: absolute;
+  width: 34px;
+  height: 36.52px;
+  left: 291px;
+  top: 407px;
+  border: 1px solid #b6b1b1;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background: linear-gradient(
+    180deg,
+    #e8cdb8 0%,
+    rgba(234, 202, 179, 0.35) 100%
+  );
 }
 
 .By-Location {
-	position: absolute;
-	width: 236px;
-	height: 40px;
-	left: 55px;
-	top: 469px;
-	padding: 11px;
+  position: absolute;
+  width: 271px;
+  height: 40px;
+  left: 55px;
+  top: 469px;
+  padding: 11px;
+  border: 1px solid #b6b1b1;
+  box-sizing: border-box;
+  border-radius: 20px;
 }
 
 .By-Pharmacy {
-	position: absolute;
-	width: 236px;
-	height: 40px;
-	left: 55px;
-	top: 531px;
-	padding: 11px;
+  position: absolute;
+  width: 271px;
+  height: 40px;
+  left: 55px;
+  top: 531px;
+  padding: 11px;
+  border: 1px solid #b6b1b1;
+  box-sizing: border-box;
+  border-radius: 20px;
 }
