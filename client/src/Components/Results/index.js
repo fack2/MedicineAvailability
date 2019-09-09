@@ -5,13 +5,18 @@ import NavBar from '../NavBar'
 
 class Results extends Component {
   render () {
-    const { data } = this.props.history.location
-    const info = data.data
+    // const { data } = this.props.history.location
+    // const info = data.data
+    const data1 = sessionStorage.getItem('results')
+    const info = JSON.parse(data1)
+    console.log('form', info.data)
 
     return (
       <>
         <NavBar />
-        {info.map((item, i) => {
+        {info.data.map((item, i) => {
+          console.log('item', item)
+
           return (
             <CustomerPharmacyInfo
               item={item}
@@ -23,9 +28,9 @@ class Results extends Component {
           )
         })}
         <UserSearchResults
-          img={info[0].img}
-          description={info[0].description}
-          medicinename={info[0].medicinename}
+          img={info.data[0].img}
+          description={info.data[0].description}
+          medicinename={info.data[0].medicinename}
         />
       </>
     )

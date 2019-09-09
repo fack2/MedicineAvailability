@@ -1,5 +1,4 @@
 h3 {
-  position: absolute;
   width: 251px;
   height: 26px;
   left: 62px;
@@ -16,7 +15,6 @@ h3 {
 }
 
 p {
-  position: absolute;
   width: 343px;
   height: 40px;
   left: 16px;
