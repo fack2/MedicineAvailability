@@ -15,7 +15,7 @@ const Search = props => {
   return (
     <div>
       <span>
-				The app is an easy way to search for the medicine you need in your next
+        The app is an easy way to search for the medicine you need in your next
 				door pharmacy.
       </span>
       <input
@@ -43,10 +43,9 @@ const Search = props => {
         onChange={searchByPharmacy}
         className="By-Pharmacy"
       >
-        <option value="">By Pharnmacy</option>
+        <option value="">By Pharmacy</option>
         <option value="Al-Eman Pharmacy">Al-Eman Pharmacy</option>
-        <option value="Al-Manara square">Al-Manara square</option>
-        <option value="Ein Sara">Ein Sara</option>
+        <option value="Al-Jazera">Al-Jazera</option>
       </select>
     </div>
   )
