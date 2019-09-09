@@ -15,9 +15,7 @@ const updateFormQuery2 = (medicine, pharmacyID, medicineid) => {
       ' update pharmacy_to_medicine set price=$1, soldOut=$2 where medicineID= $3 and pharmacyID =$4',
       [medicine.price, medicine.soldOut, medicineid, pharmacyID]
     )
-    .then(res => {
-      console.log(res => res.rows[0])
-    })
+    .then(res => res => res.rows[0])
     .catch(err => console.log(err))
 }
 module.exports = { updateFormQuery, updateFormQuery2 }
