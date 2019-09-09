@@ -28,6 +28,7 @@ class NavBar extends Component {
     const { loginWord } = this.state
 
     if (loginWord == "Logout") {
+      axios.get("/api/clearcookies").then = () => {}
       history.push("/")
     } else {
       history.push("/login")
