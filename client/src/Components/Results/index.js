@@ -12,8 +12,6 @@ class Results extends Component {
       <>
         <NavBar />
         {info.data.map((item, i) => {
-          console.log('item', item)
-
           return (
             <CustomerPharmacyInfo
               item={item}
