@@ -5,48 +5,29 @@ import axios from "axios"
 import "./style.css"
 
 class NavBar extends Component {
-  state = {
-    loginWord: ""
-  }
-
-  componentDidMount = () => {
-    const { loginWord } = this.state
-    const { login } = this.props
-    if (login) {
-      this.setState({
-        loginWord: "Logout"
-      })
-    } else {
-      this.setState({
-        loginWord: "Continue as a pharmacist"
-      })
-    }
-  }
-
-  checklogin = () => {
+  logout = () => {
     const { history } = this.props
-    const { loginWord } = this.state
 
-    if (loginWord == "Logout") {
-      axios.get("/api/clearcookies").then = () => {}
-      history.push("/")
-    } else {
-      history.push("/login")
-    }
+    axios.get("/api/clearcookies").then(() => history.push("/"))
   }
 
   render() {
+    const { login } = this.props
     return (
       <div className="NavBar">
-        <a className="home" href="">
+        <Link to="/" className="home">
           Home
-        </a>
+        </Link>
 
-        <div onClick={this.anchorClick}>
-          <div onClick={this.checklogin} className="switch1">
-            {this.state.loginWord}
+        {login ? (
+          <div onClick={this.logout} className="switch1">
+            Logout
           </div>
-        </div>
+        ) : (
+          <div className="switch1">
+            <Link to="/login">Continue as a pharmacist</Link>
+          </div>
+        )}
 
         <div className="logoDiv">
           <a className="logo1" href="" />

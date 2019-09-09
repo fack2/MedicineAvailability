@@ -19,12 +19,10 @@ class AddMedicine extends Component {
 
     axios.get("/check-auth").then(({ data }) => {
       const { success } = data
-
       if (success) {
         this.setState({
           login: true
         })
-        history.push("/pharmacy")
       } else {
         history.push("/login")
       }
