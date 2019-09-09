@@ -96,6 +96,7 @@ class AddMedicine extends Component {
             name="medCompany"
           ></input>
           <input
+            className="presc"
             type="checkbox"
             name="prescription"
             onChange={this.toggleCheckbox}

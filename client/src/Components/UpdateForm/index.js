@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import "./style.css"
+import "./form.css"
 import axios from "axios"
 
 class UpdateForm extends Component {
@@ -9,7 +9,10 @@ class UpdateForm extends Component {
     company: "",
     description: "",
     quantity: false,
-    prescription: false
+    prescription: false,
+    medicineid: 0,
+    msg: "",
+    updated: false
   }
 
   componentDidMount() {
@@ -20,7 +23,8 @@ class UpdateForm extends Component {
       description: details.description,
       name: details.name,
       prescription: details.prescription,
-      quantity: details.soldout
+      quantity: details.soldout,
+      medicineid: details.medicineid
     })
   }
 
@@ -32,6 +36,36 @@ class UpdateForm extends Component {
   toggle = event => {
     const { name } = event.target
     this.setState({ [name]: !this.state[name] })
+  }
+  updateFormInfo = event => {
+    event.preventDefault()
+
+    const {
+      name,
+      company,
+      price,
+      description,
+      quantity,
+      prescription,
+      medicineid
+    } = this.state
+
+    axios
+      .patch(`/api/pharmacy/medicine/${medicineid}`, {
+        name,
+        quantity,
+        price,
+        company,
+        description,
+        prescription
+      })
+      .then(({ data }) => {
+        if (data.updated) {
+          this.setState({ updated: true, msg: "Your data has been updated" })
+        } else {
+          this.setState({ updated: true, msg: "request failed" })
+        }
+      })
   }
 
   render() {
@@ -45,8 +79,8 @@ class UpdateForm extends Component {
     } = this.state
     return (
       <div className="updateForm">
-        <form className="upForm">
-          <label class="name" for="name">
+        <form onSubmit={this.updateFormInfo} className="upForm">
+          <label className="name" htmlFor="name">
             Medicine Name
           </label>
           <input
@@ -56,8 +90,9 @@ class UpdateForm extends Component {
             value={name}
             placeholder=""
             onChange={this.handleChange}
+            disabled
           />
-          <label class="price" for="price">
+          <label className="price" htmlFor="price">
             Price
           </label>
           <input
@@ -68,7 +103,7 @@ class UpdateForm extends Component {
             placeholder=""
             onChange={this.handleChange}
           />
-          <label className="company" for="company">
+          <label className="company" htmlFor="company">
             Company
           </label>
           <input
@@ -79,7 +114,7 @@ class UpdateForm extends Component {
             placeholder=""
             onChange={this.handleChange}
           />
-          <label className="descriptionForm" for="description">
+          <label className="descriptionForm" htmlFor="description">
             Description
           </label>
           <input
@@ -89,6 +124,7 @@ class UpdateForm extends Component {
             value={description}
             placeholder=""
             onChange={this.handleChange}
+            disabled
           />
           <input
             type="checkbox"
@@ -97,8 +133,10 @@ class UpdateForm extends Component {
             onChange={this.toggle}
             checked={prescription}
           />
-          <label className="preseptionText"> Needs prescription</label>
-
+          <label className="preseptionText" htmlFor="prescription">
+            {" "}
+            Needs prescription
+          </label>
           <input
             type="checkbox"
             name="quantity"
@@ -106,11 +144,12 @@ class UpdateForm extends Component {
             className="quantity"
             checked={quantity}
           />
-          <label className="quantityText">Quantity out of stock</label>
-          <button className="Update" type="submit">
-            {" "}
-            Update
-          </button>
+          <label className="quantityText" htmlFor="quantity">
+            Quantity out of stock
+          </label>
+          <input className="Update" type="submit" value=" Update" />
+          Update
+          {this.state.updated && <p className="updateMsg">{this.state.msg}</p>}
         </form>
       </div>
     )
