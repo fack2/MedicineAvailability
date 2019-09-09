@@ -60,8 +60,6 @@ class UpdateForm extends Component {
         prescription
       })
       .then(({ data }) => {
-        console.log("up", data.updated)
-
         if (data.updated) {
           this.setState({ updated: true, msg: "Your data has been updated" })
         } else {
@@ -82,7 +80,7 @@ class UpdateForm extends Component {
     return (
       <div className="updateForm">
         <form onSubmit={this.updateFormInfo} className="upForm">
-          <label className="name" for="name">
+          <label className="name" htmlFor="name">
             Medicine Name
           </label>
           <input
@@ -94,7 +92,7 @@ class UpdateForm extends Component {
             onChange={this.handleChange}
             disabled
           />
-          <label className="price" for="price">
+          <label className="price" htmlFor="price">
             Price
           </label>
           <input
@@ -105,7 +103,7 @@ class UpdateForm extends Component {
             placeholder=""
             onChange={this.handleChange}
           />
-          <label className="company" for="company">
+          <label className="company" htmlFor="company">
             Company
           </label>
           <input
@@ -116,7 +114,7 @@ class UpdateForm extends Component {
             placeholder=""
             onChange={this.handleChange}
           />
-          <label className="descriptionForm" for="description">
+          <label className="descriptionForm" htmlFor="description">
             Description
           </label>
           <input
@@ -135,7 +133,10 @@ class UpdateForm extends Component {
             onChange={this.toggle}
             checked={prescription}
           />
-          <label className="preseptionText"> Needs prescription</label>
+          <label className="preseptionText" htmlFor="prescription">
+            {" "}
+            Needs prescription
+          </label>
           <input
             type="checkbox"
             name="quantity"
@@ -143,7 +144,9 @@ class UpdateForm extends Component {
             className="quantity"
             checked={quantity}
           />
-          <label className="quantityText">Quantity out of stock</label>
+          <label className="quantityText" htmlFor="quantity">
+            Quantity out of stock
+          </label>
           <input className="Update" type="submit" value=" Update" />
           Update
           {this.state.updated && <p className="updateMsg">{this.state.msg}</p>}
