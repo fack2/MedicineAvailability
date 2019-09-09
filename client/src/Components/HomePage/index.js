@@ -24,21 +24,11 @@ class HomePage extends Component {
 		axios.get(`/api/medicine/${medname}`).then(({ data }) => {
 			let result = ""
 			if (location && pharmacy) {
-				result = data.data.filter(ele => {
-
-
-					if (ele.location == location && ele.pharmacyname == pharmacy) {
-						return ele
-					}
-				})
-			}
-			else if (location) {
+				result = data.data.filter(ele => ele.location == location && ele.pharmacyname == pharmacy)
+			} else if (location) {
 				result = data.data.filter(ele => ele.location = location)
-
 			} else if (pharmacy) {
 				result = data.data.filter(ele => ele.pharmacy = pharmacy)
-
-
 			} else {
 				result = data.data
 			}
@@ -46,9 +36,6 @@ class HomePage extends Component {
 			history.push({ pathname: '/results', result })
 		})
 	}
-
-
-
 
 	searchByLocation = ({ target: { value } }) => {
 		this.setState({ location: value })
