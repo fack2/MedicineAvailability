@@ -6,9 +6,28 @@ import axios from "axios"
 
 class UpdatePage extends Component {
   state = {
-    details: ""
+    details: "",
+    login: false
   }
-  componentDidMount() {
+  componentDidMount = () => {
+    const { history } = this.props
+
+    axios.get("/check-auth").then(({ data }) => {
+      const { success } = data
+
+      if (success) {
+        this.update()
+
+        this.setState({
+          login: true
+        })
+      } else {
+        history.push("/login")
+      }
+    })
+  }
+
+  update = () => {
     const { medname } = this.props.match.params
     axios.get(`/api/pharmacy/medicine/${medname}`).then(({ data }) => {
       this.setState({
