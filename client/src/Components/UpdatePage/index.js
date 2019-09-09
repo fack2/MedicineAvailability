@@ -25,7 +25,6 @@ class UpdatePage extends Component {
           <h1>loading</h1>
         ) : (
           <>
-            <NavBar />
             <UserSearchResults
               img={details.img}
               description={details.description}

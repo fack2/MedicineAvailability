@@ -1,22 +1,42 @@
 import React, { Component } from "react"
+import { Link } from "react-router-dom"
+
 import axios from "axios"
 import "./style.css"
 
 class NavBar extends Component {
   state = {
-    login: "Login"
+    loginWord: "",
+    logPath:""
   }
 
-  componentDidMount = () => {
-    axios.get("/check-auth").then(({ data }) => {
-      const { success } = data
-      if (success) {
-        this.setState({
-          login: "Logout"
-        })
-      }
-    })
+  componentDidMount = ({ login }) => {
+    const { loginWord } = this.state
+    console.log("loging",login)
+    if (login) {
+      this.setState({
+        loginWord = "Logout"
+      })}
+     else {
+      this.setState({
+        loginWord = "Continue as a pharmacist"
+      })
+    }
   }
+
+  // anchorClick = e => {
+  //   e.preventDefault()
+
+  //   const { login } = this.state
+  //   const { history } = this.props
+
+  //   if (login == "Login") {
+  //     console.log("hell")
+  //     history.push("/login")
+  //   } else {
+  //     console.log("hello")
+  //   }
+  // }
 
   render() {
     return (
@@ -24,10 +44,15 @@ class NavBar extends Component {
         <a className="home" href="">
           Home
         </a>
-        <div>
+        {/* <div onClick={this.anchorClick}>
           <a className="switch1" href="javascript:void(0)">
             {this.state.login}
           </a>
+        </div> */}
+        <div onClick={this.anchorClick}>
+          <Link to={logPath} className="switch1">
+            {this.state.login}
+          </Link>
         </div>
 
         <div className="logoDiv">

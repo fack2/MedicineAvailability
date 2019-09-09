@@ -7,7 +7,7 @@ const PharmacyInfo = info => {
   const { data } = location
   return (
     <div>
-      <NavBar />
+      <NavBar login={login:false}/>
       <p className="pharmName">Pharmacy name : {data.pharmacyname}</p>
       <p className="location">Pharmacy location : {data.location}</p>
       <p className="phone">Pharmacy phone : {data.phone}</p>

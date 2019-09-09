@@ -67,7 +67,7 @@ class AddMedicine extends Component {
     const { submitClicked } = this.state
     return (
       <div>
-        <NavBar />
+        <NavBar login={this.state.login} />
         <h3>Medicine Information</h3>
         <p>Fill The Form To Add A New Medicine</p>
         <form onSubmit={this.AddMedicineInfo}>

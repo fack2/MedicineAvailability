@@ -17,7 +17,11 @@ const App = () => (
       <Route exact path="/login" component={Login} />
       <Route exact path="/pharmacy" component={PharmacyHome} />
       <Route exact path="/pharmacy/medinfo/:medname" component={UpdatePage} />
-      <Route exact path="/customer/pharmacy/:pharmacyname" component={PharmacyInfo} />
+      <Route
+        exact
+        path="/customer/pharmacy/:pharmacyname"
+        component={PharmacyInfo}
+      />
     </React.Fragment>
   </Router>
 )
