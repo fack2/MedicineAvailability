@@ -62,10 +62,10 @@ class AddMedicine extends Component {
   }
 
   render() {
-    const { submitClicked } = this.state
+    const { submitClicked, login } = this.state
     return (
       <div>
-        <NavBar login={this.state.login} {...this.props} />
+        <NavBar login={login} {...this.props} />
         <h3>Medicine Information</h3>
         <p>Fill The Form To Add A New Medicine</p>
         <form onSubmit={this.AddMedicineInfo}>

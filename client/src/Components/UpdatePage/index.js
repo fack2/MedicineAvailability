@@ -37,14 +37,14 @@ class UpdatePage extends Component {
   }
 
   render() {
-    const { details } = this.state
+    const { details, login } = this.state
     return (
       <>
         {!details ? (
           <h1>loading</h1>
         ) : (
           <>
-            <NavBar login={this.state.login} {...this.props} />
+            <NavBar login={login} {...this.props} />
             <UserSearchResults
               img={details.img}
               description={details.description}
