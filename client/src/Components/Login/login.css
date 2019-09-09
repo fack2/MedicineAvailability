@@ -34,3 +34,7 @@
   box-sizing: border-box;
   border-radius: 20px;
 }
+
+::placeholder {
+  padding-left: 5%;
+}
