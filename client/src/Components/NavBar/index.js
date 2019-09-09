@@ -6,24 +6,31 @@ import "./style.css"
 
 class NavBar extends Component {
   state = {
-    loginWord: "",
-    logPath: ""
+    loginWord: ""
   }
 
   componentDidMount = () => {
     const { loginWord } = this.state
     const { login } = this.props
-    console.log("loging", login)
     if (login) {
       this.setState({
-        loginWord: "Logout",
-        logPath: "/"
+        loginWord: "Logout"
       })
     } else {
       this.setState({
-        loginWord: "Continue as a pharmacist",
-        logPath: "/login"
+        loginWord: "Continue as a pharmacist"
       })
+    }
+  }
+
+  checklogin = () => {
+    const { history } = this.props
+    const { loginWord } = this.state
+
+    if (loginWord == "Logout") {
+      history.push("/")
+    } else {
+      history.push("/login")
     }
   }
 
@@ -35,9 +42,9 @@ class NavBar extends Component {
         </a>
 
         <div onClick={this.anchorClick}>
-          <Link to={this.state.logPath} className="switch1">
+          <div onClick={this.checklogin} className="switch1">
             {this.state.loginWord}
-          </Link>
+          </div>
         </div>
 
         <div className="logoDiv">
