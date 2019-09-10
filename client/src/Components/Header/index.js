@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom'
 const Header = props => (
   <div className="header1">
     <div className="logo" />
-    <Link className="switch" to={props.switch ? '/login' : '/'}>
-      {props.switch ? 'Continue as a pharmacist' : 'Switch to normal user'}
+    <Link className="switch" to={props.home ? '/login' : '/'}>
+      {props.home ? 'Continue as a pharmacist' : 'Switch to normal user'}
     </Link>
   </div>
 )

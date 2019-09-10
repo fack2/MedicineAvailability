@@ -48,7 +48,7 @@ class PharmacyHome extends Component {
   render() {
     return (
       <div>
-        <Header switch={false} />
+        <Header home={false} />
         <p className="searchToUpdate">Search to Update</p>
         <input
           placeholder="search/edit medicine"

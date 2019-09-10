@@ -1,20 +1,13 @@
-import React, { Component } from "react"
-import Header from "../Header/"
-import Search from "../Search/"
-import axios from "axios"
+import React from 'react'
+import Header from '../Header/'
+import Search from '../Search/'
 
-class HomePage extends Component {
-  state = {
-    clicked: false
-  }
-
-  render() {
-    return (
-      <>
-        <Header switch={true} />
-        <Search {...this.props} />
-      </>
-    )
-  }
+const HomePage = props => {
+  return (
+    <>
+      <Header home={true} />
+      <Search {...props} />
+    </>
+  )
 }
 export default HomePage
