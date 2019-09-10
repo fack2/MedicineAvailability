@@ -5,7 +5,7 @@ import Search from '../Search/'
 const HomePage = props => {
   return (
     <>
-      <Header />
+      <Header home={true} />
       <Search {...props} />
     </>
   )
