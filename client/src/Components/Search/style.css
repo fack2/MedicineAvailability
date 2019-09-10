@@ -44,3 +44,30 @@ button {
 	top: 531px;
 	padding: 11px;
 }
+.noMedicineName {
+	position: absolute;
+	width: 343px;
+	height: 40px;
+	left: -39px;
+	top: 371px;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 25px;
+	text-align: center;
+	color: #dc3c3c;
+}
+
+.noResult {
+	position: absolute;
+	width: 343px;
+	height: 40px;
+	left: -71px;
+	top: 371px;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 25px;
+	text-align: center;
+	color: #dc3c3c;
+}
