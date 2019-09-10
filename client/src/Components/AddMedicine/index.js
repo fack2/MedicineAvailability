@@ -57,14 +57,11 @@ class AddMedicine extends Component {
         medPrice
       })
       .then(res => {
-        console.log("there is res", res)
-
-        const { message } = res.data
-        console.log("message", message)
-        if (message == "error") {
-          this.setState({ msg: "false" })
-        } else if (message == "true") {
-          this.setState({ msg: "true" })
+        const { add, message } = res.data
+        if (add && message == "done") {
+          this.setState({ msg: message })
+        } else {
+          this.setState({ msg: message })
         }
       })
   }
@@ -110,12 +107,7 @@ class AddMedicine extends Component {
           />
           <label className="checkboxLabel">Needs Prescription</label>
           <input type="submit" value="Add" className="addInput" />
-          {console.log("this.state.msg", this.state.msg)}
-          {this.state.msg === "true" ? (
-            <p className="addMsg">Your data has been added</p>
-          ) : (
-            <p className="addMsg">Enter Medicine doesn`t exist in our API</p>
-          )}
+          {this.state.msg && <p className="addMsg">{this.state.msg}</p>}
           {!this.state.medCompany && this.state.submitClicked && (
             <p className="addCompany">Please enter a company</p>
           )}
