@@ -19,7 +19,6 @@ class AddMedicine extends Component {
 
     axios.get("/check-auth").then(({ data }) => {
       const { success } = data
-
       if (success) {
         this.setState({
           login: true
@@ -63,10 +62,10 @@ class AddMedicine extends Component {
   }
 
   render() {
-    const { submitClicked } = this.state
+    const { submitClicked, login } = this.state
     return (
       <div>
-        <NavBar />
+        <NavBar login={login} {...this.props} />
         <h3>Medicine Information</h3>
         <p>Fill The Form To Add A New Medicine</p>
         <form onSubmit={this.AddMedicineInfo}>
@@ -95,6 +94,7 @@ class AddMedicine extends Component {
             name="medCompany"
           ></input>
           <input
+            className="presc"
             type="checkbox"
             name="prescription"
             onChange={this.toggleCheckbox}
