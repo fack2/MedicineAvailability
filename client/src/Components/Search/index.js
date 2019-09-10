@@ -39,7 +39,7 @@ class Search extends Component {
 
 			this.setState({ pharmaciesResult: result })
 
-			if (result.length !== 0) {
+			if (result.length !== 0 ) {
 				history.push({ pathname: '/results', result })
 			}
 		})
@@ -102,7 +102,7 @@ class Search extends Component {
 				)}
 
 				{!pharmaciesResult ||
-					(searchButtonClicked && (
+					(searchButtonClicked &&  medname && (
 						<p className="noResult">There is no result</p>
 					))}
 			</div>
