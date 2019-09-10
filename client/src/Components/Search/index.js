@@ -12,11 +12,11 @@ class Search extends Component {
 	}
 
 	changeInput = ({ target: { value, name } }) => {
-		this.setState({ [name]: value })
+		this.setState({ [name]: value, searchButtonClicked: false })
 	}
 
 	handleSearch = () => {
-		const { medname, location, pharmacy, pharmaciesResult } = this.state
+		const { medname, location, pharmacy } = this.state
 		const { history } = this.props
 		this.setState({ searchButtonClicked: true })
 		if (!medname) {

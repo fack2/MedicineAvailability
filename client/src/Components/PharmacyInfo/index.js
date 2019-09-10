@@ -2,12 +2,12 @@ import React, { Component } from 'react'
 import NavBar from '../NavBar'
 import './style.css'
 
-const PharmacyInfo = info => {
-  const { location } = info
-  const { data } = location
+const PharmacyInfo = props => {
+  const { data } = props.history.location
+
   return (
     <div>
-      <NavBar />
+      <NavBar login={false} {...props} />
       <p className="pharmName">Pharmacy name : {data.pharmacyname}</p>
       <p className="location">Pharmacy location : {data.location}</p>
       <p className="phone">Pharmacy phone : {data.phone}</p>
