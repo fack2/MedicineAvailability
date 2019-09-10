@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './style.css'
 import axios from 'axios'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class Search extends Component {
 	state = {
@@ -39,7 +40,7 @@ class Search extends Component {
 
 			this.setState({ pharmaciesResult: result })
 
-			if (result.length !== 0 ) {
+			if (result.length !== 0) {
 				history.push({ pathname: '/results', result })
 			}
 		})
@@ -102,7 +103,7 @@ class Search extends Component {
 				)}
 
 				{!pharmaciesResult ||
-					(searchButtonClicked &&  medname && (
+					(searchButtonClicked && medname && (
 						<p className="noResult">There is no result</p>
 					))}
 			</div>

@@ -14,60 +14,50 @@ span {
 }
 .searchBar {
 	position: absolute;
-	width: 232px;
-	height: 39px;
-	left: 56px;
-	top: 406px;
+	width: 72%;
+	height: 6%;
+	left: 15%;
+	top: 61%;
+	border: 1px solid #b6b1b1;
+	box-sizing: border-box;
+	border-radius: 20px;
 }
 button {
 	position: absolute;
-	width: 50px;
-	height: 27.52px;
-	left: 310px;
-	top: 411px;
+	width: 9%;
+	height: 6%;
+	left: 78%;
+	top: 61%;
+	border: 1px solid #b6b1b1;
+	box-sizing: border-box;
+	border-radius: 20px;
+	background: linear-gradient(
+		180deg,
+		#e8cdb8 0%,
+		rgba(234, 202, 179, 0.35) 100%
+	);
 }
 
 .By-Location {
 	position: absolute;
-	width: 236px;
-	height: 40px;
-	left: 55px;
-	top: 469px;
-	padding: 11px;
+	width: 73%;
+	height: 6%;
+	left: 14%;
+	top: 71%;
+	padding: 3%;
+	border: 1px solid #b6b1b1;
+	box-sizing: border-box;
+	border-radius: 20px;
 }
 
 .By-Pharmacy {
 	position: absolute;
-	width: 236px;
-	height: 40px;
-	left: 55px;
-	top: 531px;
-	padding: 11px;
-}
-.noMedicineName {
-	position: absolute;
-	width: 343px;
-	height: 40px;
-	left: -39px;
-	top: 371px;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 13px;
-	line-height: 25px;
-	text-align: center;
-	color: #dc3c3c;
-}
-
-.noResult {
-	position: absolute;
-	width: 343px;
-	height: 40px;
-	left: -71px;
-	top: 371px;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 13px;
-	line-height: 25px;
-	text-align: center;
-	color: #dc3c3c;
+	width: 73%;
+	height: 6%;
+	left: 14%;
+	top: 80%;
+	padding: 3%;
+	border: 1px solid #b6b1b1;
+	box-sizing: border-box;
+	border-radius: 20px;
 }
