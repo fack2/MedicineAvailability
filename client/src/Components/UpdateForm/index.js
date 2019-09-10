@@ -92,7 +92,7 @@ class UpdateForm extends Component {
             onChange={this.handleChange}
             disabled
           />
-          <label className="price" htmlFor="price">
+          <label className="priceCSS" htmlFor="price">
             Price
           </label>
           <input

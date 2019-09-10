@@ -17,29 +17,26 @@
 
 .nameMed {
   position: absolute;
-  width: 153px;
-  height: 26px;
-  left: 105px;
-  top: 17px;
-
+  width: 33%;
+  height: 24%;
+  left: 36%;
+  top: 6%;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 18px;
 }
 
 .description {
   position: absolute;
-  width: 178px;
-  height: 39px;
-  left: 154px;
+  width: 54%;
+  height: 40%;
+  left: 44%;
   top: 40px;
-
   font-family: SeoulHangang;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
-  line-height: 13px;
+  line-height: 106%;
   text-align: justify;
   color: #969696;
 }
