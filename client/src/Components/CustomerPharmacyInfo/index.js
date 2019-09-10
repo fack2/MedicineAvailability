@@ -5,9 +5,9 @@ import "./style.css"
 class CustomerPharmacyInfo extends Component {
   moveToDetailsPage = () => {
     const { item, history } = this.props
+    sessionStorage.setItem("pharmacyInfo", JSON.stringify(item))
     history.push({
-      pathname: `/customer/pharmacy/${item.pharmacyname}`,
-      data: item
+      pathname: `/customer/pharmacy/${item.pharmacyname}`
     })
   }
   render() {

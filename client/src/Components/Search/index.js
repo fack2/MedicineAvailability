@@ -23,7 +23,6 @@ class Search extends Component {
     if (!medname) {
       return
     }
-    // This should handle in backend
     axios.get(`/api/medicine/${medname}`).then(({ data }) => {
       let result = ""
       if (location && pharmacy) {
