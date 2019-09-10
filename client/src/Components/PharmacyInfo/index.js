@@ -3,17 +3,20 @@ import NavBar from '../NavBar'
 import './style.css'
 
 const PharmacyInfo = props => {
-  const { data } = props.history.location
+  const data = sessionStorage.getItem('pharmacyInfo')
+  const info = JSON.parse(data)
 
   return (
     <div>
       <NavBar login={false} {...props} />
-      <p className="pharmName">Pharmacy name : {data.pharmacyname}</p>
+      <p className="pharmName">Pharmacy name : {info.pharmacyname}</p>
       <div>
-        <p className="locationName">Pharmacy location : </p> <p className="location">{data.location}</p>
+        <p className="locationName">Pharmacy location : </p>
+        <p className="location">{info.location}</p>
       </div>
       <div>
-        <p className="phoneNo">Pharmacy phone : </p> <p className="phone"> {data.phone}</p>
+        <p className="phoneNo">Pharmacy phone : </p>
+        <p className="phone"> {info.phone}</p>
       </div>
     </div>
   )

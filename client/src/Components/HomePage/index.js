@@ -4,10 +4,10 @@ import Search from '../Search/'
 
 const HomePage = props => {
   return (
-		<>
-			<Header />
-			<Search {...props} />
-		</>
+    <>
+      <Header />
+      <Search {...props} />
+    </>
   )
 }
 export default HomePage
