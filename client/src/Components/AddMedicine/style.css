@@ -42,11 +42,11 @@ p {
   color: #000000;
 }
 
-.price {
+.priceADD {
   position: absolute;
   width: -1%;
   /* height: 13px; */
-  left: -55%;
+  left: 5%;
   top: calc(50% - 3% / 2 - 1%);
   font-family: Lato;
   font-style: normal;

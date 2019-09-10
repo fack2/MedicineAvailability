@@ -9,19 +9,40 @@
   line-height: 20px;
   color: #a33230;
 }
-.location {
+.locationName {
   position: absolute;
-  width: 83%;
-  height: 7%;
-  left: 11%;
-  top: 27%;
-  background: rgba(200, 186, 186, 0.2);
+  width: 41%;
+  height: 4%;
+  left: 6%;
+  top: 31%;
+  background: rgba(0, 0, 0, 0.2);
+  color: black;
+}
+.location {
+  /* position: absolute; */
+  width: 44%;
+  color: black;
+  height: 4%;
+  left: 50%;
+  top: 31%;
+  background: rgba(177, 171, 171, 0.2);
+}
+
+.phoneNo {
+  position: absolute;
+  width: 41%;
+  height: 4%;
+  left: 6%;
+  top: 41%;
+  background: rgba(0, 0, 0, 0.2);
+  color: black;
 }
 .phone {
-  position: absolute;
-  width: 83%;
-  height: 7%;
-  left: 11%;
-  top: 40%;
-  background: rgba(200, 186, 186, 0.2);
+  /* position: absolute; */
+  width: 44%;
+  color: black;
+  height: 4%;
+  left: 50%;
+  top: 41%;
+  background: rgba(177, 171, 171, 0.2);
 }

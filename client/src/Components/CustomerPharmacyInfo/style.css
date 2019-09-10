@@ -9,28 +9,28 @@
 }
 .NamePharm {
   position: absolute;
-  width: 150px;
-  height: 25px;
-  left: 10px;
-  top: 17px;
+  width: 28%;
+  /* height: 28%; */
+  left: 4%;
+  top: 25%;
   font-family: SeoulHangang;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 20px;
+  line-height: 19px;
   color: #a33230;
 }
 
 .price {
   position: absolute;
-  height: 25px;
-  top: 15px;
-  left: 271px;
-  margin-left: 60%;
-  font-family: SeoulHangang;
+  width: -1%;
+  /* height: 13px; */
+  left: 55%;
+  top: calc(50% - 38% / 2 - 1%);
+  font-family: Lato;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 19px;
   color: #000000;
 }

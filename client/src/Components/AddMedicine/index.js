@@ -77,7 +77,7 @@ class AddMedicine extends Component {
             type="text"
             name="medName"
           ></input>
-          <label className="price">Price</label>
+          <label className="priceADD">Price</label>
           <input
             className="medPrice"
             onChange={this.updateInput}

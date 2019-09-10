@@ -25,7 +25,7 @@
   box-sizing: border-box;
 }
 
-.price {
+.priceCSS {
   position: absolute;
   width: 102px;
   height: 10px;
