@@ -1,41 +1,46 @@
 .pharmName {
   position: absolute;
-  height: 26px;
-  left: 24px;
-  top: 125px;
-
+  left: 6%;
+  top: 15%;
   font-family: SeoulHangang;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
   line-height: 20px;
-
   color: #a33230;
 }
-.location {
+.locationName {
   position: absolute;
-  width: 233px;
-  height: 32px;
-  left: 119px;
-  top: 202px;
+  width: 41%;
+  height: 4%;
+  left: 6%;
+  top: 31%;
+  background: rgba(0, 0, 0, 0.2);
+  color: black;
+}
+.location {
+  width: 44%;
+  color: black;
+  height: 4%;
+  left: 50%;
+  top: 31%;
+  background: rgba(177, 171, 171, 0.2);
+}
 
-  background: rgba(196, 196, 196, 0.2);
+.phoneNo {
+  position: absolute;
+  width: 41%;
+  height: 4%;
+  left: 6%;
+  top: 41%;
+  background: rgba(0, 0, 0, 0.2);
+  color: black;
 }
 .phone {
-  position: absolute;
-  width: 233px;
-  height: 32px;
-  left: 119px;
-  top: 258px;
-
-  background: rgba(196, 196, 196, 0.2);
-}
-.prescription {
-  position: absolute;
-  width: 233px;
-  height: 32px;
-  left: 119px;
-  top: 312px;
-
-  background: rgba(196, 196, 196, 0.2);
+  width: 44%;
+  color: black;
+  height: 4%;
+  left: 50%;
+  top: 41%;
+  background: rgba(177, 171, 171, 0.2);
 }

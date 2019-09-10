@@ -1,10 +1,9 @@
 .input1 {
   position: absolute;
-  width: 305px;
-  height: 43px;
-  left: 35px;
-  top: 360px;
-
+  width: 82%;
+  height: 6%;
+  left: 10%;
+  top: 54%;
   background: #ffffff;
   border: 1px solid #b6b1b1;
   box-sizing: border-box;
@@ -12,11 +11,10 @@
 }
 .input2 {
   position: absolute;
-  width: 305px;
-  height: 43px;
-  left: 35px;
-  top: 435px;
-
+  width: 83%;
+  height: 6%;
+  left: 9%;
+  top: 63%;
   background: #ffffff;
   border: 1px solid #b6b1b1;
   box-sizing: border-box;
@@ -24,13 +22,16 @@
 }
 .login {
   position: absolute;
-  width: 166px;
-  height: 43px;
-  left: 99px;
-  top: 539px;
-
+  width: 36%;
+  height: 6%;
+  left: 30%;
+  top: 80%;
   background: #e8cdb8;
   border: 1px solid #b6b1b1;
   box-sizing: border-box;
   border-radius: 20px;
+}
+
+::placeholder {
+  padding-left: 5%;
 }
