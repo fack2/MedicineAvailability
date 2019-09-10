@@ -5,8 +5,8 @@ import NavBar from '../NavBar'
 
 class Results extends Component {
   render () {
-    const { result } = this.props.history.location
-    const info = result
+    const data1 = sessionStorage.getItem('results')
+    const info = JSON.parse(data1)
 
     return (
       <>
@@ -26,7 +26,6 @@ class Results extends Component {
           img={info[0].img}
           description={info[0].description}
           medicinename={info[0].medicinename}
-
         />
       </>
     )

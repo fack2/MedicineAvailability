@@ -4,7 +4,7 @@ import './style.css'
 const Search = props => {
   const {
     medname,
-    handleSearch,
+    searchHandler,
     changInput,
     location,
     searchByLocation,
@@ -16,7 +16,7 @@ const Search = props => {
     <div>
       <span>
         The app is an easy way to search for the medicine you need in your next
-				door pharmacy.
+        door pharmacy.
       </span>
       <input
         className="searchBar"
@@ -25,7 +25,7 @@ const Search = props => {
         type="text"
         name="medname"
       />
-      <button onClick={handleSearch}>search</button>
+      <button onClick={searchHandler}>search</button>
       <select
         className="By-Location"
         value={location}
