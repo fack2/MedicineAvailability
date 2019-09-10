@@ -9,9 +9,12 @@ const PharmacyInfo = props => {
     <div>
       <NavBar login={false} {...props} />
       <p className="pharmName">Pharmacy name : {data.pharmacyname}</p>
-      <p className="location">Pharmacy location : {data.location}</p>
-      <p className="phone">Pharmacy phone : {data.phone}</p>
-      <p className="prescription">prescription : {data.prescription}</p>
+      <div>
+        <p className="locationName">Pharmacy location : </p> <p className="location">{data.location}</p>
+      </div>
+      <div>
+        <p className="phoneNo">Pharmacy phone : </p> <p className="phone"> {data.phone}</p>
+      </div>
     </div>
   )
 }

@@ -1,90 +1,76 @@
 h3 {
-  width: 251px;
-  height: 26px;
-  left: 62px;
-  top: 98px;
-
+  position: absolute;
+  width: 71%;
+  left: 14%;
+  top: 15%;
   font-family: SeoulHangang;
   font-style: normal;
   font-weight: normal;
   font-size: 26px;
   line-height: 26px;
   text-align: center;
-
   color: #a33230;
 }
 
 p {
-  width: 343px;
-  height: 40px;
-  left: 16px;
-  top: 147px;
-
+  position: absolute;
+  width: 92%;
+  left: 15px;
+  top: 21%;
   font-family: Scope One;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 25px;
   text-align: center;
-
   color: #8395a7;
 }
 
 .medicineName {
   position: absolute;
-  width: 120px;
-  height: 13px;
-  left: 20px;
-  top: calc(50% - 13px / 2 - 107px);
-
+  width: -1%;
+  left: 6%;
+  top: calc(50% - 1% / 2 - 16%);
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
-
   color: #000000;
 }
 
-.price {
+.priceADD {
   position: absolute;
-  width: 106px;
-  height: 13px;
-  left: 9px;
-  top: calc(50% - 13px / 2 - 15px);
-
+  width: -1%;
+  left: 5%;
+  top: calc(50% - 3% / 2 - 1%);
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
-
   color: #000000;
 }
 
 .company {
   position: absolute;
-  width: 106px;
-  height: 13px;
-  left: 20px;
-  top: calc(50% - 13px / 2 + 71px);
-
+  width: -1%;
+  left: 6%;
+  top: calc(50% - 1% / 2 - -11%);
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
-
   color: #000000;
 }
 
 .medName {
   position: absolute;
-  width: 333px;
-  height: 40px;
-  left: 21px;
-  top: 247px;
-
+  width: 88%;
+  height: 6%;
+  left: 5%;
+  top: 37%;
   background: #ffffff;
   border: 1px solid #8395a7;
   box-sizing: border-box;
@@ -92,11 +78,10 @@ p {
 
 .medPrice {
   position: absolute;
-  width: 335px;
-  height: 40px;
-  left: 19px;
-  top: 338px;
-
+  width: 88%;
+  height: 6%;
+  left: 5%;
+  top: 51%;
   background: #ffffff;
   border: 1px solid #8395a7;
   box-sizing: border-box;
@@ -104,11 +89,10 @@ p {
 
 .medCompany {
   position: absolute;
-  width: 335px;
-  height: 40px;
-  left: 19px;
-  top: 426px;
-
+  width: 88%;
+  height: 6%;
+  left: 5%;
+  top: 64%;
   background: #ffffff;
   border: 1px solid #8395a7;
   box-sizing: border-box;
@@ -116,22 +100,20 @@ p {
 
 .presc {
   position: absolute;
-  width: 20px;
-  height: 15px;
-  left: 21px;
-  top: 525px;
-  background: #c4c4c4;
+  width: 7%;
+  left: 6%;
+  top: 79%;
+  background: #d3b9b9;
 }
 
 .addInput {
   position: absolute;
-  width: 178px;
-  height: 35px;
-  left: 98px;
-  top: 596px;
-
+  width: 39%;
+  height: 6%;
+  left: 30%;
+  top: 88%;
   background: #ebd6c3;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .checkboxLabel {
@@ -165,9 +147,8 @@ p {
 
 .addName {
   position: absolute;
-  height: 20px;
-  left: -91px;
-  top: 272px;
+  left: -25%;
+  top: 41%;
   font-family: Lato;
   font-style: normal;
   font-weight: bold;
@@ -178,9 +159,8 @@ p {
 
 .addCompany {
   position: absolute;
-  height: 20px;
-  left: -84px;
-  top: 453px;
+  left: -22%;
+  top: 55%;
   font-family: Lato;
   font-style: normal;
   font-weight: bold;
@@ -191,9 +171,8 @@ p {
 
 .addPrice {
   position: absolute;
-  height: 20px;
-  left: -95px;
-  top: 365px;
+  left: -26%;
+  top: 68%;
   font-family: Lato;
   font-style: normal;
   font-weight: bold;

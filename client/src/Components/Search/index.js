@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './style.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Search = props => {
   const {
@@ -25,7 +26,10 @@ const Search = props => {
         type="text"
         name="medname"
       />
-      <button onClick={searchHandler}>search</button>
+      <button onClick={this.handleSearch}>
+        <FontAwesomeIcon icon="search" />
+      </button>
+
       <select
         className="By-Location"
         value={location}

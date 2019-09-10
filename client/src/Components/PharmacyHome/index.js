@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import "./PharmacyHome.css"
 import Header from "../Header"
 import axios from "axios"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class PharmacyHome extends Component {
   state = {
@@ -59,9 +60,8 @@ class PharmacyHome extends Component {
         <button
           className="searchBtn"
           type="submit"
-          onClick={this.submitHandler}
-        >
-          Search
+          onClick={this.submitHandler}>
+          <FontAwesomeIcon icon="search" />
         </button>
 
         <p className="or">
@@ -75,7 +75,7 @@ class PharmacyHome extends Component {
         >
           Add Medicine
         </button>
-      </div>
+      </div >
     )
   }
 }

@@ -26,9 +26,11 @@ class Results extends Component {
           img={info[0].img}
           description={info[0].description}
           medicinename={info[0].medicinename}
+          prescription={info[0].prescription}
         />
       </>
     )
   }
 }
+
 export default Results
