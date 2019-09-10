@@ -1,5 +1,5 @@
-import React from "react"
-import "./style.css"
+import React from 'react'
+import './style.css'
 
 const UserSearchResults = ({
   img,
@@ -12,9 +12,9 @@ const UserSearchResults = ({
     <h3 className="nameMed">{medicinename}</h3>
     <p className="description">{description}</p>
     {prescription === true ? (
-      <p>prescription: Needs prescription</p>
+      <p>prescription: YES</p>
     ) : (
-      <p>prescription: Doesn't need prescription</p>
+      <p>prescription: NO </p>
     )}
   </div>
 )

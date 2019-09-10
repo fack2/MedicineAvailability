@@ -15,15 +15,15 @@ h3 {
 p {
   position: absolute;
   width: 92%;
-  left: 15px;
-  top: 21%;
+  left: 14%;
+  top: 109%;
   font-family: Scope One;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
-  line-height: 25px;
+  font-size: 15px;
+  line-height: 23px;
   text-align: center;
-  color: #8395a7;
+  color: #ff0000;
 }
 
 .medicineName {
