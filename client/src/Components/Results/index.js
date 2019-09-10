@@ -7,6 +7,7 @@ class Results extends Component {
   render () {
     const { result } = this.props.history.location
     const info = result
+    console.log('info', info)
 
     return (
       <>
@@ -26,7 +27,7 @@ class Results extends Component {
           img={info[0].img}
           description={info[0].description}
           medicinename={info[0].medicinename}
-
+          prescription={info[0].prescription}
         />
       </>
     )
