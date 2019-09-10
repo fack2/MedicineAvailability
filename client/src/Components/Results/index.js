@@ -7,7 +7,6 @@ class Results extends Component {
   render () {
     const { result } = this.props.history.location
     const info = result
-    console.log('info', info)
 
     return (
       <>
