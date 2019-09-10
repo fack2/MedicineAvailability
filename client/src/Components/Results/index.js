@@ -5,8 +5,8 @@ import NavBar from '../NavBar'
 
 class Results extends Component {
   render () {
-    const data1 = sessionStorage.getItem('results')
-    const info = JSON.parse(data1)
+    const data = sessionStorage.getItem('results')
+    const info = JSON.parse(data)
 
     return (
       <>
