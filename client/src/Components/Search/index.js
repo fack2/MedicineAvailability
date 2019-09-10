@@ -76,7 +76,9 @@ class Search extends Component {
 					type="text"
 					name="medname"
 				/>
-				<button onClick={this.handleSearch}>search</button>
+				<button onClick={this.handleSearch}>
+					<FontAwesomeIcon icon="search" />
+				</button>
 				<select
 					className="By-Location"
 					value={location}

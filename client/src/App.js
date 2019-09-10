@@ -8,6 +8,11 @@ import UpdatePage from './Components/UpdatePage'
 import PharmacyInfo from './Components/PharmacyInfo'
 import AddMedicine from './Components/AddMedicine'
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faSearch, faKey } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faSearch, faKey)
+
 const App = () => (
   <Router>
     <React.Fragment>

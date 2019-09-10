@@ -7,7 +7,7 @@ span {
 	font-family: Karla Tamil Inclined;
 	font-style: italic;
 	font-weight: normal;
-	font-size: 13px;
+	font-size: 15px;
 	line-height: 15px;
 
 	color: #000000;
@@ -60,4 +60,32 @@ button {
 	border: 1px solid #b6b1b1;
 	box-sizing: border-box;
 	border-radius: 20px;
+}
+
+.noResult {
+	position: absolute;
+	width: 92%;
+	left: -14%;
+	top: 55.5%;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 86%;
+	line-height: 25px;
+	text-align: center;
+	color: red;
+}
+
+.noMedicineName {
+	position: absolute;
+	width: 92%;
+	left: -4%;
+	top: 55.5%;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 86%;
+	line-height: 25px;
+	text-align: center;
+	color: red;
 }

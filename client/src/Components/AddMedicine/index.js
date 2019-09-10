@@ -60,8 +60,8 @@ class AddMedicine extends Component {
 			})
 	}
 
-  render() {
-	const {
+	render() {
+		const {
 			medCompany,
 			medName,
 			medPrice,
@@ -72,58 +72,58 @@ class AddMedicine extends Component {
 		} = this.state
 
 		return (
-      <div>
-        <NavBar login={login} {...this.props} />
-        <h3>Medicine Information</h3>
-        <p>Fill The Form To Add A New Medicine</p>
-        <form onSubmit={this.AddMedicineInfo}>
-          <label className="medicineName">Medicine Name</label>
-          <input
-            className="medName"
-            onChange={this.updateInput}
-            value={ medName}
-            type="text"
-            name="medName"
-          ></input>
-          <label className="priceADD">Price</label>
-          <input
-            className="medPrice"
-            onChange={this.updateInput}
-            value={ medPrice}
-            type="text"
-            name="medPrice"
-          ></input>
-          <label className="company">Company</label>
-          <input
-            className="medCompany"
-            onChange={this.updateInput}
-            value={ medCompany}
-            type="text"
-            name="medCompany"
-          ></input>
-          <input
-            className="presc"
-            type="checkbox"
-            name="prescription"
-            onChange={this.toggleCheckbox}
-            value={ prescription}
-          />
-          <label className="checkboxLabel">Needs Prescription</label>
-          <input type="submit" value="Add" className="addInput" />
-          { msg && <p className="addMsg">Your data has been added</p>}
-          {! medCompany &&  submitClicked && (
-            <p className="addCompany">Please enter a company</p>
-          )}
-          {! medName &&  submitClicked && (
-            <p className="addName">Please enter a name </p>
-          )}
-          {! medPrice &&  submitClicked && (
-            <p className="addPrice">Please enter a price</p>
-          )}
-        </form>
-      </div>
-    )
-  }
+			<div>
+				<NavBar login={login} {...this.props} />
+				<h3>Medicine Information</h3>
+				<p>Fill The Form To Add A New Medicine</p>
+				<form onSubmit={this.AddMedicineInfo}>
+					<label className="medicineName">Medicine Name</label>
+					<input
+						className="medName"
+						onChange={this.updateInput}
+						value={medName}
+						type="text"
+						name="medName"
+					></input>
+					<label className="priceADD">Price</label>
+					<input
+						className="medPrice"
+						onChange={this.updateInput}
+						value={medPrice}
+						type="text"
+						name="medPrice"
+					></input>
+					<label className="company">Company</label>
+					<input
+						className="medCompany"
+						onChange={this.updateInput}
+						value={medCompany}
+						type="text"
+						name="medCompany"
+					></input>
+					<input
+						className="presc"
+						type="checkbox"
+						name="prescription"
+						onChange={this.toggleCheckbox}
+						value={prescription}
+					/>
+					<label className="checkboxLabel">Needs Prescription</label>
+					<input type="submit" value="Add" className="addInput" />
+					{msg && <p className="addMsg">Your data has been added</p>}
+					{!medCompany && submitClicked && (
+						<p className="addCompany">Please enter a company</p>
+					)}
+					{!medName && submitClicked && (
+						<p className="addName">Please enter a name </p>
+					)}
+					{!medPrice && submitClicked && (
+						<p className="addPrice">Please enter a price</p>
+					)}
+				</form>
+			</div>
+		)
+	}
 }
 
 export default AddMedicine
