@@ -1,8 +1,8 @@
 h3 {
-  position: absolute;
+  position: relative;
   width: 71%;
   left: 14%;
-  top: 15%;
+  margin-top: 31%;
   font-family: SeoulHangang;
   font-style: normal;
   font-weight: normal;
@@ -13,10 +13,9 @@ h3 {
 }
 
 .discrip {
-  position: absolute;
   width: 92%;
-  left: 6%;
-  top: 21%;
+  margin-top: -5%;
+  margin-left: 3%;
   font-family: Scope One;
   font-style: normal;
   font-weight: normal;
@@ -26,157 +25,49 @@ h3 {
   color: #ff0000;
 }
 
-.medicineName {
-  position: absolute;
-  width: -1%;
-  left: 6%;
-  top: calc(50% - 1% / 2 - 16%);
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 19px;
-  color: #000000;
+.addForm {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
 }
 
-.priceADD {
-  position: absolute;
-  width: -1%;
-  left: 5%;
-  top: calc(50% - 3% / 2 - 1%);
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 19px;
-  color: #000000;
+.info {
+  width: 90%;
+  padding: 2%;
+  margin-top: 3%;
 }
 
-.company {
-  position: absolute;
-  width: -1%;
-  left: 6%;
-  top: calc(50% - 1% / 2 - -11%);
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 19px;
-  color: #000000;
+.label {
+  margin-top: 7%;
+  font-size: 1rem;
 }
 
-.medName {
-  position: absolute;
-  width: 88%;
-  height: 6%;
-  left: 5%;
-  top: 37%;
-  background: #ffffff;
-  border: 1px solid #8395a7;
+.msg {
+  color: red;
+}
+
+.addMsg{
+  text-align: center;
+  color: green
+}
+
+.submitInfo {
+  width: 38%;
+  margin-left: 28%;
+  padding: 2%;
+  margin-top: 13%;
+  border: 1px solid #b6b1b1;
   box-sizing: border-box;
-}
-
-.medPrice {
-  position: absolute;
-  width: 88%;
-  height: 6%;
-  left: 5%;
-  top: 51%;
-  background: #ffffff;
-  border: 1px solid #8395a7;
-  box-sizing: border-box;
-}
-
-.medCompany {
-  position: absolute;
-  width: 88%;
-  height: 6%;
-  left: 5%;
-  top: 64%;
-  background: #ffffff;
-  border: 1px solid #8395a7;
-  box-sizing: border-box;
-}
-
-/* .presc {
-  position: absolute;
-  width: 7%;
-  left: 6%;
-  top: 79%;
-  background: #d3b9b9;
-} */
-
-.addInput {
-  position: absolute;
-  width: 39%;
-  height: 6%;
-  left: 30%;
-  top: 88%;
-  background: #ebd6c3;
   border-radius: 20px;
+  background: linear-gradient(
+    180deg,
+    #e8cdb8 0%,
+    rgba(234, 202, 179, 0.35) 100%
+  );
 }
 
-.checkboxLabel {
-  position: absolute;
-  width: 174px;
-  height: 15px;
-  left: 52px;
-  top: 522px;
-
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 19px;
-
-  color: #000000;
-}
-
-.addMsg {
-  position: absolute;
-  height: 20px;
-  left: 5%;
-  top: 70%;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 13px;
-  line-height: 19px;
-  color: green;
-}
-
-.addName {
-  position: absolute;
-  left: 5%;
-  top: 41%;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 13px;
-  line-height: 19px;
-  color: red;
-}
-
-.addCompany {
-  position: absolute;
-  left: 5%;
-  top: 55%;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 13px;
-  line-height: 19px;
-  color: red;
-}
-
-.addPrice {
-  position: absolute;
-  left: 5%;
-  top: 68%;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 13px;
-  line-height: 19px;
-  color: red;
+.checkboxInfo {
+  width: 11%;
+  margin-top: 11%;
 }
