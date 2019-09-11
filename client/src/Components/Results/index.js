@@ -5,12 +5,12 @@ import NavBar from '../NavBar'
 
 class Results extends Component {
   render () {
-    const { data } = this.props.history.location
-    const info = data.data
+    const data = sessionStorage.getItem('results')
+    const info = JSON.parse(data)
 
     return (
       <>
-        <NavBar />
+        <NavBar login={false} {...this.props} />
         {info.map((item, i) => {
           return (
             <CustomerPharmacyInfo
@@ -26,9 +26,11 @@ class Results extends Component {
           img={info[0].img}
           description={info[0].description}
           medicinename={info[0].medicinename}
+          prescription={info[0].prescription}
         />
       </>
     )
   }
 }
+
 export default Results

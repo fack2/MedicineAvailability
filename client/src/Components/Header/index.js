@@ -1,11 +1,13 @@
 import React from 'react'
 import './style.css'
-const Header = () => (
+import { Link } from 'react-router-dom'
+
+const Header = ({ home }) => (
   <div className="header1">
     <div className="logo" />
-    <a className="switch" href="">
-      Continue as a pharmacist
-    </a>
+    <Link className="switch" to={home ? '/login' : '/'}>
+      {home ? 'Continue as a pharmacist' : 'Switch to normal user'}
+    </Link>
   </div>
 )
 

@@ -38,7 +38,9 @@ INSERT INTO pharmacy
     (pharmacyName, email, password, phone, location)
 VALUES
     ('Al-Eman Pharmacy', 'aleman@gmail.com', '123', '0598403872', 'Ras El-Jora'),
-    ('Al-Jazera', 'aljazera@gmail.com', '$2a$10$D/IX/AtYw5YHT4YWI2B2aOg5ZGMBodHNDx2x6vIbHWomyH4fsJ9SG', '0594327865', 'Al-Manara square');
+    ('Al-Jazera', 'aljazera@gmail.com', '$2a$10$D/IX/AtYw5YHT4YWI2B2aOg5ZGMBodHNDx2x6vIbHWomyH4fsJ9SG', '0594327865', 'Al-Manara square'),
+    ('AlQuds Pharmacy', 'alquds@gmail.com', '1234', '059874562', 'Ras El-Jora')
+    ;
 
 CREATE TABLE pharmacy_to_medicine
 (
@@ -52,7 +54,12 @@ CREATE TABLE pharmacy_to_medicine
 );
 
 
-INSERT INTO pharmacy_to_medicine(medicineID, pharmacyID, soldOut, price) VALUES (1, 1, false, '25 ILS'), (2, 2, true, '19 ILS'),(1,2,true,'20 ILS');
+INSERT INTO pharmacy_to_medicine
+    (medicineID, pharmacyID, soldOut, price)
+VALUES
+    (1, 1, false, 25),
+    (2, 2, true, 19),
+    (1, 3, true, 20);
 
 
 COMMIT;

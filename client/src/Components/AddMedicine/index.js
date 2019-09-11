@@ -19,12 +19,10 @@ class AddMedicine extends Component {
 
     axios.get("/check-auth").then(({ data }) => {
       const { success } = data
-
       if (success) {
         this.setState({
           login: true
         })
-        // history.push("/pharmacy")
       } else {
         history.push("/login")
       }
@@ -33,7 +31,7 @@ class AddMedicine extends Component {
 
   updateInput = event => {
     const { value, name } = event.target
-    this.setState({ [name]: value })
+    this.setState({ [name]: value, submitClicked: false })
   }
 
   toggleCheckbox = () => {
@@ -42,7 +40,6 @@ class AddMedicine extends Component {
 
   AddMedicineInfo = event => {
     event.preventDefault()
-    const { history } = this.props
     const { medName, medCompany, medPrice, prescription } = this.state
     this.setState({ submitClicked: true })
     if (medName === "" || medCompany === "" || medPrice === "") {

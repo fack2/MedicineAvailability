@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import "./PharmacyHome.css"
 import Header from "../Header"
 import axios from "axios"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 class PharmacyHome extends Component {
   state = {
@@ -47,7 +48,7 @@ class PharmacyHome extends Component {
   render() {
     return (
       <div>
-        <Header />
+        <Header home={false} />
         <p className="searchToUpdate">Search to Update</p>
         <input
           placeholder="search/edit medicine"
@@ -61,7 +62,7 @@ class PharmacyHome extends Component {
           type="submit"
           onClick={this.submitHandler}
         >
-          Search
+          <FontAwesomeIcon icon="search" />
         </button>
 
         <p className="or">

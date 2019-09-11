@@ -2,16 +2,22 @@ import React, { Component } from 'react'
 import NavBar from '../NavBar'
 import './style.css'
 
-const PharmacyInfo = info => {
-  const { location } = info
-  const { data } = location
+const PharmacyInfo = props => {
+  const data = sessionStorage.getItem('pharmacyInfo')
+  const info = JSON.parse(data)
+
   return (
     <div>
-      <NavBar />
-      <p className="pharmName">Pharmacy name : {data.pharmacyname}</p>
-      <p className="location">Pharmacy location : {data.location}</p>
-      <p className="phone">Pharmacy phone : {data.phone}</p>
-      <p className="prescription">prescription : {data.prescription}</p>
+      <NavBar login={false} {...props} />
+      <p className="pharmName">Pharmacy name : {info.pharmacyname}</p>
+      <div>
+        <p className="locationName">Pharmacy location : </p>
+        <p className="location">{info.location}</p>
+      </div>
+      <div>
+        <p className="phoneNo">Pharmacy phone : </p>
+        <p className="phone"> {info.phone}</p>
+      </div>
     </div>
   )
 }
