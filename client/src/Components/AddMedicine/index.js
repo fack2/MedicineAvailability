@@ -43,6 +43,8 @@ class AddMedicine extends Component {
 
   AddMedicineInfo = event => {
     event.preventDefault()
+    this.setState({ msg: "" })
+
     const { medName, medCompany, medPrice, prescription } = this.state
     this.setState({ submitClicked: true })
     if (medName === "" || medCompany === "" || medPrice === "") {
@@ -57,9 +59,8 @@ class AddMedicine extends Component {
         medPrice
       })
       .then(res => {
-        if (res.data.message == "true") {
-          this.setState({ msg: "true" })
-        }
+        const { message } = res.data
+        this.setState({ msg: message })
       })
   }
 
@@ -79,7 +80,7 @@ class AddMedicine extends Component {
       <div>
         <NavBar login={login} username={username} {...this.props} />
         <h3>Medicine Information</h3>
-        <p className="discrip">Fill The Form To Add A New Medicine</p>
+        <p>Fill The Form To Add A New Medicine</p>
         <form onSubmit={this.AddMedicineInfo}>
           <label className="medicineName">Medicine Name</label>
           <input
@@ -88,15 +89,15 @@ class AddMedicine extends Component {
             value={medName}
             type="text"
             name="medName"
-          ></input>
-          <label className="priceADD">Price</label>
+          />
+          <label className="price">Price</label>
           <input
             className="medPrice"
             onChange={this.updateInput}
             value={medPrice}
             type="text"
             name="medPrice"
-          ></input>
+          />
           <label className="company">Company</label>
           <input
             className="medCompany"
@@ -104,7 +105,7 @@ class AddMedicine extends Component {
             value={medCompany}
             type="text"
             name="medCompany"
-          ></input>
+          />
           <input
             className="presc"
             type="checkbox"
@@ -114,7 +115,7 @@ class AddMedicine extends Component {
           />
           <label className="checkboxLabel">Needs Prescription</label>
           <input type="submit" value="Add" className="addInput" />
-          {msg && <p className="addMsg">Your data has been added</p>}
+          {msg && <p className="addMsg">{msg}</p>}
           {!medCompany && submitClicked && (
             <p className="addCompany">Please enter a company</p>
           )}

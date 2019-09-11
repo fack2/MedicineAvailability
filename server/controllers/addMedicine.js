@@ -1,16 +1,51 @@
 const axios = require('axios')
 const addMedicineInfo = require('../database/queries/addMedicineInfo')
+const medicineExist = require('../database/queries/medicineExist')
+const addtopharmacy = require('../database/queries/addtopharmacy')
 
 exports.addMedicine = (req, res) => {
   const { medName } = req.body
-  if (req.body) {
-    axios.get(`https://api.fda.gov/drug/label.json?search=${medName}`).then(res => {
-      const description = res.data.results[0].description[0]
-      const { pharmacyID } = req
-      addMedicineInfo(req.body, description, pharmacyID)
+  const { pharmacyID } = req
+
+  medicineExist(medName)
+    .then(result => {
+      if (!result) {
+        axios
+          .get(`https://api.fda.gov/drug/label.json?search=${medName}`)
+          .then(res1 => {
+            const description = res1.data.results[0].description[0]
+
+            addMedicineInfo(req.body, description, pharmacyID)
+              .then(() => res.json({ add: true, message: 'done' }))
+              .catch(err =>
+                res.json({ add: false, err, message: 'wrong with add to db' })
+              )
+          })
+          .catch(err =>
+            res.json({
+              add: false,
+              err,
+              message: 'api doesn`t contain medicine'
+            })
+          )
+      } else {
+        addtopharmacy(result.medicineid, req.body.medPrice, pharmacyID)
+          .then(res => {
+            return res.json({
+              add: true,
+              message: 'done'
+            })
+          })
+          .catch(err =>
+            res.json({
+              add: true,
+              err,
+              message: 'medicine already exist in your database'
+            })
+          )
+      }
     })
-    return res.json({ message: 'true' })
-  } else {
-    return res.json({ message: 'false' })
-  }
+    .catch(err =>
+      res.json({ add: true, err, message: 'wrong with find medicine in db' })
+    )
 }
