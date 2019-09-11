@@ -16,7 +16,9 @@ class NavBar extends Component {
 
     return (
       <div className="NavBar">
-        <p className="home">{username}</p>
+        <Link to={username === "Home" ? "/" : "/pharmacy"} className="home">
+          {username}
+        </Link>
 
         {login ? (
           <div onClick={this.logout} className="switch1">

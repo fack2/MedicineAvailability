@@ -106,14 +106,16 @@ class AddMedicine extends Component {
             type="text"
             name="medCompany"
           />
-          <input
-            className="presc"
-            type="checkbox"
-            name="prescription"
-            onChange={this.toggleCheckbox}
-            value={prescription}
-          />
-          <label className="checkboxLabel">Needs Prescription</label>
+          <label className="checkboxLabel">
+            <input
+              className="presc"
+              type="checkbox"
+              name="prescription"
+              onChange={this.toggleCheckbox}
+              value={prescription}
+            />
+            Needs Prescription
+          </label>
           <input type="submit" value="Add" className="addInput" />
           {msg && <p className="addMsg">{msg}</p>}
           {!medCompany && submitClicked && (
