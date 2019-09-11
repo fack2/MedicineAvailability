@@ -67,10 +67,10 @@ class Search extends Component {
 
     return (
       <div>
-        <span>
+        <p className="span">
           The app is an easy way to search for the medicine you need in your
           next door pharmacy.
-        </span>
+        </p>
         <input
           className="searchBar"
           value={medname}
@@ -110,7 +110,7 @@ class Search extends Component {
           (searchButtonClicked && medname && (
             <p className="noResult">There is no result</p>
           ))}
-      </div>
+      </div >
     )
   }
 }
