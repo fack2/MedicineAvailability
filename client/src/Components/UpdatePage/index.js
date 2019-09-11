@@ -3,6 +3,7 @@ import UpdateForm from "../UpdateForm"
 import NavBar from "../NavBar"
 import UserSearchResults from "../UserSearchResults"
 import axios from "axios"
+import "./style.css"
 
 class UpdatePage extends Component {
   state = {
@@ -36,12 +37,30 @@ class UpdatePage extends Component {
     })
   }
 
+  submitHandler = () => {
+    const { history } = this.props
+
+    history.push(`/pharmacy`)
+  }
+
   render() {
     const { details, login } = this.state
     return (
       <>
         {!details ? (
-          <h1>loading</h1>
+          <div>
+            <img
+              className="image"
+              src="https://cdn.dribbble.com/users/2382015/screenshots/6065978/no_result.gif"
+            />
+            <button
+              className="backBtn"
+              type="submit"
+              onClick={this.submitHandler}
+            >
+              back
+            </button>
+          </div>
         ) : (
           <>
             <NavBar login={login} {...this.props} />
