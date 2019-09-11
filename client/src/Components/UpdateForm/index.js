@@ -103,7 +103,7 @@ class UpdateForm extends Component {
             placeholder=""
             onChange={this.handleChange}
           />
-          <label className="company" htmlFor="company">
+          <label className="companyName" htmlFor="company">
             Company
           </label>
           <input
@@ -134,7 +134,6 @@ class UpdateForm extends Component {
             checked={prescription}
           />
           <label className="preseptionText" htmlFor="prescription">
-            {" "}
             Needs prescription
           </label>
           <input
@@ -147,8 +146,8 @@ class UpdateForm extends Component {
           <label className="quantityText" htmlFor="quantity">
             Quantity out of stock
           </label>
+
           <input className="Update" type="submit" value=" Update" />
-          Update
           {this.state.updated && <p className="updateMsg">{this.state.msg}</p>}
         </form>
       </div>

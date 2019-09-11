@@ -1,46 +1,88 @@
 .pharmName {
-  position: absolute;
-  left: 6%;
-  top: 15%;
-  font-family: SeoulHangang;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 20px;
-  color: #a33230;
+	position: absolute;
+	left: 6%;
+	top: 15%;
+	font-family: SeoulHangang;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 20px;
+	color: #a33230;
 }
 .locationName {
-  position: absolute;
-  width: 41%;
-  height: 4%;
-  left: 6%;
-  top: 31%;
-  background: rgba(0, 0, 0, 0.2);
-  color: black;
+	position: absolute;
+	width: 41%;
+	height: 4%;
+	left: 6%;
+	top: 31%;
+	background: rgba(0, 0, 0, 0.2);
+	color: black;
 }
 .location {
-  width: 44%;
-  color: black;
-  height: 4%;
-  left: 50%;
-  top: 31%;
-  background: rgba(177, 171, 171, 0.2);
+	position: absolute;
+	width: 44%;
+	color: black;
+	height: 4%;
+	left: 50%;
+	top: 31%;
+	background: rgba(177, 171, 171, 0.2);
 }
 
 .phoneNo {
-  position: absolute;
-  width: 41%;
-  height: 4%;
-  left: 6%;
-  top: 41%;
-  background: rgba(0, 0, 0, 0.2);
-  color: black;
+	position: absolute;
+	width: 41%;
+	height: 4%;
+	left: 6%;
+	top: 41%;
+	background: rgba(0, 0, 0, 0.2);
+	color: black;
 }
 .phone {
-  width: 44%;
-  color: black;
-  height: 4%;
-  left: 50%;
-  top: 41%;
-  background: rgba(177, 171, 171, 0.2);
+	position: absolute;
+	width: 44%;
+	color: black;
+	height: 4%;
+	left: 50%;
+	top: 41%;
+	background: rgba(177, 171, 171, 0.2);
+}
+
+.workHours {
+	position: absolute;
+	width: 41%;
+	height: 4%;
+	left: 6%;
+	top: 51%;
+	background: rgba(0, 0, 0, 0.2);
+	color: black;
+}
+
+.hours {
+	position: absolute;
+	width: 44%;
+	color: black;
+	height: 4%;
+	left: 50%;
+	top: 51%;
+	background: rgba(177, 171, 171, 0.2);
+}
+
+.offDays {
+	position: absolute;
+	width: 41%;
+	height: 4%;
+	left: 6%;
+	top: 61%;
+	background: rgba(0, 0, 0, 0.2);
+	color: black;
+}
+
+.days {
+	position: absolute;
+	width: 44%;
+	color: black;
+	height: 4%;
+	left: 50%;
+	top: 61%;
+	background: rgba(177, 171, 171, 0.2);
 }
