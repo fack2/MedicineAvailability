@@ -1,88 +1,120 @@
 .pharmName {
-	position: absolute;
-	left: 6%;
-	top: 15%;
-	font-family: SeoulHangang;
-	font-style: normal;
+	position: relative;
+	padding-left: 2%;
+	margin-top: 37.7%;
 	font-weight: normal;
-	font-size: 20px;
-	line-height: 20px;
+	text-align: justify;
+	left: 6%;
+	font-size: 1.3em;
+	line-height: 10%;
 	color: #a33230;
 }
 .locationName {
-	position: absolute;
+	position: relative;
+	padding-left: 2%;
 	width: 41%;
-	height: 4%;
-	left: 6%;
-	top: 31%;
+	left: 4%;
 	background: rgba(0, 0, 0, 0.2);
 	color: black;
+	margin-top: 30.7%;
+	font-weight: normal;
+	font-size: 1em;
+	text-align: justify;
+	line-height: 160%;
 }
 .location {
-	position: absolute;
+	position: relative;
+	padding-left: 2%;
+	margin-top: -11.3%;
+	font-weight: normal;
+	font-size: 1em;
+	text-align: justify;
 	width: 44%;
 	color: black;
-	height: 4%;
 	left: 50%;
-	top: 31%;
 	background: rgba(177, 171, 171, 0.2);
+	line-height: 160%;
 }
 
 .phoneNo {
-	position: absolute;
+	position: relative;
+	padding-left: 2%;
 	width: 41%;
-	height: 4%;
-	left: 6%;
-	top: 41%;
 	background: rgba(0, 0, 0, 0.2);
 	color: black;
+	margin-top: 11.7%;
+	font-weight: normal;
+	font-size: 1em;
+	text-align: justify;
+	line-height: 160%;
+	left: 4%;
 }
 .phone {
-	position: absolute;
+	position: relative;
+	padding-left: 2%;
+	margin-top: -11.3%;
+	font-weight: normal;
+	font-size: 1em;
+	text-align: justify;
+	left: 50%;
+	line-height: 160%;
 	width: 44%;
 	color: black;
-	height: 4%;
-	left: 50%;
-	top: 41%;
 	background: rgba(177, 171, 171, 0.2);
 }
 
 .workHours {
-	position: absolute;
+	position: relative;
+	padding-left: 2%;
 	width: 41%;
-	height: 4%;
-	left: 6%;
-	top: 51%;
 	background: rgba(0, 0, 0, 0.2);
 	color: black;
+	margin-top: 11.7%;
+	font-weight: normal;
+	font-size: 1em;
+	text-align: justify;
+	line-height: 160%;
+	left: 4%;
 }
 
 .hours {
-	position: absolute;
+	position: relative;
+	padding-left: 2%;
+	margin-top: -11.3%;
+	font-weight: normal;
+	font-size: 1em;
+	text-align: justify;
+	left: 50%;
+	line-height: 160%;
 	width: 44%;
 	color: black;
-	height: 4%;
-	left: 50%;
-	top: 51%;
 	background: rgba(177, 171, 171, 0.2);
 }
 
 .offDays {
-	position: absolute;
+	position: relative;
+	padding-left: 2%;
 	width: 41%;
-	height: 4%;
-	left: 6%;
-	top: 61%;
 	background: rgba(0, 0, 0, 0.2);
 	color: black;
+	margin-top: 11.7%;
+	font-weight: normal;
+	font-size: 1em;
+	text-align: justify;
+	line-height: 160%;
+	left: 4%;
 }
 
 .days {
-	position: absolute;
+	position: relative;
+	padding-left: 2%;
+	margin-top: -11.3%;
+	font-weight: normal;
+	font-size: 1em;
+	text-align: justify;
+	left: 50%;
+	line-height: 160%;
 	width: 44%;
 	color: black;
-	height: 4%;
-	left: 50%;
-	top: 61%;
 	background: rgba(177, 171, 171, 0.2);
 }
