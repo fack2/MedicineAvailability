@@ -49,12 +49,15 @@ class UpdatePage extends Component {
       <>
         {!details ? (
           <div>
-            <h3>This medicine is not available in your pharmacy</h3>
             <img
               className="image"
-              src="https://www.thesun.co.uk/wp-content/uploads/2017/01/nintchdbpict000261270267.jpg"
+              src="https://cdn.dribbble.com/users/2382015/screenshots/6065978/no_result.gif"
             />
-            <button type="submit" onClick={this.submitHandler}>
+            <button
+              className="backBtn"
+              type="submit"
+              onClick={this.submitHandler}
+            >
               back
             </button>
           </div>

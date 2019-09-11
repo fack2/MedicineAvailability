@@ -1,6 +1,19 @@
 .image {
   border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-  width: 150px;
+  padding: 1.4%;
+  width: 97%;
+}
+.backBtn {
+  width: 22%;
+  height: 6%;
+  left: 40%;
+  top: 45%;
+  border: 1px solid #b6b1b1;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background: linear-gradient(
+    180deg,
+    #e8cdb8 0%,
+    rgba(234, 202, 179, 0.35) 100%
+  );
 }
