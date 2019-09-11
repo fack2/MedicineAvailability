@@ -12,26 +12,23 @@ class NavBar extends Component {
   }
 
   render() {
-    const { login } = this.props
+    const { login, username } = this.props
+
     return (
       <div className="NavBar">
-        <Link to="/" className="home">
-          Home
-        </Link>
+        <p className="home">{username}</p>
 
         {login ? (
           <div onClick={this.logout} className="switch1">
             Logout
           </div>
         ) : (
-          <div className="switch1">
-            <Link to="/login">Continue as a pharmacist</Link>
-          </div>
+          <Link to="/login" className="switch1">
+            Continue as a pharmacist
+          </Link>
         )}
 
-        <Link to="/" className="logoDiv">
-          <a className="logo1" href="" />
-        </Link>
+        <Link to="/" className="logoDiv logo1"></Link>
       </div>
     )
   }

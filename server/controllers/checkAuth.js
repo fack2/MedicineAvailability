@@ -1,3 +1,5 @@
 exports.checkAuth = (req, res) => {
-  res.json({ success: true })
+  const { pharmacyName } = req
+
+  res.json({ success: true, username: pharmacyName })
 }

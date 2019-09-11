@@ -8,7 +8,7 @@ const PharmacyInfo = props => {
 
   return (
     <div>
-      <NavBar login={false} {...props} />
+      <NavBar login={false} username="Home" {...props} />
       <p className="pharmName">Pharmacy name : {info.pharmacyname}</p>
       <div>
         <p className="locationName">Pharmacy location : </p>

@@ -11,6 +11,8 @@ exports.auth = (req, res, next) => {
       }
       if (result) {
         req.pharmacyID = result.pharmacyID
+        req.pharmacyName = result.pharmacyName
+
         return next()
       } else {
         return res.json({ error: 'not Authorized', success: false })

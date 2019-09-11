@@ -12,8 +12,12 @@ exports.get = (req, res) => {
           return res.json({ err })
         }
         if (result) {
-          const { pharmacyid } = data
-          const token = jwt.sign({ email, pharmacyID: pharmacyid }, process.env.SECRET)
+          const { pharmacyid, pharmacyname } = data
+
+          const token = jwt.sign(
+            { email, pharmacyID: pharmacyid, pharmacyName: pharmacyname },
+            process.env.SECRET
+          )
           return res
             .cookie('token', token, { maxAge: 99999999 })
             .json({ msg: 'true', token })
