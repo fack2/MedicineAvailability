@@ -1,31 +1,30 @@
 .input1 {
-  position: absolute;
-  width: 82%;
-  height: 6%;
-  left: 10%;
-  top: 54%;
-  background: #ffffff;
+  position: relative;
+  width: 86%;
+  padding: 4%;
+  left: 8%;
+  margin-top: 96%;
   border: 1px solid #b6b1b1;
   box-sizing: border-box;
   border-radius: 20px;
 }
 .input2 {
-  position: absolute;
-  width: 83%;
-  height: 6%;
-  left: 9%;
-  top: 63%;
-  background: #ffffff;
+  position: relative;
+  width: 86%;
+  padding: 4%;
+  left: 8%;
+  margin-top: 9%;
   border: 1px solid #b6b1b1;
   box-sizing: border-box;
   border-radius: 20px;
 }
 .login {
-  position: absolute;
+  position: relative;
   width: 36%;
-  height: 6%;
+  height: 11%;
   left: 30%;
-  top: 80%;
+  padding: 2%;
+  margin-top: 14%;
   background: #e8cdb8;
   border: 1px solid #b6b1b1;
   box-sizing: border-box;
