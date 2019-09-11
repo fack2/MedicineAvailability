@@ -1,5 +1,4 @@
 .switch {
-  position: absolute;
   width: 133px;
   height: 14px;
   left: 222px;
@@ -52,7 +51,6 @@
 }
 
 ::placeholder {
-  position: absolute;
   width: 181px;
   height: 29px;
   font-family: Lato;
