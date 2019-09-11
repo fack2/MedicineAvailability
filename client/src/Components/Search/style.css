@@ -1,91 +1,83 @@
-span {
-	position: absolute;
-	width: 268px;
-	height: 79px;
-	left: 56px;
-	top: 327px;
-	font-family: Karla Tamil Inclined;
-	font-style: italic;
-	font-weight: normal;
-	font-size: 15px;
-	line-height: 15px;
-
-	color: #000000;
+.span {
+  position: relative;
+  width: 64%;
+  left: 52px;
+  margin-top: 91%;
+  font-family: Karla Tamil Inclined;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 15px;
+  text-align: justify;
+  line-height: 18px;
+  color: #000000;
 }
 .searchBar {
-	position: absolute;
-	width: 72%;
-	height: 6%;
-	left: 15%;
-	top: 61%;
-	border: 1px solid #b6b1b1;
-	box-sizing: border-box;
-	border-radius: 20px;
+  position: relative;
+  width: 75%;
+  padding: 3%;
+  left: 13%;
+  border: 1px solid #b6b1b1;
+  box-sizing: border-box;
+  border-radius: 20px;
 }
 button {
-	position: absolute;
-	width: 9%;
-	height: 6%;
-	left: 78%;
-	top: 61%;
-	border: 1px solid #b6b1b1;
-	box-sizing: border-box;
-	border-radius: 20px;
-	background: linear-gradient(
-		180deg,
-		#e8cdb8 0%,
-		rgba(234, 202, 179, 0.35) 100%
-	);
+  position: relative;
+  left: 3%;
+  padding: 3%;
+  border: 1px solid #b6b1b1;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background: linear-gradient(
+    180deg,
+    #e8cdb8 0%,
+    rgba(234, 202, 179, 0.35) 100%
+  );
 }
 
 .By-Location {
-	position: absolute;
-	width: 73%;
-	height: 6%;
-	left: 14%;
-	top: 71%;
-	padding: 3%;
-	border: 1px solid #b6b1b1;
-	box-sizing: border-box;
-	border-radius: 20px;
+  position: relative;
+  width: 76%;
+  left: 12%;
+  margin-top: 10%;
+  padding: 3%;
+  border: 1px solid #b6b1b1;
+  box-sizing: border-box;
+  border-radius: 20px;
 }
 
 .By-Pharmacy {
-	position: absolute;
-	width: 73%;
-	height: 6%;
-	left: 14%;
-	top: 80%;
-	padding: 3%;
-	border: 1px solid #b6b1b1;
-	box-sizing: border-box;
-	border-radius: 20px;
+  position: relative;
+  width: 76%;
+  left: 12%;
+  margin-top: 6%;
+  padding: 3%;
+  border: 1px solid #b6b1b1;
+  box-sizing: border-box;
+  border-radius: 20px;
 }
 
 .noResult {
-	position: absolute;
-	width: 92%;
-	left: -14%;
-	top: 55.5%;
-	font-family: Lato;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 86%;
-	line-height: 25px;
-	text-align: center;
-	color: red;
+  position: relative;
+  left: -17%;
+  font-family: Lato;
+  font-style: normal;
+  margin-top: -38%;
+  font-weight: normal;
+  font-size: 86%;
+  line-height: 25px;
+  text-align: center;
+  color: red;
 }
 
 .noMedicineName {
-	position: absolute;
-	width: 92%;
-	left: -4%;
-	top: 55.5%;
-	font-family: Lato;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 86%;
-	line-height: 25px;
-	text-align: center;
-	color: red;
+  position: relative;
+  width: 92%;
+  left: -5%;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  margin-top: -38%;
+  font-size: 14px;
+  text-align: center;
+  color: red;
 }
