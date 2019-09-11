@@ -31,15 +31,18 @@ CREATE TABLE pharmacy
     email VARCHAR(50) UNIQUE,
     password VARCHAR(150) NOT NULL,
     phone INTEGER NOT NULL,
-    location VARCHAR(150) NOT NULL
+    location VARCHAR(150) NOT NULL,
+    workHours VARCHAR (150) NOT NULL,
+    daysOff VARCHAR (150) NOT NULL
+
 );
 
 INSERT INTO pharmacy
-    (pharmacyName, email, password, phone, location)
+    (pharmacyName, email, password, phone, location, workHours, daysOff)
 VALUES
-    ('Al-Eman Pharmacy', 'aleman@gmail.com', '123', '0598403872', 'Ras El-Jora'),
-    ('Al-Jazera', 'aljazera@gmail.com', '$2a$10$D/IX/AtYw5YHT4YWI2B2aOg5ZGMBodHNDx2x6vIbHWomyH4fsJ9SG', '0594327865', 'Al-Manara square'),
-    ('AlQuds Pharmacy', 'alquds@gmail.com', '1234', '059874562', 'Ras El-Jora')
+    ('Al-Eman Pharmacy', 'aleman@gmail.com', '123', '0598403872', 'Ras El-Jora', '8AM - 11PM', 'Saturday'),
+    ('Al-Jazera', 'aljazera@gmail.com', '$2a$10$D/IX/AtYw5YHT4YWI2B2aOg5ZGMBodHNDx2x6vIbHWomyH4fsJ9SG', '0594327865', 'Al-Manara square', '8AM - 11PM', 'Sunday'),
+    ('AlQuds Pharmacy', 'alquds@gmail.com', '1234', '059874562', 'Ras El-Jora', '8AM - 11PM', 'Monday')
     ;
 
 CREATE TABLE pharmacy_to_medicine
