@@ -5,7 +5,6 @@ import './style.css'
 const PharmacyInfo = props => {
   const data = sessionStorage.getItem('pharmacyInfo')
   const info = JSON.parse(data)
-  console.log('info', info)
 
   return (
     <div>
