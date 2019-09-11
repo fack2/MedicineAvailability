@@ -40,6 +40,8 @@ class AddMedicine extends Component {
 
   AddMedicineInfo = event => {
     event.preventDefault()
+    this.setState({ msg: "" })
+
     const { medName, medCompany, medPrice, prescription } = this.state
     this.setState({ submitClicked: true })
     if (medName === "" || medCompany === "" || medPrice === "") {
@@ -55,16 +57,20 @@ class AddMedicine extends Component {
       })
       .then(res => {
         const { add, message } = res.data
-        if (add && message == "done") {
-          this.setState({ msg: message })
-        } else {
-          this.setState({ msg: message })
-        }
+        this.setState({ msg: message })
       })
   }
 
   render() {
-    const { submitClicked } = this.state
+    const {
+      medCompany,
+      medName,
+      medPrice,
+      prescription,
+      msg,
+      submitClicked
+    } = this.state
+
     return (
       <div>
         <NavBar />
@@ -75,7 +81,7 @@ class AddMedicine extends Component {
           <input
             className="medName"
             onChange={this.updateInput}
-            value={this.state.medName}
+            value={medName}
             type="text"
             name="medName"
           ></input>
@@ -83,7 +89,7 @@ class AddMedicine extends Component {
           <input
             className="medPrice"
             onChange={this.updateInput}
-            value={this.state.medPrice}
+            value={medPrice}
             type="text"
             name="medPrice"
           ></input>
@@ -91,7 +97,7 @@ class AddMedicine extends Component {
           <input
             className="medCompany"
             onChange={this.updateInput}
-            value={this.state.medCompany}
+            value={medCompany}
             type="text"
             name="medCompany"
           ></input>
@@ -100,18 +106,18 @@ class AddMedicine extends Component {
             type="checkbox"
             name="prescription"
             onChange={this.toggleCheckbox}
-            value={this.state.prescription}
+            value={prescription}
           />
           <label className="checkboxLabel">Needs Prescription</label>
           <input type="submit" value="Add" className="addInput" />
-          {this.state.msg && <p className="addMsg">{this.state.msg}</p>}
-          {!this.state.medCompany && this.state.submitClicked && (
+          {msg && <p className="addMsg">{msg}</p>}
+          {!medCompany && submitClicked && (
             <p className="addCompany">Please enter a company</p>
           )}
-          {!this.state.medName && this.state.submitClicked && (
+          {!medName && submitClicked && (
             <p className="addName">Please enter a name </p>
           )}
-          {!this.state.medPrice && this.state.submitClicked && (
+          {!medPrice && submitClicked && (
             <p className="addPrice">Please enter a price</p>
           )}
         </form>
