@@ -3,6 +3,7 @@ import UpdateForm from "../UpdateForm"
 import NavBar from "../NavBar"
 import UserSearchResults from "../UserSearchResults"
 import axios from "axios"
+import "./style.css"
 
 class UpdatePage extends Component {
   state = {
@@ -36,12 +37,27 @@ class UpdatePage extends Component {
     })
   }
 
+  submitHandler = () => {
+    const { history } = this.props
+
+    history.push(`/pharmacy`)
+  }
+
   render() {
     const { details, login } = this.state
     return (
       <>
         {!details ? (
-          <h1>loading</h1>
+          <div>
+            <h3>This medicine is not available in your pharmacy</h3>
+            <img
+              className="image"
+              src="https://www.thesun.co.uk/wp-content/uploads/2017/01/nintchdbpict000261270267.jpg"
+            />
+            <button type="submit" onClick={this.submitHandler}>
+              back
+            </button>
+          </div>
         ) : (
           <>
             <NavBar login={login} {...this.props} />
