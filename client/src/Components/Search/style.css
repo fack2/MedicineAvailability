@@ -57,12 +57,11 @@ button {
 }
 
 .noResult {
-  position: absolute;
-  width: 92%;
-  left: -14%;
-  top: 55.5%;
+  position: relative;
+  left: -17%;
   font-family: Lato;
   font-style: normal;
+  margin-top: -38%;
   font-weight: normal;
   font-size: 86%;
   line-height: 25px;
