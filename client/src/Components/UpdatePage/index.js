@@ -43,16 +43,16 @@ class UpdatePage extends Component {
         {!details ? (
           <h1>loading</h1>
         ) : (
-          <>
-            <NavBar login={login} {...this.props} />
-            <UserSearchResults
-              img={details.img}
-              description={details.description}
-              medicinename={details.name}
-            />
-            <UpdateForm details={details} />
-          </>
-        )}
+            <>
+              <NavBar login={login} {...this.props} />
+              <UserSearchResults
+                img={details.img}
+                description={details.description}
+                medicinename={details.name}
+              />
+              <UpdateForm details={details} />
+            </>
+          )}
       </>
     )
   }
