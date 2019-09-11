@@ -91,6 +91,9 @@ class AddMedicine extends Component {
                 type="text"
                 name="medName"
               /> </label>
+            {!medCompany && submitClicked && (
+              <p className="msg">Please enter a name</p>
+            )}
             <label className="label">Price
           <input
                 className="info"
@@ -99,6 +102,9 @@ class AddMedicine extends Component {
                 type="text"
                 name="medPrice"
               /> </label>
+            {!medName && submitClicked && (
+              <p className="msg">Please enter Price </p>
+            )}
             <label className="label">Company
           <input
                 className="info"
@@ -107,6 +113,9 @@ class AddMedicine extends Component {
                 type="text"
                 name="medCompany"
               />     </label>
+            {!medPrice && submitClicked && (
+              <p className="msg">Please enter a Company</p>
+            )}
             <label className="checkboxLabel">
               <input
                 className="checkboxInfo"
@@ -119,15 +128,9 @@ class AddMedicine extends Component {
           </label>
             <input type="submit" value="Add" className="submitInfo" />
             {msg && <p className="addMsg">{msg}</p>}
-            {!medCompany && submitClicked && (
-              <p className="addCompany">Please enter a company</p>
-            )}
-            {!medName && submitClicked && (
-              <p className="addName">Please enter a name </p>
-            )}
-            {!medPrice && submitClicked && (
-              <p className="addPrice">Please enter a price</p>
-            )}
+
+
+
           </div>
         </form>
       </div>
