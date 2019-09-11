@@ -98,13 +98,13 @@ h3 {
   box-sizing: border-box;
 }
 
-/* .presc {
+.presc {
   position: absolute;
   width: 7%;
   left: 6%;
   top: 79%;
   background: #d3b9b9;
-} */
+}
 
 .addInput {
   position: absolute;
