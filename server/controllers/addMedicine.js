@@ -30,17 +30,17 @@ exports.addMedicine = (req, res) => {
           )
       } else {
         addtopharmacy(result.medicineid, req.body.medPrice, pharmacyID)
-          .then(() => {
+          .then(res => {
             return res.json({
               add: true,
-              message: 'medicine exist already in db'
+              message: 'done'
             })
           })
           .catch(err =>
             res.json({
               add: true,
               err,
-              message: 'medicine exist already in db'
+              message: 'medicine already exist in your database'
             })
           )
       }
