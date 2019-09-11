@@ -62,16 +62,16 @@ class UpdatePage extends Component {
             </button>
           </div>
         ) : (
-          <>
-            <NavBar login={login} {...this.props} />
-            <UserSearchResults
-              img={details.img}
-              description={details.description}
-              medicinename={details.name}
-            />
-            <UpdateForm details={details} />
-          </>
-        )}
+            <>
+              <NavBar login={login} {...this.props} />
+              <UserSearchResults
+                img={details.img}
+                description={details.description}
+                medicinename={details.name}
+              />
+              <UpdateForm details={details} />
+            </>
+          )}
       </>
     )
   }
