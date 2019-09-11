@@ -1,152 +1,152 @@
+.upForm {
+  margin-top: 65%;
+  padding-top: 10%;
+  margin-left: 5%;
+  padding: 10%;
+  width: 90%;
+}
+.checks {
+  margin-top: 7%;
+  display: block;
+  margin-bottom: 7%;
+}
 .name {
-  position: absolute;
-  width: 30%;
-  left: 11%;
-  top: calc(50% - 0% / 2 - 15%);
+  position: relative;
+
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
   color: #000000;
+  display: block;
+}
+.upForm input {
+  margin-top: 1%;
+  margin-bottom: 3%;
+  padding: 3%;
 }
 .nameStyle {
-  position: absolute;
+  position: relative;
   width: 77%;
   height: 5%;
-  left: 11%;
-  top: 39%;
+
   background: #ffffff;
   border: 1px solid #8395a7;
   box-sizing: border-box;
+  display: block;
 }
 
 .priceCSS {
-  position: absolute;
-  width: 30%;
-  left: 11%;
-  top: calc(50% - 0% / 2 - 4%);
+  position: relative;
+
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
   color: #000000;
+  display: block;
 }
 .priceStyle {
-  position: absolute;
+  position: relative;
   width: 77%;
   height: 5%;
-  left: 11%;
-  top: 50%;
+
   background: #ffffff;
   border: 1px solid #8395a7;
   box-sizing: border-box;
+  display: block;
 }
 .companyName {
-  position: absolute;
+  position: relative;
   width: -1%;
-  left: 11%;
-  top: calc(46% - 1% / 2 - -11%);
+
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
   color: #000000;
+  display: block;
 }
 
 .companyStyle {
-  position: absolute;
+  position: relative;
   width: 77%;
   height: 5%;
-  left: 11%;
-  top: 60%;
+
   background: #ffffff;
   border: 1px solid #8395a7;
   box-sizing: border-box;
+  display: block;
 }
 .descriptionForm {
-  position: absolute;
+  position: relative;
   width: -1%;
-  left: 11%;
-  top: calc(66% - 0% / 2 - 0%);
+
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
   color: #000000;
+  display: block;
 }
 .descriptionStyle {
-  position: absolute;
+  position: relative;
   width: 77%;
-  height: 10%;
-  left: 11%;
-  top: 70%;
+  height: 50%;
+
   background: #ffffff;
   border: 1px solid #8395a7;
   box-sizing: border-box;
   justify-content: flex-start;
+  display: block;
 }
 .preseption {
-  width: 20px;
-  height: 15px;
-  left: 42px;
-  top: 554px;
-
   background: #c4c4c4;
-  position: absolute;
+  position: relative;
 }
 .preseptionText {
-  position: absolute;
-  width: 36%;
-  left: 20%;
-  top: 83%;
+  position: relative;
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
   color: #000000;
+  display: block;
 }
 .quantity {
-  position: absolute;
-  width: 6%;
-  height: 2.3%;
-  left: 11%;
-  top: 87%;
   background: #c4c4c4;
+  position: relative;
 }
 .quantityText {
-  position: absolute;
-  width: 174px;
-  height: 15px;
-  left: 73px;
-  top: 581px;
-
+  position: relative;
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
-
   color: #000000;
+  display: block;
 }
 .Update {
-  position: absolute;
-  width: 24%;
+  position: relative;
+  display: block;
+  width: 46%;
   height: 5%;
-  left: 41%;
-  top: 94%;
   background: #ebd6c3;
   border-radius: 10px;
+  margin-left: 18%;
 }
 .updateMsg {
-  position: absolute;
+  position: relative;
+  display: block;
+
   height: 20px;
   left: 29px;
-  top: 642px;
   font-family: Lato;
   font-style: normal;
   font-weight: bold;

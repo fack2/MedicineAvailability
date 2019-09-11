@@ -114,38 +114,29 @@ class UpdateForm extends Component {
             placeholder=""
             onChange={this.handleChange}
           />
-          <label className="descriptionForm" htmlFor="description">
-            Description
-          </label>
-          <input
-            className="descriptionStyle"
-            type="text"
-            name="description"
-            value={description}
-            placeholder=""
-            onChange={this.handleChange}
-            disabled
-          />
-          <input
-            type="checkbox"
-            name="prescription"
-            className="preseption"
-            onChange={this.toggle}
-            checked={prescription}
-          />
-          <label className="preseptionText" htmlFor="prescription">
-            Needs prescription
-          </label>
-          <input
-            type="checkbox"
-            name="quantity"
-            onChange={this.toggle}
-            className="quantity"
-            checked={quantity}
-          />
-          <label className="quantityText" htmlFor="quantity">
-            Quantity out of stock
-          </label>
+
+          <div className="checks">
+            <label className="preseptionText" htmlFor="prescription">
+              <input
+                type="checkbox"
+                name="prescription"
+                className="preseption"
+                onChange={this.toggle}
+                checked={prescription}
+              />
+              Needs prescription
+            </label>
+            <label className="quantityText" htmlFor="quantity">
+              <input
+                type="checkbox"
+                name="quantity"
+                onChange={this.toggle}
+                className="quantity"
+                checked={quantity}
+              />
+              Quantity out of stock
+            </label>
+          </div>
 
           <input className="Update" type="submit" value=" Update" />
           {this.state.updated && <p className="updateMsg">{this.state.msg}</p>}
