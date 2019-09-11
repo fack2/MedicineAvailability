@@ -33,12 +33,12 @@ CREATE TABLE pharmacy
     phone INTEGER NOT NULL,
     location VARCHAR(150) NOT NULL,
     workHours VARCHAR (150) NOT NULL,
-    daysOff VARCHAR (150) NOT NULL
+    offDays VARCHAR (150) NOT NULL
 
 );
 
 INSERT INTO pharmacy
-    (pharmacyName, email, password, phone, location, workHours, daysOff)
+    (pharmacyName, email, password, phone, location, workHours, offDays)
 VALUES
     ('Al-Eman Pharmacy', 'aleman@gmail.com', '123', '0598403872', 'Ras El-Jora', '8AM - 11PM', 'Saturday'),
     ('Al-Jazera', 'aljazera@gmail.com', '$2a$10$D/IX/AtYw5YHT4YWI2B2aOg5ZGMBodHNDx2x6vIbHWomyH4fsJ9SG', '0594327865', 'Al-Manara square', '8AM - 11PM', 'Sunday'),
