@@ -11,17 +11,19 @@ class Results extends Component {
     return (
       <>
         <NavBar login={false} username="Home" {...this.props} />
-        {info.map((item, i) => {
-          return (
-            <CustomerPharmacyInfo
-              item={item}
-              pharmacyname={item.pharmacyname}
-              price={item.price}
-              history={this.props.history}
-              key={i}
-            />
-          )
-        })}
+        <div className="divD">
+          {info.map((item, i) => {
+            return (
+              <CustomerPharmacyInfo
+                item={item}
+                pharmacyname={item.pharmacyname}
+                price={item.price}
+                history={this.props.history}
+                key={i}
+              />
+            )
+          })}
+        </div>
         <UserSearchResults
           img={info[0].img}
           description={info[0].description}

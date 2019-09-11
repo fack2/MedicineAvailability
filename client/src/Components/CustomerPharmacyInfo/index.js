@@ -13,9 +13,11 @@ class CustomerPharmacyInfo extends Component {
   render() {
     const { pharmacyname, price } = this.props
     return (
-      <div className="pharmacyInfo" onClick={this.moveToDetailsPage}>
-        <h3 className="NamePharm">{pharmacyname}</h3>
-        <h3 className="price">{price}</h3>
+      <div className="resultDpage">
+        <div className="pharmacyInfoD" onClick={this.moveToDetailsPage}>
+          <h3 className="NamePharmD">{pharmacyname}</h3>
+          <h3 className="priceD">{price}</h3>
+        </div>
       </div>
     )
   }

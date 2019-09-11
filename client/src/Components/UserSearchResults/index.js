@@ -7,14 +7,14 @@ const UserSearchResults = ({
   medicinename,
   prescription
 }) => (
-  <div className="medicineInformation">
-    <img src={img} alt="medicinImage" className="medicineImage" />
-    <h3 className="nameMed">{medicinename}</h3>
-    <p className="description">{description}</p>
+  <div className="medicineInformationD">
+    <img src={img} alt="medicinImage" className="medicineImageD" />
+    <h3 className="nameMedD">{medicinename}</h3>
+    <p className="descriptionD">{description}</p>
     {prescription === true ? (
-      <p className="pre">prescription: YES</p>
+      <p className="preD">prescription: YES</p>
     ) : (
-      <p className="pre">prescription: NO </p>
+      <p className="preD">prescription: NO </p>
     )}
   </div>
 )
