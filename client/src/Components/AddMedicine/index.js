@@ -11,17 +11,20 @@ class AddMedicine extends Component {
     prescription: false,
     msg: "",
     submitClicked: false,
-    login: false
+    login: false,
+    username: ""
   }
 
   componentDidMount = () => {
     const { history } = this.props
 
     axios.get("/check-auth").then(({ data }) => {
-      const { success } = data
+      const { success, username } = data
+
       if (success) {
         this.setState({
-          login: true
+          login: true,
+          username
         })
       } else {
         history.push("/login")
@@ -56,7 +59,7 @@ class AddMedicine extends Component {
         medPrice
       })
       .then(res => {
-        const { add, message } = res.data
+        const { message } = res.data
         this.setState({ msg: message })
       })
   }
@@ -68,13 +71,14 @@ class AddMedicine extends Component {
       medPrice,
       prescription,
       msg,
+      submitClicked,
       login,
-      submitClicked
+      username
     } = this.state
 
     return (
       <div>
-        <NavBar login={login} {...this.props} />
+        <NavBar login={login} username={username} {...this.props} />
         <h3>Medicine Information</h3>
         <p>Fill The Form To Add A New Medicine</p>
         <form onSubmit={this.AddMedicineInfo}>
@@ -85,7 +89,7 @@ class AddMedicine extends Component {
             value={medName}
             type="text"
             name="medName"
-          ></input>
+          />
           <label className="price">Price</label>
           <input
             className="medPrice"
@@ -93,7 +97,7 @@ class AddMedicine extends Component {
             value={medPrice}
             type="text"
             name="medPrice"
-          ></input>
+          />
           <label className="company">Company</label>
           <input
             className="medCompany"
@@ -101,15 +105,17 @@ class AddMedicine extends Component {
             value={medCompany}
             type="text"
             name="medCompany"
-          ></input>
-          <input
-            className="presc"
-            type="checkbox"
-            name="prescription"
-            onChange={this.toggleCheckbox}
-            value={prescription}
           />
-          <label className="checkboxLabel">Needs Prescription</label>
+          <label className="checkboxLabel">
+            <input
+              className="presc"
+              type="checkbox"
+              name="prescription"
+              onChange={this.toggleCheckbox}
+              value={prescription}
+            />
+            Needs Prescription
+          </label>
           <input type="submit" value="Add" className="addInput" />
           {msg && <p className="addMsg">{msg}</p>}
           {!medCompany && submitClicked && (

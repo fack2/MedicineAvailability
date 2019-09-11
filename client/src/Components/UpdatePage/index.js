@@ -8,19 +8,21 @@ import "./style.css"
 class UpdatePage extends Component {
   state = {
     details: "",
-    login: false
+    login: false,
+    username: ""
   }
   componentDidMount = () => {
     const { history } = this.props
 
     axios.get("/check-auth").then(({ data }) => {
-      const { success } = data
+      const { success, username } = data
 
       if (success) {
         this.update()
 
         this.setState({
-          login: true
+          login: true,
+          username
         })
       } else {
         history.push("/login")
@@ -44,7 +46,7 @@ class UpdatePage extends Component {
   }
 
   render() {
-    const { details, login } = this.state
+    const { details, login, username } = this.state
     return (
       <>
         {!details ? (
@@ -62,16 +64,16 @@ class UpdatePage extends Component {
             </button>
           </div>
         ) : (
-            <>
-              <NavBar login={login} {...this.props} />
-              <UserSearchResults
-                img={details.img}
-                description={details.description}
-                medicinename={details.name}
-              />
-              <UpdateForm details={details} />
-            </>
-          )}
+          <>
+            <NavBar login={login} username={username} {...this.props} />
+            <UserSearchResults
+              img={details.img}
+              description={details.description}
+              medicinename={details.name}
+            />
+            <UpdateForm details={details} />
+          </>
+        )}
       </>
     )
   }
