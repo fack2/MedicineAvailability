@@ -80,53 +80,55 @@ class AddMedicine extends Component {
       <div>
         <NavBar login={login} username={username} {...this.props} />
         <h3>Medicine Information</h3>
-        <p>Fill The Form To Add A New Medicine</p>
+        <p className="discrip">Fill The Form To Add A New Medicine</p>
         <form onSubmit={this.AddMedicineInfo}>
-          <label className="medicineName">Medicine Name</label>
+          <div className="addForm">
+            <label className="label">Medicine Name
           <input
-            className="medName"
-            onChange={this.updateInput}
-            value={medName}
-            type="text"
-            name="medName"
-          />
-          <label className="price">Price</label>
+                className="info"
+                onChange={this.updateInput}
+                value={medName}
+                type="text"
+                name="medName"
+              /> </label>
+            <label className="label">Price
           <input
-            className="medPrice"
-            onChange={this.updateInput}
-            value={medPrice}
-            type="text"
-            name="medPrice"
-          />
-          <label className="company">Company</label>
+                className="info"
+                onChange={this.updateInput}
+                value={medPrice}
+                type="text"
+                name="medPrice"
+              /> </label>
+            <label className="label">Company
           <input
-            className="medCompany"
-            onChange={this.updateInput}
-            value={medCompany}
-            type="text"
-            name="medCompany"
-          />
-          <label className="checkboxLabel">
-            <input
-              className="presc"
-              type="checkbox"
-              name="prescription"
-              onChange={this.toggleCheckbox}
-              value={prescription}
-            />
-            Needs Prescription
+                className="info"
+                onChange={this.updateInput}
+                value={medCompany}
+                type="text"
+                name="medCompany"
+              />     </label>
+            <label className="checkboxLabel">
+              <input
+                className="checkboxInfo"
+                type="checkbox"
+                name="prescription"
+                onChange={this.toggleCheckbox}
+                value={prescription}
+              />
+              Needs Prescription
           </label>
-          <input type="submit" value="Add" className="addInput" />
-          {msg && <p className="addMsg">{msg}</p>}
-          {!medCompany && submitClicked && (
-            <p className="addCompany">Please enter a company</p>
-          )}
-          {!medName && submitClicked && (
-            <p className="addName">Please enter a name </p>
-          )}
-          {!medPrice && submitClicked && (
-            <p className="addPrice">Please enter a price</p>
-          )}
+            <input type="submit" value="Add" className="submitInfo" />
+            {msg && <p className="addMsg">{msg}</p>}
+            {!medCompany && submitClicked && (
+              <p className="addCompany">Please enter a company</p>
+            )}
+            {!medName && submitClicked && (
+              <p className="addName">Please enter a name </p>
+            )}
+            {!medPrice && submitClicked && (
+              <p className="addPrice">Please enter a price</p>
+            )}
+          </div>
         </form>
       </div>
     )
