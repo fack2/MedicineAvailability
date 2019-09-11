@@ -12,11 +12,11 @@ h3 {
   color: #a33230;
 }
 
-p {
+.discrip {
   position: absolute;
   width: 92%;
-  left: 14%;
-  top: 109%;
+  left: 6%;
+  top: 21%;
   font-family: Scope One;
   font-style: normal;
   font-weight: normal;
@@ -98,13 +98,13 @@ p {
   box-sizing: border-box;
 }
 
-.presc {
+/* .presc {
   position: absolute;
   width: 7%;
   left: 6%;
   top: 79%;
   background: #d3b9b9;
-}
+} */
 
 .addInput {
   position: absolute;
@@ -135,8 +135,8 @@ p {
 .addMsg {
   position: absolute;
   height: 20px;
-  left: -78px;
-  top: 456px;
+  left: 5%;
+  top: 70%;
   font-family: Lato;
   font-style: normal;
   font-weight: bold;
@@ -147,7 +147,7 @@ p {
 
 .addName {
   position: absolute;
-  left: -25%;
+  left: 5%;
   top: 41%;
   font-family: Lato;
   font-style: normal;
@@ -159,7 +159,7 @@ p {
 
 .addCompany {
   position: absolute;
-  left: -22%;
+  left: 5%;
   top: 55%;
   font-family: Lato;
   font-style: normal;
@@ -171,7 +171,7 @@ p {
 
 .addPrice {
   position: absolute;
-  left: -26%;
+  left: 5%;
   top: 68%;
   font-family: Lato;
   font-style: normal;

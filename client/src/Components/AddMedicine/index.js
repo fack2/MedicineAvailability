@@ -75,7 +75,7 @@ class AddMedicine extends Component {
 			<div>
 				<NavBar login={login} {...this.props} />
 				<h3>Medicine Information</h3>
-				<p>Fill The Form To Add A New Medicine</p>
+				<p className="discrip">Fill The Form To Add A New Medicine</p>
 				<form onSubmit={this.AddMedicineInfo}>
 					<label className="medicineName">Medicine Name</label>
 					<input

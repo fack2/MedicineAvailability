@@ -12,9 +12,9 @@ const UserSearchResults = ({
     <h3 className="nameMed">{medicinename}</h3>
     <p className="description">{description}</p>
     {prescription === true ? (
-      <p>prescription: YES</p>
+      <p className="pre">prescription: YES</p>
     ) : (
-      <p>prescription: NO </p>
+      <p className="pre">prescription: NO </p>
     )}
   </div>
 )
