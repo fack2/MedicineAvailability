@@ -73,7 +73,7 @@ class Login extends Component {
             onChange={this.changName}
           />
           <input type="submit" className="login" value="Login" />
-          {this.state.errorMsg && <p>User or password WRONG</p>}
+          {this.state.errorMsg && <p className="invalidMsg">User or password WRONG</p>}
         </form>
       </>
     )
