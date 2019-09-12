@@ -34,3 +34,9 @@
 ::placeholder {
   padding-left: 5%;
 }
+
+.invalidMsg {
+  color: red;
+  margin-left: 22%;
+  margin-top: -18%;
+}

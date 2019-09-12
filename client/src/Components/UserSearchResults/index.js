@@ -1,11 +1,21 @@
 import React from 'react'
 import './style.css'
 
-const UserSearchResults = ({ img, description, medicinename }) => (
-  <div className="medicineInformation">
-    <img src={img} alt="medicinImage" className="medicineImage" />
-    <h3 className="nameMed">{medicinename}</h3>
-    <p className="description">{description}</p>
+const UserSearchResults = ({
+  img,
+  description,
+  medicinename,
+  prescription
+}) => (
+  <div className="medicineInformationD">
+    <img src={img} alt="medicinImage" className="medicineImageD" />
+    <h3 className="nameMedD">{medicinename}</h3>
+    <p className="descriptionD">{description}</p>
+    {prescription === true ? (
+      <p className="preD">prescription: YES</p>
+    ) : (
+      <p className="preD">prescription: NO </p>
+    )}
   </div>
 )
 
