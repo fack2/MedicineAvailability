@@ -74,7 +74,6 @@ class UpdateForm extends Component {
       quantity,
       price,
       company,
-      description,
       prescription
     } = this.state
     return (
