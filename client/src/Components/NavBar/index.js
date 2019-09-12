@@ -25,10 +25,10 @@ class NavBar extends Component {
             Logout
           </div>
         ) : (
-          <Link to="/login" className="switch1">
-            Continue as a pharmacist
+            <Link to="/login" className="switch2">
+              Continue as a pharmacist
           </Link>
-        )}
+          )}
 
         <Link to="/" className="logoDiv logo1"></Link>
       </div>
