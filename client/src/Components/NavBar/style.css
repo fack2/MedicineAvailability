@@ -22,30 +22,18 @@
 
 .home {
   position: absolute;
-  left: 20.53%;
-  right: 67.73%;
-  top: 39.66%;
-  bottom: 36.21%;
-
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 16px;
-
+  margin-top: 6%;
+  margin-left: 19%;
   color: #a33230;
 }
 
 .switch1 {
+  margin-top: 6%;
+  margin-left: 84%;
+}
+
+.switch2 {
+  margin-top: 6%;
   position: absolute;
-  width: 133px;
-  height: 14px;
-  left: 235px;
-  top: 25px;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 14px;
-  color: #000000;
+  margin-left: 55%;
 }

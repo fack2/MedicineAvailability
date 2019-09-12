@@ -51,13 +51,12 @@ class AddMedicine extends Component {
       return
     }
 
-    axios
-      .post("/api/pharmacy/medicine", {
-        medName,
-        medCompany,
-        prescription,
-        medPrice
-      })
+    axios.post("/api/pharmacy/medicine", {
+      medName,
+      medCompany,
+      prescription,
+      medPrice
+    })
       .then(res => {
         const { message } = res.data
         this.setState({ msg: message })
@@ -128,9 +127,6 @@ class AddMedicine extends Component {
           </label>
             <input type="submit" value="Add" className="submitInfo" />
             {msg && <p className="addMsg">{msg}</p>}
-
-
-
           </div>
         </form>
       </div>

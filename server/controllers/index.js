@@ -10,11 +10,7 @@ const { updateMedForm } = require('./updatePharMed')
 const logout = require('./logout')
 
 router.get('/api/medicine/:medname', search.get)
-router.get(
-  '/api/pharmacy/medicine/:medname',
-  auth,
-  getPharmacyMed.updatePharmacy
-)
+router.get('/api/pharmacy/medicine/:medname', auth, getPharmacyMed.updatePharmacy)
 router.get('/check-auth', auth, checkAuth)
 router.post('/api/login', login.get)
 router.post('/api/pharmacy/medicine', auth, addMedicine)
