@@ -1,83 +1,97 @@
 .span {
-  position: relative;
-  width: 64%;
-  left: 52px;
-  margin-top: 91%;
-  font-family: Karla Tamil Inclined;
-  font-style: italic;
-  font-weight: normal;
-  font-size: 15px;
-  text-align: justify;
-  line-height: 18px;
-  color: #000000;
+	position: relative;
+	width: 64%;
+	left: 52px;
+	margin-top: 91%;
+	font-family: Karla Tamil Inclined;
+	font-style: italic;
+	font-weight: normal;
+	font-size: 15px;
+	text-align: justify;
+	line-height: 18px;
+	color: #000000;
 }
 .searchBar {
-  position: relative;
-  width: 75%;
-  padding: 3%;
-  left: 13%;
-  border: 1px solid #b6b1b1;
-  box-sizing: border-box;
-  border-radius: 20px;
+	position: relative;
+	width: 75%;
+	padding: 3%;
+	left: 13%;
+	border: 1px solid #b6b1b1;
+	box-sizing: border-box;
+	border-radius: 20px;
 }
 button {
-  position: relative;
-  left: 3%;
-  padding: 3%;
-  border: 1px solid #b6b1b1;
-  box-sizing: border-box;
-  border-radius: 20px;
-  background: linear-gradient(
-    180deg,
-    #e8cdb8 0%,
-    rgba(234, 202, 179, 0.35) 100%
-  );
+	position: relative;
+	left: 3%;
+	padding: 3%;
+	border: 1px solid #b6b1b1;
+	box-sizing: border-box;
+	border-radius: 20px;
+	background: linear-gradient(
+		180deg,
+		#e8cdb8 0%,
+		rgba(234, 202, 179, 0.35) 100%
+	);
 }
 
 .By-Location {
-  position: relative;
-  width: 76%;
-  left: 12%;
-  margin-top: 10%;
-  padding: 3%;
-  border: 1px solid #b6b1b1;
-  box-sizing: border-box;
-  border-radius: 20px;
+	position: relative;
+	width: 76%;
+	left: 12%;
+	margin-top: 10%;
+	padding: 3%;
+	border: 1px solid #b6b1b1;
+	box-sizing: border-box;
+	border-radius: 20px;
 }
 
 .By-Pharmacy {
-  position: relative;
-  width: 76%;
-  left: 12%;
-  margin-top: 6%;
-  padding: 3%;
-  border: 1px solid #b6b1b1;
-  box-sizing: border-box;
-  border-radius: 20px;
+	position: relative;
+	width: 76%;
+	left: 12%;
+	margin-top: 6%;
+	padding: 3%;
+	border: 1px solid #b6b1b1;
+	box-sizing: border-box;
+	border-radius: 20px;
 }
 
 .noResult {
-  position: relative;
-  left: -17%;
-  font-family: Lato;
-  font-style: normal;
-  margin-top: -38%;
-  font-weight: normal;
-  font-size: 86%;
-  line-height: 25px;
-  text-align: center;
-  color: red;
+	position: relative;
+	left: -20%;
+	font-family: Lato;
+	font-style: normal;
+	margin-top: -44%;
+	font-weight: normal;
+	font-size: 86%;
+	line-height: 25px;
+	text-align: center;
+	color: red;
 }
 
 .noMedicineName {
-  position: relative;
-  width: 92%;
-  left: -5%;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
-  margin-top: -38%;
-  font-size: 14px;
-  text-align: center;
-  color: red;
+	position: relative;
+	width: 92%;
+	left: -5%;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	margin-top: -38%;
+	font-size: 14px;
+	text-align: center;
+	color: red;
+}
+
+.loadingSearch {
+	margin: 30%;
+	position: relative;
+}
+
+.loadingSearchP {
+	margin-top: -52%;
+	color: rgb(69, 69, 109);
+	margin-left: 86%;
+	font-weight: bold;
+	font-size: 100%;
+	position: absolute;
 }
