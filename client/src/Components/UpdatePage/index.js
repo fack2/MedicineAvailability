@@ -4,6 +4,7 @@ import NavBar from '../NavBar'
 import UserSearchResults from '../UserSearchResults'
 import axios from 'axios'
 import './style.css'
+import ClipLoader from 'react-spinners/ClipLoader'
 
 class UpdatePage extends Component {
 	state = {
@@ -78,7 +79,10 @@ class UpdatePage extends Component {
 						</>
 					)
 				) : (
-					<p>loading</p>
+					<div className="loading">
+						<ClipLoader sizeUnit={'px'} size={150} color={'#123abc'} />
+						<p className="loadingP">Loading</p>
+					</div>
 				)}
 			</>
 		)

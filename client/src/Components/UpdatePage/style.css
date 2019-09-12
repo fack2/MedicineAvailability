@@ -1,18 +1,29 @@
 .image {
-  padding: 1.4%;
-  width: 97%;
+	padding: 1.4%;
+	width: 97%;
 }
 .backBtn {
-  width: 22%;
-  height: 6%;
-  left: 40%;
-  top: 45%;
-  border: 1px solid #b6b1b1;
-  box-sizing: border-box;
-  border-radius: 20px;
-  background: linear-gradient(
-    180deg,
-    #e8cdb8 0%,
-    rgba(234, 202, 179, 0.35) 100%
-  );
+	width: 22%;
+	height: 6%;
+	left: 40%;
+	top: 45%;
+	border: 1px solid #b6b1b1;
+	box-sizing: border-box;
+	border-radius: 20px;
+	background: linear-gradient(
+		180deg,
+		#e8cdb8 0%,
+		rgba(234, 202, 179, 0.35) 100%
+	);
+}
+
+.loading {
+	margin: 30%;
+}
+
+.loadingP {
+	color: rgb(69, 69, 109);
+	margin-left: 35%;
+	font-weight: bold;
+	font-size: 100%;
 }
