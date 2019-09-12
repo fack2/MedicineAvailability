@@ -16,7 +16,7 @@ class CustomerPharmacyInfo extends Component {
       <div className="resultDpage">
         <div className="pharmacyInfoD" onClick={this.moveToDetailsPage}>
           <h3 className="NamePharmD">{pharmacyname}</h3>
-          <h3 className="priceD">{price}</h3>
+          <h3 className="priceD">{price} ILS</h3>
         </div>
       </div>
     )
