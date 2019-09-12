@@ -1,47 +1,46 @@
-.medicineInformation {
-	position: absolute;
-	width: 308px;
-	height: 118px;
-	left: 33px;
-	top: 79px;
+.medicineInformationD {
+  position: absolute;
+  width: 308px;
+  height: 118px;
+  left: 33px;
+  top: 79px;
 
-	background: #ffffff;
+  background: #ffffff;
 }
 
-.medicineImage {
-	position: relative;
-	display: inline;
-	width: 108px;
-	height: 123px;
+.medicineImageD {
+  position: relative;
+  display: inline;
+  width: 108px;
+  height: 123px;
 }
 
-.nameMed {
-	position: absolute;
-	width: 33%;
-	height: 24%;
-	left: 36%;
-	top: 6%;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 18px;
+.nameMedD {
+  position: relative;
+  width: 33%;
+  height: 24%;
+  left: 36%;
+  top: -169%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100%;
 }
 
-.description {
-	position: absolute;
-	width: 54%;
-	height: 40%;
-	left: 44%;
-	top: 40px;
-	font-family: SeoulHangang;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 13px;
-	line-height: 106%;
-	text-align: justify;
-	color: #969696;
+.descriptionD {
+  position: absolute;
+  width: 56%;
+  height: 40%;
+  left: 44%;
+  top: 40px;
+  font-family: SeoulHangang;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 106%;
+  text-align: justify;
+  color: #000000;
 }
 
-.pre {
-	top: 118%;
-	left: 44%;
+.preD {
+  margin-top: -30%;
 }
