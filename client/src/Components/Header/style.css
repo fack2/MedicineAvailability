@@ -1,9 +1,9 @@
 .header1 {
   position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
+  width: 34%;
+  height: 36%;
+  left: 36%;
+  top: 33%;
 
   background: linear-gradient(
     180deg,
@@ -32,9 +32,9 @@
   position: absolute;
   width: 133px;
   height: 14px;
-  left: 222px;
+  left: 225px;
   top: 260px;
-
+  text-decoration: none;
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
