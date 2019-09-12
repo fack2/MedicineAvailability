@@ -28,8 +28,13 @@ class Results extends Component {
           img={info[0].img}
           description={info[0].description}
           medicinename={info[0].medicinename}
-          prescription={info[0].prescription}
+          // prescription={info[0].prescription}
         />
+        {info[0].prescription === true ? (
+          <p className="preD">prescription: YES</p>
+        ) : (
+          <p className="preD">prescription: NO </p>
+        )}
       </>
     )
   }

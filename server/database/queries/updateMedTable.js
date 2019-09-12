@@ -13,7 +13,7 @@ const updateFormQuery2 = (medicine, pharmacyID, medicineid) => {
   return dbConnection
     .query(
       ' update pharmacy_to_medicine set price=$1, soldOut=$2 where medicineID= $3 and pharmacyID =$4',
-      [medicine.price, medicine.soldOut, medicineid, pharmacyID]
+      [medicine.price, medicine.quantity, medicineid, pharmacyID]
     )
     .then(res => res => res.rows[0])
     .catch(err => console.log(err))
