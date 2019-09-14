@@ -40,9 +40,9 @@ CREATE TABLE pharmacy
 INSERT INTO pharmacy
     (pharmacyName, email, password, phone, location, workHours, offDays)
 VALUES
-    ('Al-Eman Pharmacy', 'aleman@gmail.com', '123', '0598403872', 'Ras El-Jora', '8AM - 11PM', 'Saturday'),
+    ('Al-Eman Pharmacy', 'aleman@gmail.com', '$2a$10$D/IX/AtYw5YHT4YWI2B2aOg5ZGMBodHNDx2x6vIbHWomyH4fsJ9SG', '0598403872', 'Ras El-Jora', '8AM - 11PM', 'Saturday'),
     ('Al-Jazera', 'aljazera@gmail.com', '$2a$10$D/IX/AtYw5YHT4YWI2B2aOg5ZGMBodHNDx2x6vIbHWomyH4fsJ9SG', '0594327865', 'Al-Manara square', '8AM - 11PM', 'Sunday'),
-    ('AlQuds Pharmacy', 'alquds@gmail.com', '1234', '059874562', 'Ras El-Jora', '8AM - 11PM', 'Monday')
+    ('AlQuds Pharmacy', 'alquds@gmail.com', '$2a$10$D/IX/AtYw5YHT4YWI2B2aOg5ZGMBodHNDx2x6vIbHWomyH4fsJ9SG', '059874562', 'Ras El-Jora', '8AM - 11PM', 'Monday')
     ;
 
 CREATE TABLE pharmacy_to_medicine
