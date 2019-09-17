@@ -67,7 +67,7 @@ class UpdateForm extends Component {
     } = this.state;
 
     if (!this.checkIfUpdate()) {
-      this.setState({ updated: true, msg: "alaredy up to date" });
+      this.setState({ updated: true, msg: "Already up to date" });
       return;
     }
     axios
