@@ -26,7 +26,7 @@ class NavBar extends Component {
           </div>
         ) : (
             <Link to="/login" className="switch2">
-              Continue as a pharmacist
+              pharmacist
           </Link>
           )}
 
