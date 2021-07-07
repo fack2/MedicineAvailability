@@ -1,48 +1,63 @@
 .medicineInformationD {
-  position: absolute;
-  width: 308px;
-  height: 118px;
-  left: 33px;
-  top: 79px;
+	position: absolute;
+	width: 308px;
+	height: 118px;
+	left: 33px;
+	top: 79px;
 
-  background: #ffffff;
+	background: #ffffff;
 }
 
 .medicineImageD {
-  position: relative;
-  display: inline;
-  width: 108px;
-  height: 123px;
+	position: relative;
+	display: inline;
+	width: 108px;
+	height: 123px;
 }
 
 .nameMedD {
-  position: relative;
-  width: 33%;
-  height: 24%;
-  left: 36%;
-  top: -169%;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 100%;
+	position: relative;
+	width: 33%;
+	height: 24%;
+	left: 36%;
+	top: -169%;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100%;
 }
 
 .descriptionD {
-  position: absolute;
-  width: 56%;
-  height: 40%;
-  left: 44%;
-  top: 40px;
-  font-family: SeoulHangang;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 106%;
-  text-align: justify;
-  color: #000000;
+	position: absolute;
+	width: 56%;
+	height: 40%;
+	left: 44%;
+	top: 40px;
+	font-family: SeoulHangang;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 106%;
+	text-align: justify;
+	color: #000000;
 }
 
 .preD {
-  top: 193px;
-  position: absolute;
-  margin-left: 7%;
+	top: 193px;
+	position: absolute;
+	margin-left: 7%;
+}
+
+.readMore {
+	position: absolute;
+	width: 56%;
+	height: 40%;
+	left: 44%;
+	top: 40px;
+	font-family: SeoulHangang;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 106%;
+	text-align: justify;
+	color: #000000;
 }
